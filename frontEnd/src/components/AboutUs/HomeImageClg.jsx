@@ -1,0 +1,90 @@
+import React from "react";
+import { Award, Users } from "lucide-react";
+import Container from "../Layout/Container";
+import TopImage from "../TopImage";
+import img1 from "../../assets/aboutImg1.png";
+import img2 from "../../assets/aboutImg2.jpg";
+import { GiTeamIdea } from "react-icons/gi";
+import { FaFolderClosed } from "react-icons/fa6";
+import { TbClockCheck } from "react-icons/tb";
+import Button from "../Button";
+import { useNavigate } from "react-router-dom";
+
+const HomeImageClg = () => {
+  const navigate = useNavigate();
+
+  const handleGetStarted = () => {
+    navigate("/about");
+  };
+
+  return (
+    <Container>
+      <div className="grid items-center gap-36 p-20 md:grid-cols-2">
+        <div className="relative rounded-xl">
+          <TopImage source1={img1} source2={img2} className="z-0" />
+
+          <div className="animate-float-x absolute top-10 right-28 z-10 flex w-fit items-center space-x-4 rounded-lg bg-white p-4 shadow-md transition-transform duration-300 hover:scale-105">
+            <Users className="text-blue-500" />
+            <div>
+              <p className="text-xl font-bold text-gray-900">10+</p>
+              <p className="text-sm text-gray-600">Years of Experience</p>
+            </div>
+          </div>
+
+          <div className="animate-float-x-reverse absolute right-2/5 -bottom-16 z-10 flex w-fit flex-col items-start gap-4 space-x-4 rounded-lg bg-white p-4 shadow-md transition-transform duration-300 hover:scale-105">
+            <div className="rounded-full bg-blue-50 p-3">
+              <Award className="text-blue-500" />
+            </div>
+            <div>
+              <p className="text-xl font-bold text-gray-900">97%</p>
+              <p className="text-sm text-gray-600">Customer Satisfaction</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="animate-slide-in space-y-6">
+          <div className="mb-4">
+            <h2 className="mb-1 text-lg font-medium text-gray-700">About Us</h2>
+            <h1 className="text-3xl leading-tight font-bold text-gray-900 md:text-4xl lg:text-5xl">
+              <span className="text-[#2a4768]">Financial Solutions </span>
+              to Propel Your Firm's Success
+            </h1>
+          </div>
+
+          <div className="stagger-animation space-y-4 text-gray-600">
+            <p>
+              The accounting industry is evolving quickly, and staying ahead can
+              be challenging. Partner with Account Wisely—your dedicated ally in
+              success. With decades of experience, we offer India, US and UK
+              start-ups and accounting firms cost-effective, scalable outsourced
+              accounting solutions, enabling you to focus on what matters most:
+              serving your clients.
+            </p>
+          </div>
+
+          <ul className="my-7 flex flex-col gap-5 font-semibold">
+            <h4 className="text-lg font-bold text-black">
+              Here's what we bring to the table:
+            </h4>
+            <li className="flex items-center gap-3 text-lg">
+              <GiTeamIdea className="text-3xl" />
+              An Expert Team
+            </li>
+            <li className="flex items-center gap-3 text-lg">
+              <FaFolderClosed className="text-3xl" />
+              Tailored Services
+            </li>
+            <li className="flex items-center gap-3 text-lg">
+              <TbClockCheck className="text-3xl" />
+              On-Time Delivery
+            </li>
+          </ul>
+
+          <Button text="More About Us" onClick={handleGetStarted} />
+        </div>
+      </div>
+    </Container>
+  );
+};
+
+export default HomeImageClg;
