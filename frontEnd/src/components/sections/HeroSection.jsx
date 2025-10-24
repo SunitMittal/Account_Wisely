@@ -6,11 +6,17 @@ const HeroSection = () => {
   return (
     <section className="relative flex min-h-screen items-center">
       {/* Background video */}
-      <video autoPlay loop muted className="absolute inset-0 h-full w-full">
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 h-full w-full object-cover"
+      >
         <source src={BackgroundVideo} type="video/mp4" />
       </video>
 
-      <div className="relative z-10 container mx-auto px-4 md:px-6">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
           <div
             className="mb-6 inline-block rounded-full bg-white/20 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm"
@@ -21,7 +27,7 @@ const HeroSection = () => {
           </div>
 
           <h1
-            className="mb-6 text-4xl leading-tight font-bold text-white md:text-5xl lg:text-6xl"
+            className="mb-6 text-3xl leading-tight font-bold text-white sm:text-4xl md:text-5xl lg:text-6xl"
             data-aos="fade-up"
             data-aos-delay="200"
           >

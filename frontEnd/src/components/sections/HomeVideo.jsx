@@ -46,15 +46,15 @@ const HomeVideo = () => {
         style={{ backgroundColor: `rgba(0, 0, 0, 0.6)` }}
       />
 
-      {/* Text Content Layer */}
-      <div className="animate-fade-in-up relative z-40 ml-56 max-w-4xl px-5 text-white">
+  {/* Text Content Layer */}
+  <div className="animate-fade-in-up relative z-40 mx-4 md:ml-56 max-w-4xl px-5 text-white">
         <p
           className="inline rounded-full p-2"
           style={{ background: "rgba(255,255,255,0.2)" }}
         >
           Your Trusted Partner in Accounting Solutions
         </p>
-        <h1 className="mb-4 text-4xl leading-normal font-semibold tracking-tight md:text-7xl">
+  <h1 className="mb-4 text-3xl leading-normal font-semibold tracking-tight sm:text-4xl md:text-6xl lg:text-7xl">
           <span style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)" }}>
             Expert Outsourced{" "}
             <span

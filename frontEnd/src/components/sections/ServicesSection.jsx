@@ -59,7 +59,7 @@ const ServicesSection = () => {
   return (
     <Container2>
       <div>
-        <div className="sticky top-8 text-sm font-semibold tracking-wider text-gray-600">
+        <div className="md:sticky md:top-8 text-sm font-semibold tracking-wider text-gray-600">
           <p>Services</p>
           <h2 className="mt-2 text-3xl font-bold text-[#2a4768] md:max-w-56 md:text-5xl">
             Outsourced Accounting
