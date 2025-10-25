@@ -51,20 +51,20 @@ const Contact = () => {
         title="Get in Touch with Account Wisely - Let's Talk Business!"
         link="Contact Us"
       />
-      <div className="flex flex-col gap-6 bg-[#eceef6] pt-16">
+      <div className="flex flex-col gap-4 bg-[#eceef6] pt-8 sm:gap-6 sm:pt-16">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-evenly">
           {/* section 1 */}
-          <div className="flex flex-col gap-7 px-6">
+          <div className="flex flex-col gap-5 px-4 sm:gap-7 sm:px-6">
             {/* chat */}
             <div>
-              <p className="text-lg font-semibold">Chat with Us</p>
-              <p className="text-gray-400">
+              <p className="text-base font-semibold sm:text-lg">Chat with Us</p>
+              <p className="text-sm text-gray-400 sm:text-base">
                 Speak to our friendly team via live chat
               </p>
-              <div className="mt-4 flex items-center gap-2">
-                <RiMailSendLine />
+              <div className="mt-3 flex items-center gap-2 sm:mt-4">
+                <RiMailSendLine className="h-4 w-4 sm:h-5 sm:w-5" />
                 <a
-                  className="underline"
+                  className="text-sm underline sm:text-base"
                   href="mailto:partners@accountwisely.com"
                 >
                   Shoot Us An Email
@@ -73,14 +73,14 @@ const Contact = () => {
             </div>
             {/* visit */}
             <div>
-              <p className="text-lg font-semibold">Visit Us</p>
-              <p className="text-gray-400">Meet use directly at our office</p>
-              <div className="mt-4 flex items-center gap-2">
-                <FiMapPin />
+              <p className="text-base font-semibold sm:text-lg">Visit Us</p>
+              <p className="text-sm text-gray-400 sm:text-base">Meet use directly at our office</p>
+              <div className="mt-3 flex items-center gap-2 sm:mt-4">
+                <FiMapPin className="h-4 w-4 sm:h-5 sm:w-5" />
                 <a
                   href="https://maps.google.com/"
                   target="_blank"
-                  className="underline"
+                  className="text-sm underline sm:text-base"
                 >
                   Mumbai - India
                 </a>
@@ -88,25 +88,25 @@ const Contact = () => {
             </div>
           </div>
           {/* section 2 */}
-          <div className="my-8 flex flex-col gap-6 px-6">
-            <p className="text-3xl font-bold md:text-5xl">
+          <div className="my-6 flex flex-col gap-4 px-4 sm:my-8 sm:gap-6 sm:px-6">
+            <p className="text-2xl font-bold sm:text-3xl md:text-5xl">
               Ready to get Started?{" "}
               <span className="text-[#2a4768]">let's chat.</span>
             </p>
-            <div className="flex flex-col gap-6 rounded-xl border bg-white p-6">
-              <form onSubmit={handleSubmit} className="mx-auto flex max-w-4xl flex-col gap-4">
-                <p className="mb-4 text-gray-400">
+            <div className="flex flex-col gap-4 rounded-xl border bg-white p-4 sm:gap-6 sm:p-6">
+              <form onSubmit={handleSubmit} className="mx-auto flex max-w-4xl flex-col gap-3 sm:gap-4">
+                <p className="mb-3 text-sm text-gray-400 sm:mb-4 sm:text-base">
                   Please fill out the form below, and a member of our team will
                   get back to you as soon as possible.
                 </p>
 
-                <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                <div className="grid grid-cols-1 gap-3 sm:gap-4 md:grid-cols-2">
                   <input
                     type="text"
                     name="firstname"
                     id="firstname"
                     placeholder="First Name"
-                    className="h-12 w-full rounded-md border-0 bg-[#eceef6] px-4 py-2 focus:outline-none"
+                    className="h-10 w-full rounded-md border-0 bg-[#eceef6] px-3 py-2 text-sm focus:outline-none sm:h-12 sm:px-4 sm:text-base"
                     required
                   />
                   <input
@@ -114,17 +114,17 @@ const Contact = () => {
                     name="lastname"
                     id="lastname"
                     placeholder="Last Name"
-                    className="h-12 w-full rounded-md border-0 bg-[#eceef6] px-4 py-2 focus:outline-none"
+                    className="h-10 w-full rounded-md border-0 bg-[#eceef6] px-3 py-2 text-sm focus:outline-none sm:h-12 sm:px-4 sm:text-base"
                   />
                 </div>
 
-                <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                <div className="grid grid-cols-1 gap-3 sm:gap-4 md:grid-cols-2">
                   <input
                     type="email"
                     name="email"
                     id="email"
                     placeholder="Email Address"
-                    className="h-12 w-full rounded-md border-0 bg-[#eceef6] px-4 py-2 focus:outline-none"
+                    className="h-10 w-full rounded-md border-0 bg-[#eceef6] px-3 py-2 text-sm focus:outline-none sm:h-12 sm:px-4 sm:text-base"
                     required
                   />
                   <input
@@ -132,7 +132,7 @@ const Contact = () => {
                     name="phone"
                     id="phone"
                     placeholder="Phone"
-                    className="h-12 w-full rounded-md border-0 bg-[#eceef6] px-4 py-2 focus:outline-none"
+                    className="h-10 w-full rounded-md border-0 bg-[#eceef6] px-3 py-2 text-sm focus:outline-none sm:h-12 sm:px-4 sm:text-base"
                     required
                   />
                 </div>
@@ -141,16 +141,16 @@ const Contact = () => {
                   name="message"
                   id="message"
                   placeholder="Write a Message"
-                  className="h-24 w-full resize-none rounded-md border-0 bg-[#eceef6] px-4 py-2 focus:outline-none"
+                  className="h-20 w-full resize-none rounded-md border-0 bg-[#eceef6] px-3 py-2 text-sm focus:outline-none sm:h-24 sm:px-4 sm:text-base"
                 />
                 {errors.form && (
-                  <p className="text-sm text-red-600">{errors.form}</p>
+                  <p className="text-xs text-red-600 sm:text-sm">{errors.form}</p>
                 )}
 
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="h-12 rounded-md bg-gradient-to-r from-[#2b4969] to-[#7cb5be] px-4 py-2 font-semibold text-white hover:cursor-pointer disabled:opacity-50"
+                  className="h-10 rounded-md bg-gradient-to-r from-[#2b4969] to-[#7cb5be] px-4 py-2 text-sm font-semibold text-white hover:cursor-pointer disabled:opacity-50 sm:h-12 sm:text-base"
                 >
                   {submitting ? "Sending..." : "Send Message"}
                 </button>
@@ -159,52 +159,52 @@ const Contact = () => {
           </div>
         </div>
         {/* section 3 */}
-        <div className="mt-16 flex flex-col place-items-center gap-6 bg-white px-6 py-4">
-          <div>
+        <div className="mt-12 flex flex-col place-items-center gap-4 bg-white px-4 py-4 sm:mt-16 sm:gap-6 sm:px-6">
+          <div className="w-full max-w-4xl">
             <div className="flex flex-col">
-              <p className="rounded-md bg-[#f5f5f5] px-5 py-4 font-bold">
+              <p className="rounded-md bg-[#f5f5f5] px-3 py-3 text-sm font-bold sm:px-5 sm:py-4 sm:text-base">
                 How can I get in touch with Account Wisely?
               </p>
-              <p className="mt-4 mb-6 text-gray-500">
+              <p className="mt-3 mb-4 text-xs text-gray-500 sm:mt-4 sm:mb-6 sm:text-sm">
                 You can contact us via our website's contact form, email us at
                 partners@accountwisely.com.
               </p>
             </div>
             <div className="flex flex-col">
-              <p className="rounded-md bg-[#f5f5f5] px-5 py-4 font-bold">
+              <p className="rounded-md bg-[#f5f5f5] px-3 py-3 text-sm font-bold sm:px-5 sm:py-4 sm:text-base">
                 Where is Account Wisely India located?
               </p>
-              <p className="mt-4 mb-6 text-gray-500">
+              <p className="mt-3 mb-4 text-xs text-gray-500 sm:mt-4 sm:mb-6 sm:text-sm">
                 We provide outsourced accounting services to start-ups, CA's and
                 accounting firms across the India, with our operations center
                 based in Ahmedabad, India.
               </p>
             </div>
             <div className="flex flex-col">
-              <p className="rounded-md bg-[#f5f5f5] px-5 py-4 font-bold">
+              <p className="rounded-md bg-[#f5f5f5] px-3 py-3 text-sm font-bold sm:px-5 sm:py-4 sm:text-base">
                 How long does it take to receive a response?
               </p>
-              <p className="mt-4 mb-6 text-gray-500">
+              <p className="mt-3 mb-4 text-xs text-gray-500 sm:mt-4 sm:mb-6 sm:text-sm">
                 We typically respond within 24 business hours. For urgent
                 queries, you can reach out via phone or live chat during working
                 hours.
               </p>
             </div>
             <div className="flex flex-col">
-              <p className="rounded-md bg-[#f5f5f5] px-5 py-4 font-bold">
+              <p className="rounded-md bg-[#f5f5f5] px-3 py-3 text-sm font-bold sm:px-5 sm:py-4 sm:text-base">
                 Who can I contact for sales inquiries?
               </p>
-              <p className="mt-4 mb-6 text-gray-500">
+              <p className="mt-3 mb-4 text-xs text-gray-500 sm:mt-4 sm:mb-6 sm:text-sm">
                 For business inquiries, you can reach our sales team at
                 sales@white-bull.India or fill out the contact form, and a
                 representative will get back to you.
               </p>
             </div>
             <div className="flex flex-col">
-              <p className="rounded-md bg-[#f5f5f5] px-5 py-4 font-bold">
+              <p className="rounded-md bg-[#f5f5f5] px-3 py-3 text-sm font-bold sm:px-5 sm:py-4 sm:text-base">
                 Can I book a consultation before partnering with Account Wisely?
               </p>
-              <p className="mt-4 mb-8 text-gray-500">
+              <p className="mt-3 mb-6 text-xs text-gray-500 sm:mt-4 sm:mb-8 sm:text-sm">
                 Yes! We offer a free trial so you can experience our services
                 firsthand. Visit our Book a Free Trial page to get started.
               </p>

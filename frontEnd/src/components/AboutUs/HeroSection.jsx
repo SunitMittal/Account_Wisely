@@ -31,17 +31,17 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <div className="animate-slide-in space-y-6">
-          <div className="mb-4">
-            <h2 className="mb-1 text-lg font-medium text-gray-700">About Us</h2>
-            <h1 className="text-3xl leading-tight font-bold text-gray-900 md:text-4xl lg:text-5xl">
+        <div className="animate-slide-in space-y-4 sm:space-y-6">
+          <div className="mb-3 sm:mb-4">
+            <h2 className="mb-1 text-base font-medium text-gray-700 sm:text-lg">About Us</h2>
+            <h1 className="text-2xl leading-tight font-bold text-gray-900 sm:text-3xl md:text-4xl lg:text-5xl">
               Expert Outsourced{" "}
               <span className="text-blue-700">Accounting Services</span> for
               Indian Start-Ups & CA Firms — Save Time & Cut Costs
             </h1>
           </div>
 
-          <div className="stagger-animation space-y-4 text-gray-600">
+          <div className="stagger-animation space-y-3 text-sm text-gray-600 sm:space-y-4 sm:text-base">
             <p>
               We provide{" "}
               <span className="font-medium">

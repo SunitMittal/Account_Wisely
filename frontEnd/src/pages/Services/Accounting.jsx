@@ -44,21 +44,21 @@ const Accounting = () => {
         link="Services / Accounting Services"
       />
 
-      <div className="md:my-28 md:grid md:grid-cols-[400px_minmax(900px,_1fr)_100px] md:justify-center md:px-72">
+      <div className="my-8 md:my-28 md:grid md:grid-cols-[300px_minmax(600px,_1fr)_50px] md:justify-center md:px-4 lg:grid-cols-[400px_minmax(900px,_1fr)_100px] lg:px-72">
         {/* left part */}
-        <div className="mt-10 md:sticky md:top-2 md:h-fit">
+        <div className="mt-6 md:sticky md:top-2 md:h-fit lg:mt-10">
           <ServiceList />
 
-          <div className="mx-auto my-8 max-w-96 rounded-2xl border border-[#2a4768] bg-white p-4.5">
-            <TbPhoneCalling className="text-6xl text-[#2a4768]" />
-            <h2 className="text-lg font-bold">Need Help?</h2>
-            <p className="pt-2 pb-5 text-gray-500">
+          <div className="mx-auto my-6 max-w-96 rounded-2xl border border-[#2a4768] bg-white p-4 sm:my-8 sm:p-4.5">
+            <TbPhoneCalling className="text-4xl text-[#2a4768] sm:text-6xl" />
+            <h2 className="text-base font-bold sm:text-lg">Need Help?</h2>
+            <p className="pt-2 pb-4 text-sm text-gray-500 sm:pb-5 sm:text-base">
               Get in touch and let us know how we can help touch as soon as
               possible.
             </p>
             <Link
               to={"/contact"}
-              className="rounded-md bg-linear-to-r from-[#2b4969] to-[#7cb5be] px-4 py-2 font-semibold text-white hover:cursor-pointer"
+              className="rounded-md bg-linear-to-r from-[#2b4969] to-[#7cb5be] px-3 py-2 text-sm font-semibold text-white hover:cursor-pointer sm:px-4 sm:text-base"
             >
               Contact Us
             </Link>
@@ -72,15 +72,15 @@ const Accounting = () => {
             className="mx-auto h-auto w-11/12 rounded-2xl"
           />
 
-          <div className="my-8 px-4.5">
+          <div className="my-6 px-3 sm:my-8 sm:px-4.5">
             <div>
-              <h3 className="text-4xl font-bold">
+              <h3 className="text-2xl font-bold sm:text-3xl md:text-4xl">
                 Expert{" "}
                 <span className="text-[#2a4768]">Accounting Solutions</span> for
                 start-ups & Accounting Firms in the India – Boost Efficiency &
                 Compliance
               </h3>
-              <p className="my-5 text-justify leading-7 text-gray-500">
+              <p className="my-4 text-justify text-sm leading-6 text-gray-500 sm:my-5 sm:leading-7 sm:text-base">
                 As your accounting firm grows, so do the complexities of
                 managing financial operations.{" "}
                 <span className="font-semibold text-gray-600">
@@ -94,7 +94,7 @@ const Accounting = () => {
                 .
               </p>
 
-              <p className="my-5 text-justify leading-7 text-gray-500">
+              <p className="my-4 text-justify text-sm leading-6 text-gray-500 sm:my-5 sm:leading-7 sm:text-base">
                 With our{" "}
                 <span className="font-semibold text-gray-600">
                   expert accounting solutions
@@ -103,9 +103,9 @@ const Accounting = () => {
                 costs, and enhance service quality—without hiring in-house
                 staff.
               </p>
-              <p className="my-5 text-justify leading-7 text-gray-500">
+              <p className="my-4 text-justify text-sm leading-6 text-gray-500 sm:my-5 sm:leading-7 sm:text-base">
                 <span className="font-semibold text-gray-600">Pain Point:</span>{" "}
-                Growing your client base and meeting increasing demands doesn’t
+                Growing your client base and meeting increasing demands doesn't
                 have to come at the expense of quality. With Account Wisely, you
                 can scale effortlessly, focusing on building stronger client
                 relationships and growing your practice. Our team handles the
@@ -115,25 +115,25 @@ const Accounting = () => {
             </div>
 
             <div>
-              <h3 className="text-4xl font-bold text-[#2a4768]">
+              <h3 className="text-2xl font-bold text-[#2a4768] sm:text-3xl md:text-4xl">
                 Why Accounting Firms Trust Account Wisely
               </h3>
-              <p className="my-5 text-justify leading-7 text-gray-500">
-                When you outsource to Account Wisely, you’re not just
-                outsourcing accounting—you’re gaining a trusted partner that
-                supports your firm’s success. From everyday financial tasks to
+              <p className="my-4 text-justify text-sm leading-6 text-gray-500 sm:my-5 sm:leading-7 sm:text-base">
+                When you outsource to Account Wisely, you're not just
+                outsourcing accounting—you're gaining a trusted partner that
+                supports your firm's success. From everyday financial tasks to
                 intricate tax filings, we take the load off your team and ensure
-                your clients get the best. Whether you’re a CA practice or a
-                larger firm, we’re here to help you grow—offering scalable,
+                your clients get the best. Whether you're a CA practice or a
+                larger firm, we're here to help you grow—offering scalable,
                 flexible solutions to meet your needs, no matter the season.
               </p>
 
-              <p className="text-justify leading-7 text-gray-500">
-                We don’t just process numbers—we empower your firm with seamless
+              <p className="text-justify text-sm leading-6 text-gray-500 sm:leading-7 sm:text-base">
+                We don't just process numbers—we empower your firm with seamless
                 financial management:
               </p>
 
-              <ul className="my-5 list-disc pl-7 text-justify leading-7 text-gray-500">
+              <ul className="my-4 list-disc pl-5 text-justify text-sm leading-6 text-gray-500 sm:my-5 sm:pl-7 sm:leading-7 sm:text-base">
                 <li>
                   <span className="font-bold text-gray-600">Scalability:</span>{" "}
                   Expand your practice without worrying about additional
@@ -159,35 +159,35 @@ const Accounting = () => {
                 </li>
               </ul>
 
-              <p className="rounded-2xl bg-[#325271] px-8 py-9 text-xl text-white">
-                Ready to boost your firm’s cash flow management? Discover our
+              <p className="rounded-2xl bg-[#325271] px-4 py-6 text-sm text-white sm:px-8 sm:py-9 sm:text-base md:text-xl">
+                Ready to boost your firm's cash flow management? Discover our
                 Outsourced <strong>Services </strong>
                 designed to streamline your financial processes.
               </p>
             </div>
 
             <div>
-              <h3 className="my-5 text-4xl font-bold">
-                Precision Accounting to Drive Your Firm’s Growth!
+              <h3 className="my-4 text-2xl font-bold sm:my-5 sm:text-3xl md:text-4xl">
+                Precision Accounting to Drive Your Firm's Growth!
               </h3>
-              <p className="text-justify leading-7 text-gray-500">
+              <p className="text-justify text-sm leading-6 text-gray-500 sm:leading-7 sm:text-base">
                 We understand that precision is everything. Our outsourced
                 accounting solutions are designed to give you accurate,
                 real-time financial insights, allowing your firm to make
-                smarter, faster decisions. We’ve helped firms to optimize their
+                smarter, faster decisions. We've helped firms to optimize their
                 operations, reduce overhead, and maintain the compliance your
                 clients depend on—all while freeing up time for you to focus on
                 business growth.
               </p>
-              <p className="my-5 text-justify leading-7 text-gray-500">
+              <p className="my-4 text-justify text-sm leading-6 text-gray-500 sm:my-5 sm:leading-7 sm:text-base">
                 <span className="font-bold">Pain Point: </span>The pressure to
                 stay organized, compliant, and profitable can feel overwhelming.
                 Let Account Wisely take care of the financial details, so you
                 can keep your focus on delivering value to your clients,
                 confidently and efficiently.
               </p>
-              <p className="rounded-2xl bg-[#325271] px-8 py-9 text-xl text-white">
-                Want to simplify your firm’s payables and receivables? Explore
+              <p className="rounded-2xl bg-[#325271] px-4 py-6 text-sm text-white sm:px-8 sm:py-9 sm:text-base md:text-xl">
+                Want to simplify your firm's payables and receivables? Explore
                 our{" "}
                 <Link to={"/services/payroll"} className="font-bold">
                   Outsoured Payroll Services
@@ -453,33 +453,33 @@ const Accounting = () => {
       </div>
 
       {/* FAQs */}
-      <div className="items-center bg-white px-4.5 py-10 md:py-28">
-        <p className="text-center font-semibold text-[#2a4768]">FAQs</p>
-        <h2 className="text-center text-3xl font-bold md:text-5xl">
+      <div className="items-center bg-white px-3 py-8 sm:px-4.5 sm:py-10 md:py-28">
+        <p className="text-center text-sm font-semibold text-[#2a4768] sm:text-base">FAQs</p>
+        <h2 className="text-center text-2xl font-bold sm:text-3xl md:text-5xl">
           Everything You Need to Know About{" "}
           <span className="text-[#2a4768]">Outsourced Accounting</span>
         </h2>
-        <p className="my-5 text-center text-gray-500">
+        <p className="my-4 text-center text-sm text-gray-500 sm:my-5 sm:text-base">
           Discover helpful answers to your most pressing financial questions.
-          We’re here to assist you every step of the way!{" "}
+          We're here to assist you every step of the way!{" "}
         </p>
-        <div className="mx-auto max-w-lg p-4 md:max-w-7xl">
+        <div className="mx-auto max-w-lg p-3 sm:p-4 md:max-w-7xl">
           {faqs.map((faq, index) => (
             <div
               key={index}
               className="border-b border-gray-200 last:border-none"
             >
               <button
-                className="flex w-full items-center justify-between py-4 text-left font-semibold hover:cursor-pointer md:py-6 md:text-xl"
+                className="flex w-full items-center justify-between py-3 text-left text-sm font-semibold hover:cursor-pointer sm:py-4 sm:text-base md:py-6 md:text-xl"
                 onClick={() => toggleFAQ(index)}
               >
                 {faq.question}
-                <span className="text-xl">
+                <span className="text-lg sm:text-xl">
                   {openIndex === index ? "−" : "+"}
                 </span>
               </button>
               {openIndex === index && (
-                <p className="pb-4 text-gray-400 md:text-xl">{faq.answer}</p>
+                <p className="pb-3 text-sm text-gray-400 sm:pb-4 sm:text-base md:text-xl">{faq.answer}</p>
               )}
             </div>
           ))}

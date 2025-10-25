@@ -60,17 +60,17 @@ const ServicesSection = () => {
     <Container2>
       <div>
         <div className="md:sticky md:top-8 text-sm font-semibold tracking-wider text-gray-600">
-          <p>Services</p>
-          <h2 className="mt-2 text-3xl font-bold text-[#2a4768] md:max-w-56 md:text-5xl">
+          <p className="text-xs sm:text-sm">Services</p>
+          <h2 className="mt-2 text-2xl font-bold text-[#2a4768] sm:text-3xl md:max-w-56 md:text-4xl lg:text-5xl">
             Outsourced Accounting
           </h2>
-          <h2 className="text-3xl font-bold text-gray-900 md:text-5xl">
+          <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl lg:text-5xl">
             Services
           </h2>
-          <h2 className="text-3xl font-bold text-gray-900 md:max-w-96 md:text-5xl">
+          <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl md:max-w-96 md:text-4xl lg:text-5xl">
             Designed for Your Firm
           </h2>
-          <p className="mt-4 max-w-[26rem] leading-7 font-normal text-gray-600">
+          <p className="mt-4 max-w-[26rem] text-sm leading-6 font-normal text-gray-600 sm:text-base sm:leading-7">
             Managing client accounts can be a drain on your time and resources.
             Account Wisely takes the load off your shoulders with a full range
             of outsourced accounting services designed to meet the unique needs
@@ -81,7 +81,7 @@ const ServicesSection = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2">
         {services.map((service) => (
           <div
             key={service.id}

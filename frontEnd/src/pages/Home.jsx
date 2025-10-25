@@ -34,19 +34,19 @@ const Home = () => {
         <section className="bg-white">
           <HomeImageClg />
         </section>
-        <section className="md:py-16">
+        <section className="md:py-10">
           <ServicesSection />
         </section>
         <section className="bg-white">
           <CompanyOverviewSection />
         </section>
-        <section className="md:py-16">
+        <section className="md:py-10">
           <OnboardingProcessSection />
         </section>
         <section className="bg-white">
           <TestimonialsSection />
         </section>
-        <section className="bg-gray-50 py-8 md:py-16">
+        <section className="bg-gray-50 py-8 md:py-10">
           <FAQSection />
         </section>
         <section className="bg-white">

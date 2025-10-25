@@ -33,29 +33,30 @@ const Header = () => {
 
   return (
     <>
-      <div className="flex gap-5 bg-gradient-primary px-5 py-2 text-sm text-white sm:justify-center md:justify-normal md:gap-10 md:px-28 md:text-lg shadow-modern">
+      <div className="flex gap-2 bg-gradient-primary px-4 py-2 text-xs text-white sm:justify-center sm:gap-5 sm:px-5 sm:text-sm md:justify-normal md:gap-10 md:px-28 md:text-lg shadow-modern">
         <a
           href="mailto:partners@accountwisely.com"
           className="underline-offset-8.5 flex items-center gap-1 hover:underline"
         >
-          <HiOutlineMailOpen />
-          partners@accountwisely.com
+          <HiOutlineMailOpen className="h-3 w-3 sm:h-4 sm:w-4" />
+          <span className="hidden xs:inline">partners@accountwisely.com</span>
+          <span className="xs:hidden">Email Us</span>
         </a>
       </div>
 
       <nav className="bg-white shadow-modern border-b border-neutral-200">
-        <div className="mx-auto max-w-7xl px-6 py-5 md:px-28">
+        <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6 sm:py-5 md:px-28">
           {/* desktop view */}
           <div className="hidden items-center justify-between lg:flex">
             <div className="flex-shrink-0">
-              <Link to={"/"} className="text-4xl font-bold text-primary hover:text-secondary transition-colors duration-300">
+              <Link to={"/"} className="text-2xl font-bold text-primary hover:text-secondary transition-colors duration-300 xl:text-4xl">
                 Account Wisely
               </Link>
             </div>
-            <div className="flex items-center space-x-8">
+            <div className="flex items-center space-x-4 xl:space-x-8">
               <Link
                 to={"/"}
-                className={`text-medium font-bold transition-colors duration-300 ${isActive("/")
+                className={`text-sm font-bold transition-colors duration-300 xl:text-medium ${isActive("/")
                   ? "text-secondary underline underline-offset-8"
                   : "text-neutral-600 hover:text-primary"
                   }`}
@@ -64,7 +65,7 @@ const Header = () => {
               </Link>
               <Link
                 to={"/about"}
-                className={`text-medium font-bold transition-colors duration-300 ${isActive("/about")
+                className={`text-sm font-bold transition-colors duration-300 xl:text-medium ${isActive("/about")
                   ? "text-secondary underline underline-offset-8"
                   : "text-neutral-600 hover:text-primary"
                   }`}
@@ -73,7 +74,7 @@ const Header = () => {
               </Link>
               <div className="group relative">
                 <button
-                  className={`text-medium flex items-center font-bold transition-colors duration-300 ${isActive("/services")
+                  className={`text-sm flex items-center font-bold transition-colors duration-300 xl:text-medium ${isActive("/services")
                     ? "text-secondary underline underline-offset-8"
                     : "text-neutral-600 hover:text-primary"
                     }`}
@@ -81,7 +82,7 @@ const Header = () => {
                   Services
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className={`ml-1 h-4 w-4 underline-offset-8 transition-transform duration-300 hover:underline ${isServicesOpen ? "rotate-180" : ""
+                    className={`ml-1 h-3 w-3 xl:h-4 xl:w-4 underline-offset-8 transition-transform duration-300 hover:underline ${isServicesOpen ? "rotate-180" : ""
                       }`}
                     fill="none"
                     viewBox="0 0 24 24"
@@ -130,7 +131,7 @@ const Header = () => {
               </div>
               <Link
                 to={"/career"}
-                className={`text-medium font-bold transition-colors duration-300 ${isActive("/career")
+                className={`text-sm font-bold transition-colors duration-300 xl:text-medium ${isActive("/career")
                   ? "text-secondary underline underline-offset-8"
                   : "text-neutral-600 hover:text-primary"
                   }`}
@@ -139,7 +140,7 @@ const Header = () => {
               </Link>
               <Link
                 to={"/contact"}
-                className={`text-medium font-bold transition-colors duration-300 ${isActive("/contact")
+                className={`text-sm font-bold transition-colors duration-300 xl:text-medium ${isActive("/contact")
                   ? "text-secondary underline underline-offset-8"
                   : "text-neutral-600 hover:text-primary"
                   }`}
@@ -151,7 +152,7 @@ const Header = () => {
 
           {/* mobile view */}
           <div className="flex items-center justify-between lg:hidden">
-            <Link to={"/"} className="text-5xl font-bold text-[#2a4768]">
+            <Link to={"/"} className="text-2xl font-bold text-[#2a4768] sm:text-3xl md:text-4xl">
               Account Wisely
             </Link>
             <div className="flex items-center">
@@ -164,7 +165,7 @@ const Header = () => {
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
-                  className="h-6 w-6"
+                  className="h-5 w-5 sm:h-6 sm:w-6"
                 >
                   <path
                     strokeLinecap="round"
@@ -183,12 +184,12 @@ const Header = () => {
               }`}
           >
             <div className="flex items-center justify-between p-4">
-              <h1 className="text-3xl font-extrabold text-white">
+              <h1 className="text-2xl font-extrabold text-white sm:text-3xl">
                 Account Wisely
               </h1>
               <button
                 onClick={closeMenu}
-                className="w-10 rounded-lg bg-white p-2 font-bold text-[#2a4768]"
+                className="w-8 rounded-lg bg-white p-2 font-bold text-[#2a4768] sm:w-10"
               >
                 X
               </button>

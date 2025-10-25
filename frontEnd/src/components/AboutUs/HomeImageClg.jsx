@@ -19,11 +19,12 @@ const HomeImageClg = () => {
 
   return (
     <Container>
-      <div className="grid items-center gap-36 p-20 md:grid-cols-2">
+      <div className="grid items-center md:gap-36 md:p-20 md:grid-cols-2 grid-rows-1 px-20 
+      ">
         <div className="relative rounded-xl">
           <TopImage source1={img1} source2={img2} className="z-0" />
 
-          <div className="animate-float-x absolute top-10 right-28 z-10 flex w-fit items-center space-x-4 rounded-lg bg-white p-4 shadow-md transition-transform duration-300 hover:scale-105">
+          <div className="animate-float-x absolute -top-8 -left-20 md:top-10 md:right-28 z-10 flex w-fit items-center space-x-4 rounded-lg bg-[#fff3f3] p-4 shadow-md transition-transform duration-300 hover:scale-105">
             <Users className="text-blue-500" />
             <div>
               <p className="text-xl font-bold text-gray-900">10+</p>
@@ -31,7 +32,7 @@ const HomeImageClg = () => {
             </div>
           </div>
 
-          <div className="animate-float-x-reverse absolute right-2/5 -bottom-16 z-10 flex w-fit flex-col items-start gap-4 space-x-4 rounded-lg bg-white p-4 shadow-md transition-transform duration-300 hover:scale-105">
+          <div className="animate-float-x-reverse absolute -left-10 -bottom-40 md:right-2/5 md:-bottom-16 z-10 flex w-fit flex-col items-start gap-4 space-x-4 rounded-lg bg-[#fff3f3] p-4 shadow-md transition-transform duration-300 hover:scale-105">
             <div className="rounded-full bg-blue-50 p-3">
               <Award className="text-blue-500" />
             </div>
@@ -43,7 +44,7 @@ const HomeImageClg = () => {
         </div>
 
         <div className="animate-slide-in space-y-6">
-          <div className="mb-4">
+          <div className="mb-3">
             <h2 className="mb-1 text-lg font-medium text-gray-700">About Us</h2>
             <h1 className="text-3xl leading-tight font-bold text-gray-900 md:text-4xl lg:text-5xl">
               <span className="text-[#2a4768]">Financial Solutions </span>

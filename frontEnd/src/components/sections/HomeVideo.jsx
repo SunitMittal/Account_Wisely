@@ -46,18 +46,19 @@ const HomeVideo = () => {
         style={{ backgroundColor: `rgba(0, 0, 0, 0.6)` }}
       />
 
-  {/* Text Content Layer */}
-  <div className="animate-fade-in-up relative z-40 mx-4 md:ml-56 max-w-4xl px-5 text-white">
+      {/* Text Content Layer */}
+      <div className="animate-fade-in-up relative z-40 mx-4 md:ml-56 max-w-4xl px-3 sm:px-5 text-white">
         <p
-          className="inline rounded-full p-2"
+          className="inline rounded-full p-2 text-xs sm:text-sm"
           style={{ background: "rgba(255,255,255,0.2)" }}
         >
           Your Trusted Partner in Accounting Solutions
         </p>
-  <h1 className="mb-4 text-3xl leading-normal font-semibold tracking-tight sm:text-4xl md:text-6xl lg:text-7xl">
+        <h1 className="mb-4 text-2xl leading-normal font-semibold tracking-tight sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
           <span style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)" }}>
             Expert Outsourced{" "}
             <span
+              className="block sm:inline"
               style={{
                 background: "rgba(255, 255, 255, 0.2)",
                 padding: "5px",
@@ -65,14 +66,14 @@ const HomeVideo = () => {
               }}
             >
               {" "}
-              Accounting <br /> Solutions
+              Accounting <br className="hidden sm:block" /> Solutions
             </span>{" "}
             for Indian Startups & Accounting Firms
           </span>
         </h1>
 
         <p
-          className="mb-8 max-w-2xl opacity-90"
+          className="mb-6 max-w-2xl text-sm opacity-90 sm:mb-8 sm:text-base"
           style={{ textShadow: "1px 1px 2px rgba(0, 0, 0, 0.8)" }}
         >
           AccountWisely provides expert outsourced accounting services for
@@ -83,7 +84,9 @@ const HomeVideo = () => {
           reliability behind the scenes.
         </p>
 
-        <Button onClick={handleGetStarted}>Get Started</Button>
+        <div className="flex flex-col sm:flex-row gap-4">
+          <Button onClick={handleGetStarted} text={"Get in Touch"}></Button>
+        </div>
       </div>
     </section>
   );
