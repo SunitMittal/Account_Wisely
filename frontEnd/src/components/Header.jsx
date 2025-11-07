@@ -87,7 +87,7 @@ const Header = () => {
                   className={`text-lg flex items-center font-bold transition-colors duration-300 xl:text-medium ${
                     isActive("/services")
                       ? "text-secondary underline underline-offset-8"
-                      : "text-neutral-600 hover:text-primary"
+                      : "text-[#fa8e23] hover:text-primary"
                   }`}
                 >
                   Services
@@ -108,7 +108,7 @@ const Header = () => {
                     />
                   </svg>
                 </button>
-                <div className="absolute left-0 z-50 hidden min-w-[230px] space-y-2 rounded-lg bg-gradient-secondary p-4 text-white group-hover:block shadow-modern-lg">
+                <div className="absolute left-0 z-50 hidden min-w-[230px] space-y-2 rounded-lg bg-gradient-secondary p-4  group-hover:block shadow-modern-lg">
                   <Link
                     to={"/services/accounting"}
                     className="block py-1 underline-offset-8 hover:underline"

@@ -1,12 +1,5 @@
 @import "tailwindcss";
 
-/* Global Styles - Dark Purple Background Theme */
-/* * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} */
-
 html {
     background-color: #1a0940;
     color: #fa8e23;
