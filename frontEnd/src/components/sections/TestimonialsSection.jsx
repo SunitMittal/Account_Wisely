@@ -39,7 +39,7 @@ const TestimonialsSection = () => {
     <section id="testimonials" className="py-20">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mb-4 text-center">
-          <span className="text-lg font-medium tracking-wider text-teal-600 uppercase">
+          <span className="text-2xl font-bold tracking-wider text-teal-600 uppercase">
             Our Success Story
           </span>
         </div>
