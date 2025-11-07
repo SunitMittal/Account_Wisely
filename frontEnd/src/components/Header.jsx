@@ -44,12 +44,12 @@ const Header = () => {
         </a>
       </div>
 
-      <nav className="bg-white shadow-modern border-b border-neutral-200">
+      <nav className="bg-primary shadow-modern border-b border-secondary/30" style={{ backgroundColor: '#1a0940' }}>
         <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6 sm:py-5 md:px-28">
           {/* desktop view */}
           <div className="hidden items-center justify-between lg:flex">
             <div className="flex-shrink-0">
-              <Link to={"/"} className="text-2xl font-bold text-primary hover:text-secondary transition-colors duration-300 xl:text-4xl">
+              <Link to={"/"} className="text-2xl font-bold text-secondary hover:text-secondary-light transition-colors duration-300 xl:text-4xl">
                 Account Wisely
               </Link>
             </div>
@@ -58,7 +58,7 @@ const Header = () => {
                 to={"/"}
                 className={`text-lg font-bold transition-colors duration-300 xl:text-medium ${isActive("/")
                   ? "text-secondary underline underline-offset-8"
-                  : "text-neutral-600 hover:text-primary"
+                  : "text-secondary hover:text-secondary-light"
                   }`}
               >
                 Home
@@ -67,7 +67,7 @@ const Header = () => {
                 to={"/about"}
                 className={`text-lg font-bold transition-colors duration-300 xl:text-medium ${isActive("/about")
                   ? "text-secondary underline underline-offset-8"
-                  : "text-neutral-600 hover:text-primary"
+                  : "text-secondary hover:text-secondary-light"
                   }`}
               >
                 About Us
@@ -76,7 +76,7 @@ const Header = () => {
                 <button
                   className={`text-lg flex items-center font-bold transition-colors duration-300 xl:text-medium ${isActive("/services")
                     ? "text-secondary underline underline-offset-8"
-                    : "text-neutral-600 hover:text-primary"
+                    : "text-secondary hover:text-secondary-light"
                     }`}
                 >
                   Services
@@ -133,7 +133,7 @@ const Header = () => {
                 to={"/career"}
                 className={`text-lg font-bold transition-colors duration-300 xl:text-medium ${isActive("/career")
                   ? "text-secondary underline underline-offset-8"
-                  : "text-neutral-600 hover:text-primary"
+                  : "text-secondary hover:text-secondary-light"
                   }`}
               >
                 Career
@@ -142,7 +142,7 @@ const Header = () => {
                 to={"/contact"}
                 className={`text-lg font-bold transition-colors duration-300 xl:text-medium ${isActive("/contact")
                   ? "text-secondary underline underline-offset-8"
-                  : "text-neutral-600 hover:text-primary"
+                  : "text-secondary hover:text-secondary-light"
                   }`}
               >
                 Contact Us
@@ -152,13 +152,13 @@ const Header = () => {
 
           {/* mobile view */}
           <div className="flex items-center justify-between lg:hidden">
-            <Link to={"/"} className="text-2xl font-bold text-[#2a4768] sm:text-3xl md:text-4xl">
+            <Link to={"/"} className="text-2xl font-bold text-secondary sm:text-3xl md:text-4xl">
               Account Wisely
             </Link>
             <div className="flex items-center">
               <button
                 onClick={toggleMenu}
-                className="rounded-md bg-white p-2 text-[#2a4768] hover:bg-gray-200 focus:outline-none"
+                className="rounded-md bg-secondary/20 p-2 text-secondary hover:bg-secondary/30 focus:outline-none border border-secondary/30"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -180,7 +180,7 @@ const Header = () => {
 
           {/* mobile menu dropdown - slide in from right */}
           <div
-            className={`fixed top-0 right-0 z-50 h-full w-full transform bg-[#2a4768] transition-transform duration-300 ease-in-out ${isMenuOpen ? "translate-x-0" : "translate-x-full"
+            className={`fixed top-0 right-0 z-50 h-full w-full transform bg-primary transition-transform duration-300 ease-in-out ${isMenuOpen ? "translate-x-0" : "translate-x-full"
               }`}
           >
             <div className="flex items-center justify-between p-4">
@@ -189,7 +189,7 @@ const Header = () => {
               </h1>
               <button
                 onClick={closeMenu}
-                className="w-8 rounded-lg bg-white p-2 font-bold text-[#2a4768] sm:w-10"
+                className="w-8 rounded-lg bg-secondary/20 p-2 font-bold text-secondary sm:w-10 border border-secondary/30"
               >
                 X
               </button>
@@ -198,7 +198,7 @@ const Header = () => {
               <Link
                 onClick={closeMenu}
                 to={"/"}
-                className={`block border-b border-[#3a5a7d] px-3 py-4 text-white ${isActive("/") ? "font-bold" : ""
+                className={`block border-b border-primary-light px-3 py-4 text-white ${isActive("/") ? "font-bold" : ""
                   }`}
               >
                 Home
@@ -206,7 +206,7 @@ const Header = () => {
               <Link
                 onClick={closeMenu}
                 to={"/about"}
-                className={`block border-b border-[#3a5a7d] px-3 py-4 text-white ${isActive("/about") ? "font-bold" : ""
+                className={`block border-b border-primary-light px-3 py-4 text-white ${isActive("/about") ? "font-bold" : ""
                   }`}
               >
                 About Us
@@ -214,7 +214,7 @@ const Header = () => {
               <div>
                 <button
                   onClick={toggleServicesMenu}
-                  className={`flex w-full items-center justify-between border-b border-[#3a5a7d] px-3 py-4 text-white ${isActive("/services") ? "font-bold" : ""
+                  className={`flex w-full items-center justify-between border-b border-primary-light px-3 py-4 text-white ${isActive("/services") ? "font-bold" : ""
                     }`}
                 >
                   Services
@@ -235,7 +235,7 @@ const Header = () => {
                   </svg>
                 </button>
                 {isServicesOpen && (
-                  <div className="flex flex-col space-y-3 bg-[#375b82] px-6 py-2">
+                  <div className="flex flex-col space-y-3 bg-primary-light px-6 py-2">
                     <Link
                       onClick={closeMenu}
                       to={"/services/accounting"}
@@ -284,7 +284,7 @@ const Header = () => {
               <Link
                 onClick={closeMenu}
                 to={"/career"}
-                className={`block border-b border-[#3a5a7d] px-3 py-4 text-white ${isActive("/career") ? "font-bold" : ""
+                className={`block border-b border-primary-light px-3 py-4 text-white ${isActive("/career") ? "font-bold" : ""
                   }`}
               >
                 Career
@@ -292,7 +292,7 @@ const Header = () => {
               <Link
                 onClick={closeMenu}
                 to={"/contact"}
-                className={`block border-b border-[#3a5a7d] px-3 py-4 text-white ${isActive("/contact") ? "font-bold" : ""
+                className={`block border-b border-primary-light px-3 py-4 text-white ${isActive("/contact") ? "font-bold" : ""
                   }`}
               >
                 Contact Us

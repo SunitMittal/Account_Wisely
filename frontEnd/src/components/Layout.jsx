@@ -6,7 +6,7 @@ import ScrollToTop from "../ScrollToTop";
 
 const Layout = () => {
   return (
-    <div className="flex flex-col min-h-screen bg-gray-100">
+    <div className="flex flex-col min-h-screen" style={{ backgroundColor: '#1a0940', color: '#fa8e23' }}>
       <ScrollToTop />
       <Header />
       <main className="flex-grow">

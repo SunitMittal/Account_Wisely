@@ -31,25 +31,25 @@ const Home = () => {
         <section>
           <HomeVideo />
         </section>
-        <section className="bg-white">
+        <section style={{ backgroundColor: '#1a0940' }}>
           <HomeImageClg />
         </section>
         <section className="md:py-10">
           <ServicesSection />
         </section>
-        <section className="bg-white">
+        <section style={{ backgroundColor: '#1a0940' }}>
           <CompanyOverviewSection />
         </section>
         <section className="md:py-10">
           <OnboardingProcessSection />
         </section>
-        <section className="bg-white">
+        <section style={{ backgroundColor: '#1a0940' }}>
           <TestimonialsSection />
         </section>
-        <section className="bg-gray-50 py-8 md:py-10">
+        <section className="bg-primary py-8 md:py-10">
           <FAQSection />
         </section>
-        <section className="bg-white">
+        <section style={{ backgroundColor: '#1a0940' }}>
           <CtaSection />
         </section>
       </main>

@@ -31,9 +31,9 @@ const ServicesCard = ({ title, content, icon, path, color = "default" }) => {
             onClick={handleClick}
             className={`${
               color === "default"
-                ? "bg-navy-100 text-navy-600"
+                ? "bg-primary-light text-primary"
                 : "bg-white/20 text-white"
-            } hover:text-navy-600 rounded-full bg-[#2a4768] p-2 text-white transition-all duration-300 group-hover:-rotate-45 group-hover:bg-white group-hover:text-black hover:cursor-pointer sm:p-3`}
+            } hover:text-primary rounded-full bg-primary p-2 text-white transition-all duration-300 group-hover:-rotate-45 group-hover:bg-white group-hover:text-black hover:cursor-pointer sm:p-3`}
           >
             {color === "default" ? (
               <ArrowRight size={16} className="sm:h-5 sm:w-5" />

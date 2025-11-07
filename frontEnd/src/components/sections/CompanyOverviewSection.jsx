@@ -14,7 +14,7 @@ const CompanyOverviewSection = () => {
     <section id="about" aria-labelledby="about-heading" className="py-12 sm:py-16 md:py-20">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mb-4 text-center">
-          <span className="text-lg font-semibold tracking-wider text-teal-600 uppercase sm:text-lg">
+          <span className="text-xs font-medium tracking-wider text-secondary uppercase sm:text-sm">
             Company Overview
           </span>
         </div>
@@ -24,7 +24,7 @@ const CompanyOverviewSection = () => {
           className="mb-6 text-center text-2xl font-bold sm:text-3xl md:text-4xl"
         >
           Efficiency, Accuracy, and Trust Define
-          <span className="text-navy-800 block">AccountWisely</span>
+          <span className="text-primary block">AccountWisely</span>
         </h2>
 
         <div className="mx-auto mb-8 max-w-3xl text-center sm:mb-12">
