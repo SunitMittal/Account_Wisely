@@ -85,7 +85,7 @@ const OnboardingProcessSection = () => {
             className="water-fill-card relative overflow-hidden rounded-lg border bg-white transition-all duration-300"
           >
             {/* Water fill overlay */}
-            <div className="water-fill absolute right-0 bottom-0 left-0 z-0 h-0 bg-gradient-to-t from-[#7ab3bd] to-[#2a4768] transition-all duration-700 ease-out"></div>
+            <div className="water-fill absolute right-0 bottom-0 left-0 z-0 h-0 bg-gradient-to-t from-[#3d2a78] to-[#1a0940] transition-all duration-700 ease-out"></div>
 
             {/* Card content above the water */}
             <div className="relative z-10">

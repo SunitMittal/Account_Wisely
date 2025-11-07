@@ -36,9 +36,9 @@ const ServicesCard = ({ title, content, icon, path, color = "default" }) => {
             } hover:text-primary rounded-full bg-primary p-2 text-white transition-all duration-300 group-hover:-rotate-45 group-hover:bg-white group-hover:text-black hover:cursor-pointer sm:p-3`}
           >
             {color === "default" ? (
-              <ArrowRight size={16} className="sm:h-5 sm:w-5" />
+              <ArrowRight size={16} className="sm:h-5 sm:w-5 text-[#ffaf60]" />
             ) : (
-              <ArrowUpRight size={16} className="sm:h-5 sm:w-5" />
+              <ArrowUpRight size={16} className="sm:h-5 sm:w-5 text-[#ffaf60]" />
             )}
           </button>
         </div>
