@@ -87,7 +87,11 @@ const Header = () => {
                   className={`text-lg flex items-center font-bold transition-colors duration-300 xl:text-medium ${
                     isActive("/services")
                       ? "text-secondary underline underline-offset-8"
+<<<<<<< HEAD
                       : "text-[#fa8e23] hover:text-primary"
+=======
+                      : "text-neutral-600 hover:text-primary"
+>>>>>>> 6d4cc31f6b5bde867e3e040ad99e91171958049e
                   }`}
                 >
                   Services
