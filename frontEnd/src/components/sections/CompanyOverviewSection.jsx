@@ -14,7 +14,7 @@ const CompanyOverviewSection = () => {
     <section id="about" aria-labelledby="about-heading" className="py-12 sm:py-16 md:py-20">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mb-4 text-center">
-          <span className="text-lg font-semibold tracking-wider text-teal-600 uppercase sm:text-lg">
+          <span className="text-2xl font-bold tracking-wider text-teal-600 uppercase sm:text-2xl">
             Company Overview
           </span>
         </div>

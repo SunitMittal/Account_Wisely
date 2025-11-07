@@ -45,7 +45,7 @@ const HomeImageClg = () => {
 
         <div className="animate-slide-in space-y-6">
           <div className="mb-3">
-            <h2 className="mb-1 text-lg font-medium text-gray-700">About Us</h2>
+            <h2 className="mb-1 text-2xl font-bold text-gray-700">About Us</h2>
             <h1 className="text-3xl leading-tight font-bold text-gray-900 md:text-4xl lg:text-5xl">
               <span className="text-[#2a4768]">Financial Solutions </span>
               to Propel Your Firm's Success

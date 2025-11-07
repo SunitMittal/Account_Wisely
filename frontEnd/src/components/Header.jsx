@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import "../index.css";
 import { HiOutlineMailOpen } from "react-icons/hi";
 import { BiPhoneCall } from "react-icons/bi";
-import Logo from "../assets/Wyfs_Logo.svg";
+import Logo from "../assets/websiteLogo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -49,41 +49,53 @@ const Header = () => {
           {/* desktop view */}
           <div className="hidden items-center justify-between lg:flex">
             <div className="flex-shrink-0">
-              <Link to={"/"} className="text-2xl font-bold text-primary hover:text-secondary transition-colors duration-300 xl:text-4xl">
+              <Link
+                to={"/"}
+                className="flex items-center gap-3 text-2xl font-bold text-[#2a4768] hover:text-secondary transition-colors duration-300 xl:text-4xl"
+              >
+                <img
+                  src={Logo}
+                  alt="Account Wisely logo"
+                  className="h-15 w-15 object-contain sm:h-15 sm:w-15"
+                />
                 Account Wisely
               </Link>
             </div>
             <div className="flex items-center space-x-4 xl:space-x-8">
               <Link
                 to={"/"}
-                className={`text-lg font-bold transition-colors duration-300 xl:text-medium ${isActive("/")
-                  ? "text-secondary underline underline-offset-8"
-                  : "text-neutral-600 hover:text-primary"
-                  }`}
+                className={`text-lg font-bold transition-colors duration-300 xl:text-medium ${
+                  isActive("/")
+                    ? "text-secondary underline underline-offset-8"
+                    : "text-neutral-600 hover:text-primary"
+                }`}
               >
                 Home
               </Link>
               <Link
                 to={"/about"}
-                className={`text-lg font-bold transition-colors duration-300 xl:text-medium ${isActive("/about")
-                  ? "text-secondary underline underline-offset-8"
-                  : "text-neutral-600 hover:text-primary"
-                  }`}
+                className={`text-lg font-bold transition-colors duration-300 xl:text-medium ${
+                  isActive("/about")
+                    ? "text-secondary underline underline-offset-8"
+                    : "text-neutral-600 hover:text-primary"
+                }`}
               >
                 About Us
               </Link>
               <div className="group relative">
                 <button
-                  className={`text-lg flex items-center font-bold transition-colors duration-300 xl:text-medium ${isActive("/services")
-                    ? "text-secondary underline underline-offset-8"
-                    : "text-neutral-600 hover:text-primary"
-                    }`}
+                  className={`text-lg flex items-center font-bold transition-colors duration-300 xl:text-medium ${
+                    isActive("/services")
+                      ? "text-secondary underline underline-offset-8"
+                      : "text-neutral-600 hover:text-primary"
+                  }`}
                 >
                   Services
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className={`ml-1 h-3 w-3 xl:h-4 xl:w-4 underline-offset-8 transition-transform duration-300 hover:underline ${isServicesOpen ? "rotate-180" : ""
-                      }`}
+                    className={`ml-1 h-3 w-3 xl:h-4 xl:w-4 underline-offset-8 transition-transform duration-300 hover:underline ${
+                      isServicesOpen ? "rotate-180" : ""
+                    }`}
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -131,19 +143,21 @@ const Header = () => {
               </div>
               <Link
                 to={"/career"}
-                className={`text-lg font-bold transition-colors duration-300 xl:text-medium ${isActive("/career")
-                  ? "text-secondary underline underline-offset-8"
-                  : "text-neutral-600 hover:text-primary"
-                  }`}
+                className={`text-lg font-bold transition-colors duration-300 xl:text-medium ${
+                  isActive("/career")
+                    ? "text-secondary underline underline-offset-8"
+                    : "text-neutral-600 hover:text-primary"
+                }`}
               >
                 Career
               </Link>
               <Link
                 to={"/contact"}
-                className={`text-lg font-bold transition-colors duration-300 xl:text-medium ${isActive("/contact")
-                  ? "text-secondary underline underline-offset-8"
-                  : "text-neutral-600 hover:text-primary"
-                  }`}
+                className={`text-lg font-bold transition-colors duration-300 xl:text-medium ${
+                  isActive("/contact")
+                    ? "text-secondary underline underline-offset-8"
+                    : "text-neutral-600 hover:text-primary"
+                }`}
               >
                 Contact Us
               </Link>
@@ -152,8 +166,16 @@ const Header = () => {
 
           {/* mobile view */}
           <div className="flex items-center justify-between lg:hidden">
-            <Link to={"/"} className="text-2xl font-bold text-[#2a4768] sm:text-3xl md:text-4xl">
-              Account Wisely
+            <Link
+              to={"/"}
+              className="flex items-center gap-3 text-2xl font-bold text-[#2a4768] sm:text-3xl md:text-4xl"
+            >
+              <img
+                src={Logo}
+                alt="Account Wisely logo"
+                className="h-10 w-10 object-contain"
+              />
+              <span>Account Wisely</span>
             </Link>
             <div className="flex items-center">
               <button
@@ -180,8 +202,9 @@ const Header = () => {
 
           {/* mobile menu dropdown - slide in from right */}
           <div
-            className={`fixed top-0 right-0 z-50 h-full w-full transform bg-[#2a4768] transition-transform duration-300 ease-in-out ${isMenuOpen ? "translate-x-0" : "translate-x-full"
-              }`}
+            className={`fixed top-0 right-0 z-50 h-full w-full transform bg-[#2a4768] transition-transform duration-300 ease-in-out ${
+              isMenuOpen ? "translate-x-0" : "translate-x-full"
+            }`}
           >
             <div className="flex items-center justify-between p-4">
               <h1 className="text-2xl font-extrabold text-white sm:text-3xl">
@@ -198,24 +221,27 @@ const Header = () => {
               <Link
                 onClick={closeMenu}
                 to={"/"}
-                className={`block border-b border-[#3a5a7d] px-3 py-4 text-white ${isActive("/") ? "font-bold" : ""
-                  }`}
+                className={`block border-b border-[#3a5a7d] px-3 py-4 text-white ${
+                  isActive("/") ? "font-bold" : ""
+                }`}
               >
                 Home
               </Link>
               <Link
                 onClick={closeMenu}
                 to={"/about"}
-                className={`block border-b border-[#3a5a7d] px-3 py-4 text-white ${isActive("/about") ? "font-bold" : ""
-                  }`}
+                className={`block border-b border-[#3a5a7d] px-3 py-4 text-white ${
+                  isActive("/about") ? "font-bold" : ""
+                }`}
               >
                 About Us
               </Link>
               <div>
                 <button
                   onClick={toggleServicesMenu}
-                  className={`flex w-full items-center justify-between border-b border-[#3a5a7d] px-3 py-4 text-white ${isActive("/services") ? "font-bold" : ""
-                    }`}
+                  className={`flex w-full items-center justify-between border-b border-[#3a5a7d] px-3 py-4 text-white ${
+                    isActive("/services") ? "font-bold" : ""
+                  }`}
                 >
                   Services
                   <svg
@@ -223,8 +249,9 @@ const Header = () => {
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    className={`h-4 w-4 transition-transform duration-300 ${isServicesOpen ? "rotate-180" : ""
-                      }`}
+                    className={`h-4 w-4 transition-transform duration-300 ${
+                      isServicesOpen ? "rotate-180" : ""
+                    }`}
                   >
                     <path
                       strokeLinecap="round"
@@ -239,42 +266,47 @@ const Header = () => {
                     <Link
                       onClick={closeMenu}
                       to={"/services/accounting"}
-                      className={`py-1 text-white underline-offset-8 hover:underline ${isActive("/services/accounting") ? "font-bold" : ""
-                        }`}
+                      className={`py-1 text-white underline-offset-8 hover:underline ${
+                        isActive("/services/accounting") ? "font-bold" : ""
+                      }`}
                     >
                       Accounting Services
                     </Link>
                     <Link
                       onClick={closeMenu}
                       to={"/services/taxreturn"}
-                      className={`py-1 text-white underline-offset-8 hover:underline ${isActive("/services/taxreturn") ? "font-bold" : ""
-                        }`}
+                      className={`py-1 text-white underline-offset-8 hover:underline ${
+                        isActive("/services/taxreturn") ? "font-bold" : ""
+                      }`}
                     >
                       Tax Return Preparation
                     </Link>
                     <Link
                       onClick={closeMenu}
                       to={"/services/payroll"}
-                      className={`py-1 text-white underline-offset-8 hover:underline ${isActive("/services/payroll") ? "font-bold" : ""
-                        }`}
+                      className={`py-1 text-white underline-offset-8 hover:underline ${
+                        isActive("/services/payroll") ? "font-bold" : ""
+                      }`}
                     >
                       Payroll Services
                     </Link>
                     <Link
                       onClick={closeMenu}
                       to={"/services/gst"}
-                      className={`py-1 text-white underline-offset-8 hover:underline ${isActive("/services/gst") ? "font-bold" : ""
-                        }`}
+                      className={`py-1 text-white underline-offset-8 hover:underline ${
+                        isActive("/services/gst") ? "font-bold" : ""
+                      }`}
                     >
                       GST Return Filing Services
                     </Link>
                     <Link
                       onClick={closeMenu}
                       to={"/services/financialanalysis"}
-                      className={`py-1 text-white underline-offset-8 hover:underline ${isActive("/services/financialanalysis")
-                        ? "font-bold"
-                        : ""
-                        }`}
+                      className={`py-1 text-white underline-offset-8 hover:underline ${
+                        isActive("/services/financialanalysis")
+                          ? "font-bold"
+                          : ""
+                      }`}
                     >
                       Financial Analysis Services
                     </Link>
@@ -284,16 +316,18 @@ const Header = () => {
               <Link
                 onClick={closeMenu}
                 to={"/career"}
-                className={`block border-b border-[#3a5a7d] px-3 py-4 text-white ${isActive("/career") ? "font-bold" : ""
-                  }`}
+                className={`block border-b border-[#3a5a7d] px-3 py-4 text-white ${
+                  isActive("/career") ? "font-bold" : ""
+                }`}
               >
                 Career
               </Link>
               <Link
                 onClick={closeMenu}
                 to={"/contact"}
-                className={`block border-b border-[#3a5a7d] px-3 py-4 text-white ${isActive("/contact") ? "font-bold" : ""
-                  }`}
+                className={`block border-b border-[#3a5a7d] px-3 py-4 text-white ${
+                  isActive("/contact") ? "font-bold" : ""
+                }`}
               >
                 Contact Us
               </Link>
