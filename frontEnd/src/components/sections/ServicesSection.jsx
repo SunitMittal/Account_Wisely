@@ -60,8 +60,8 @@ const ServicesSection = () => {
     <Container2>
       <div>
         <div className="md:sticky md:top-8 text-sm font-semibold tracking-wider text-gray-600">
-          <p className="text-xs sm:text-sm">Services</p>
-          <h2 className="mt-2 text-2xl font-bold text-primary sm:text-3xl md:max-w-56 md:text-4xl lg:text-5xl">
+          <p className="text-2xl font-bold sm:text-2xl">Services</p>
+          <h2 className="mt-2 text-2xl font-bold text-[#2a4768] sm:text-3xl md:max-w-56 md:text-4xl lg:text-5xl">
             Outsourced Accounting
           </h2>
           <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl lg:text-5xl">

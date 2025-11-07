@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProcessCard = ({ number, title, content, icon, color = "default" }) => {
+const ProcessCard = ({ number, title, content, icon}) => {
   return (
     <div className="hover-lift group flex h-full flex-col overflow-hidden rounded-lg">
       <div className="flex-grow p-6 mb-10">

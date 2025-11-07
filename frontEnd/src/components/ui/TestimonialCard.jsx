@@ -3,7 +3,7 @@ import React from "react";
 const TestimonialCard = ({ quote, name, isActive = false }) => {
   return (
     <div className={`${isActive ? "block" : "hidden"}`}>
-      <blockquote className="mb-6 text-gray-600 md:text-xl">
+      <blockquote className="mb-6 text-[#ffaf60] md:text-xl">
         "{quote}"
       </blockquote>
 

@@ -33,7 +33,7 @@ const HeroSection = () => {
 
         <div className="animate-slide-in space-y-4 sm:space-y-6">
           <div className="mb-3 sm:mb-4">
-            <h2 className="mb-1 text-base font-medium text-gray-700 sm:text-lg">About Us</h2>
+            <h2 className="mb-1 text-base font-bold text-gray-700 sm:text-xl">About Us</h2>
             <h1 className="text-2xl leading-tight font-bold text-gray-900 sm:text-3xl md:text-4xl lg:text-5xl">
               Expert Outsourced{" "}
               <span className="text-blue-700">Accounting Services</span> for
