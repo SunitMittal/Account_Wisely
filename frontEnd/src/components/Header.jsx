@@ -56,7 +56,7 @@ const Header = () => {
             <div className="flex items-center space-x-4 xl:space-x-8">
               <Link
                 to={"/"}
-                className={`text-sm font-bold transition-colors duration-300 xl:text-medium ${isActive("/")
+                className={`text-lg font-bold transition-colors duration-300 xl:text-medium ${isActive("/")
                   ? "text-secondary underline underline-offset-8"
                   : "text-neutral-600 hover:text-primary"
                   }`}
@@ -65,7 +65,7 @@ const Header = () => {
               </Link>
               <Link
                 to={"/about"}
-                className={`text-sm font-bold transition-colors duration-300 xl:text-medium ${isActive("/about")
+                className={`text-lg font-bold transition-colors duration-300 xl:text-medium ${isActive("/about")
                   ? "text-secondary underline underline-offset-8"
                   : "text-neutral-600 hover:text-primary"
                   }`}
@@ -74,7 +74,7 @@ const Header = () => {
               </Link>
               <div className="group relative">
                 <button
-                  className={`text-sm flex items-center font-bold transition-colors duration-300 xl:text-medium ${isActive("/services")
+                  className={`text-lg flex items-center font-bold transition-colors duration-300 xl:text-medium ${isActive("/services")
                     ? "text-secondary underline underline-offset-8"
                     : "text-neutral-600 hover:text-primary"
                     }`}
@@ -131,7 +131,7 @@ const Header = () => {
               </div>
               <Link
                 to={"/career"}
-                className={`text-sm font-bold transition-colors duration-300 xl:text-medium ${isActive("/career")
+                className={`text-lg font-bold transition-colors duration-300 xl:text-medium ${isActive("/career")
                   ? "text-secondary underline underline-offset-8"
                   : "text-neutral-600 hover:text-primary"
                   }`}
@@ -140,7 +140,7 @@ const Header = () => {
               </Link>
               <Link
                 to={"/contact"}
-                className={`text-sm font-bold transition-colors duration-300 xl:text-medium ${isActive("/contact")
+                className={`text-lg font-bold transition-colors duration-300 xl:text-medium ${isActive("/contact")
                   ? "text-secondary underline underline-offset-8"
                   : "text-neutral-600 hover:text-primary"
                   }`}

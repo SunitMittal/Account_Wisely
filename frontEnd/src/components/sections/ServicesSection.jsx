@@ -60,7 +60,7 @@ const ServicesSection = () => {
     <Container2>
       <div>
         <div className="md:sticky md:top-8 text-sm font-semibold tracking-wider text-gray-600">
-          <p className="text-xs sm:text-sm">Services</p>
+          <p className="text-lg font-semibold sm:text-lg">Services</p>
           <h2 className="mt-2 text-2xl font-bold text-[#2a4768] sm:text-3xl md:max-w-56 md:text-4xl lg:text-5xl">
             Outsourced Accounting
           </h2>

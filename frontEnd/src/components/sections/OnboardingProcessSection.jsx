@@ -64,7 +64,7 @@ const OnboardingProcessSection = () => {
   return (
     <Container>
       <div className="mb-5 text-center">
-        <p className="text-sm font-bold tracking-wider text-[#2a4768]">
+        <p className="text-lg font-bold tracking-wider text-[#2a4768]">
           Client Onboarding Process
         </p>
         <h2 className="mt-2 text-2xl font-bold md:text-4xl">
