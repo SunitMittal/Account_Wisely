@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "../index.css";
 import { HiOutlineMailOpen } from "react-icons/hi";
-import { BiPhoneCall } from "react-icons/bi";
 import Logo from "../assets/websiteLogo.png";
 
 const Header = () => {
@@ -33,7 +32,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="flex gap-2 bg-gradient-primary px-4 py-2 text-xs text-white sm:justify-center sm:gap-5 sm:px-5 sm:text-sm md:justify-normal md:gap-10 md:px-28 md:text-lg shadow-modern">
+      <div className="flex gap-2 bg-[#2a4768] px-4 py-2 text-xs text-white sm:justify-center sm:gap-5 sm:px-5 sm:text-sm md:justify-normal md:gap-10 md:px-28 md:text-lg">
         <a
           href="mailto:partners@accountwisely.com"
           className="underline-offset-8.5 flex items-center gap-1 hover:underline"
@@ -44,14 +43,14 @@ const Header = () => {
         </a>
       </div>
 
-      <nav className="bg-primary shadow-modern border-b border-secondary/30" style={{ backgroundColor: '#1a0940' }}>
-        <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6 sm:py-5 md:px-28">
+      <nav className="bg-white shadow-sm">
+        <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6 sm:py-5 md:px-10">
           {/* desktop view */}
           <div className="hidden items-center justify-between lg:flex">
             <div className="flex-shrink-0">
               <Link
                 to={"/"}
-                className="flex items-center gap-3 text-2xl font-bold text-[#2a4768] hover:text-secondary transition-colors duration-300 xl:text-4xl"
+                className="flex items-center gap-3 text-3xl font-bold text-[#2a4768] xl:text-5xl"
               >
                 <img
                   src={Logo}
@@ -61,39 +60,39 @@ const Header = () => {
                 Account Wisely
               </Link>
             </div>
-            <div className="flex items-center space-x-4 xl:space-x-8">
+            <div className="flex items-center space-x-4 xl:space-x-6">
               <Link
                 to={"/"}
-                className={`text-lg font-bold transition-colors duration-300 xl:text-medium ${
+                className={`text-lg font-bold xl:text-medium ${
                   isActive("/")
-                    ? "text-secondary underline underline-offset-8"
-                    : "text-neutral-600 hover:text-primary"
+                    ? "text-[#2a4768] underline underline-offset-8"
+                    : ""
                 }`}
               >
                 Home
               </Link>
               <Link
                 to={"/about"}
-                className={`text-lg font-bold transition-colors duration-300 xl:text-medium ${
+                className={`text-lg font-bold xl:text-medium ${
                   isActive("/about")
-                    ? "text-secondary underline underline-offset-8"
-                    : "text-neutral-600 hover:text-primary"
+                    ? "text-[#2a4768] underline underline-offset-8"
+                    : ""
                 }`}
               >
                 About Us
               </Link>
               <div className="group relative">
                 <button
-                  className={`text-lg flex items-center font-bold transition-colors duration-300 xl:text-medium ${
+                  className={`flex items-center text-lg font-bold xl:text-medium ${
                     isActive("/services")
-                      ? "text-secondary underline underline-offset-8"
-                      : "text-[#fa8e23] hover:text-primary hover:text-primary"
+                      ? "text-[#2a4768] underline underline-offset-8"
+                      : ""
                   }`}
                 >
                   Services
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className={`ml-1 h-3 w-3 xl:h-4 xl:w-4 underline-offset-8 transition-transform duration-300 hover:underline ${
+                    className={`ml-1 h-3 w-3 xl:h-4 xl:w-5 underline-offset-8 transition-transform duration-300 hover:underline ${
                       isServicesOpen ? "rotate-180" : ""
                     }`}
                     fill="none"
@@ -108,7 +107,7 @@ const Header = () => {
                     />
                   </svg>
                 </button>
-                <div className="absolute left-0 z-50 hidden min-w-[230px] space-y-2 rounded-lg bg-gradient-secondary p-4  group-hover:block shadow-modern-lg">
+                <div className="absolute left-0 z-50 hidden min-w-[230px] space-y-2 rounded-lg bg-gradient-to-b from-[#2c4a6a] via-[#578397] to-[#7ab4bd] p-4  group-hover:block text-white">
                   <Link
                     to={"/services/accounting"}
                     className="block py-1 underline-offset-8 hover:underline"
@@ -143,20 +142,20 @@ const Header = () => {
               </div>
               <Link
                 to={"/career"}
-                className={`text-lg font-bold transition-colors duration-300 xl:text-medium ${
+                className={`text-lg font-bold xl:text-medium ${
                   isActive("/career")
-                    ? "text-secondary underline underline-offset-8"
-                    : "text-neutral-600 hover:text-primary"
+                    ? "text-[#2a4768] underline underline-offset-8"
+                    : ""
                 }`}
               >
                 Career
               </Link>
               <Link
                 to={"/contact"}
-                className={`text-lg font-bold transition-colors duration-300 xl:text-medium ${
+                className={`text-lg font-bold xl:text-medium ${
                   isActive("/contact")
-                    ? "text-secondary underline underline-offset-8"
-                    : "text-neutral-600 hover:text-primary"
+                    ? "text-[#2a4768] underline underline-offset-8"
+                    : ""
                 }`}
               >
                 Contact Us
@@ -180,7 +179,7 @@ const Header = () => {
             <div className="flex items-center">
               <button
                 onClick={toggleMenu}
-                className="rounded-md bg-secondary/20 p-2 text-secondary hover:bg-secondary/30 focus:outline-none border border-secondary/30"
+                className="rounded-md bg-white p-2 text-[#2a4768] hover:bg-gray-200 focus:outline-none border"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -212,7 +211,7 @@ const Header = () => {
               </h1>
               <button
                 onClick={closeMenu}
-                className="w-8 rounded-lg bg-secondary/20 p-2 font-bold text-secondary sm:w-10 border border-secondary/30"
+                className="w-8 rounded-lg bg-white p-2 font-bold text-[#2a4768] sm:w-10 border"
               >
                 X
               </button>

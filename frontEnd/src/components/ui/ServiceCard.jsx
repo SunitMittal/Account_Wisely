@@ -5,19 +5,19 @@ const ServiceCard = ({
   icon,
   title,
   description,
-  color = "default",
+  color = "blue" | "teal" | "default",
   className,
 }) => {
   const bgColors = {
-    blue: "bg-gradient-to-br from-primary to-primary-dark",
-    teal: "bg-gradient-to-br from-secondary to-secondary-dark",
+    blue: "bg-gradient-to-br from-navy-800 to-navy-600",
+    teal: "bg-gradient-to-br from-teal-700 to-teal-500",
     default: "bg-white border border-gray-200",
   };
 
   const textColors = {
     blue: "text-white",
     teal: "text-white",
-    default: "text-primary",
+    default: "text-navy-800",
   };
 
   const descriptionColors = {
@@ -29,7 +29,7 @@ const ServiceCard = ({
   const iconColors = {
     blue: "text-secondary-light",
     teal: "text-white/90",
-    default: "text-secondary",
+    default: "text-teal-600",
   };
 
   return (
@@ -49,9 +49,9 @@ const ServiceCard = ({
         <button
           className={`${
             color === "default"
-              ? "bg-primary-light text-primary"
+              ? "bg-navy-100 text-navy-600"
               : "bg-white/20 text-white"
-          } hover:text-primary rounded-full p-3 transition-all duration-300 group-hover:rotate-45 hover:bg-white`}
+          } hover:text-navy-600 rounded-full p-3 transition-all duration-300 group-hover:rotate-45 hover:bg-white`}
         >
           {color === "default" ? (
             <ArrowRight size={20} />
