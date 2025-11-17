@@ -6,7 +6,7 @@ import { RiMapPin2Fill } from "react-icons/ri";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-primary px-4 py-8 text-white sm:px-6 sm:py-10 md:px-10">
+    <footer className="bg-[#294466] px-4 py-8 text-white sm:px-6 sm:py-10 md:px-10">
       {/* Main Footer Content */}
       <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-1 gap-5 sm:gap-7 md:grid-cols-4">
@@ -31,7 +31,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/about"
-                  className="text-sm hover:text-accent transition-colors duration-300 sm:text-base"
+                  className="text-sm hover:text-gray-300 duration-300 sm:text-base"
                 >
                   About Us
                 </Link>
@@ -39,7 +39,7 @@ const Footer = () => {
               <li>
                 <Link
                   to={"contact"}
-                  className="text-sm hover:text-accent transition-colors duration-300 sm:text-base"
+                  className="text-sm hover:text-gray-300 duration-300 sm:text-base"
                 >
                   Contact Us
                 </Link>
@@ -56,7 +56,7 @@ const Footer = () => {
               <li>
                 <Link
                   to={"/services/accounting"}
-                  className="text-sm hover:text-accent transition-colors duration-300 sm:text-base"
+                  className="text-sm hover:text-gray-300 duration-300 sm:text-base"
                 >
                   Accounting Services
                 </Link>
@@ -64,7 +64,7 @@ const Footer = () => {
               <li>
                 <Link
                   to={"/services/taxreturn"}
-                  className="text-sm hover:text-accent transition-colors duration-300 sm:text-base"
+                  className="text-sm hover:text-gray-300 duration-300 sm:text-base"
                 >
                   Tax Return Preparation
                 </Link>
@@ -80,7 +80,7 @@ const Footer = () => {
               <li>
                 <Link
                   to={"/services/financialanalysis"}
-                  className="text-sm hover:text-accent transition-colors duration-300 sm:text-base"
+                  className="text-sm hover:text-gray-300 duration-300 sm:text-base"
                 >
                   Financial Analysis Services
                 </Link>
@@ -88,7 +88,7 @@ const Footer = () => {
               <li>
                 <Link
                   to={"/services/gst"}
-                  className="text-sm hover:text-accent transition-colors duration-300 sm:text-base"
+                  className="text-sm hover:text-gray-300 duration-300 sm:text-base"
                 >
                   GST Return Filing Services
                 </Link>
