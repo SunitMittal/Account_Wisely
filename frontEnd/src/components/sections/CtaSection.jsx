@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../ui/Button";
+import Button from "../Button";
 import { useNavigate } from "react-router-dom";
 
 const CtaSection = () => {
@@ -14,7 +14,7 @@ const CtaSection = () => {
   };
 
   return (
-    <section className="from-navy-800 to-navy-900 bg-gradient-to-r py-20">
+    <section className="py-20">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mx-auto max-w-3xl text-center">
           <h2
@@ -25,7 +25,7 @@ const CtaSection = () => {
           </h2>
 
           <p
-            className="mb-8 text-lg text-gray-600"
+            className="mb-8 text-lg text-gray-700"
             data-aos="fade-up"
             data-aos-delay="100"
           >
@@ -38,13 +38,9 @@ const CtaSection = () => {
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <Button variant="primary" size="lg" onClick={handleConsultation}>
-              Schedule a Consultation
-            </Button>
+            <Button text="Schedule a Consultation" onClick={handleConsultation} />
+            <Button text="Learn More" onClick={handleLearnMore} />
 
-            <Button variant="primary" size="lg" onClick={handleLearnMore}>
-              Learn More
-            </Button>
           </div>
         </div>
       </div>

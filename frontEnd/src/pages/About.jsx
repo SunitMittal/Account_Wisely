@@ -10,23 +10,23 @@ const About = () => {
   return (
     <div className="flex w-full flex-col">
       <LandingImage title="About Us" link="About" />
-      <div className="py-8 md:py-16">
+      <div className="py-8 md:py-16 bg-white">
         <HeroSection />
       </div>
 
-      <div className="bg-white py-8 md:py-16">
+      <div className="py-8 md:py-16 bg-[#fff2dd]">
         <WhyChooseSection />
       </div>
 
-      <div className="bg-gray-50 py-8 md:py-16">
+      <div className="py-8 md:py-16 bg-white">
         <WorkingProcess />
       </div>
 
-      <div className="bg-white py-8 md:py-16">
+      <div className="py-8 md:py-16 bg-[#fff2dd]">
         <MissionValues />
       </div>
 
-      <div className="bg-gray-50 py-8 md:py-16">
+      <div className="py-8 md:py-16 bg-white">
         <FAQSection />
       </div>
     </div>

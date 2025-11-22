@@ -51,7 +51,7 @@ const Contact = () => {
         title="Get in Touch with Account Wisely - Let's Talk Business!"
         link="Contact Us"
       />
-      <div className="flex flex-col gap-4 bg-[#eceef6] pt-8 sm:gap-6 sm:pt-16">
+      <div className="flex flex-col gap-4 bg-white pt-8 sm:gap-6 sm:pt-16">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-evenly">
           {/* section 1 */}
           <div className="flex flex-col gap-5 px-4 sm:gap-7 sm:px-6">
@@ -93,7 +93,7 @@ const Contact = () => {
               Ready to get Started?{" "}
               <span className="text-[#2a4768]">let's chat.</span>
             </p>
-            <div className="flex flex-col gap-4 rounded-xl border bg-white p-4 sm:gap-6 sm:p-6">
+            <div className="flex flex-col gap-4 rounded-xl border p-4 sm:gap-6 sm:p-6">
               <form onSubmit={handleSubmit} className="mx-auto flex max-w-4xl flex-col gap-3 sm:gap-4">
                 <p className="mb-3 text-sm text-gray-400 sm:mb-4 sm:text-base">
                   Please fill out the form below, and a member of our team will
@@ -159,7 +159,7 @@ const Contact = () => {
           </div>
         </div>
         {/* section 3 */}
-        <div className="mt-12 flex flex-col place-items-center gap-4 bg-white px-4 py-4 sm:mt-16 sm:gap-6 sm:px-6">
+        <div className="mt-12 flex flex-col place-items-center gap-4 bg-[#fff2dd] px-4 py-4 sm:mt-16 sm:gap-6 sm:px-6">
           <div className="w-full max-w-4xl">
             <div className="flex flex-col">
               <p className="rounded-md bg-[#f5f5f5] px-3 py-3 text-sm font-bold sm:px-5 sm:py-4 sm:text-base">

@@ -80,7 +80,7 @@ const Career = () => {
     <>
       <LandingImage title="Career" link="Career" />
 
-      <div className="mt-24 text-center">
+      <div className="mt-24 text-center bg-white">
         <p className="font-semibold text-[#2a4768]">Career</p>
         <h2 className="mt-4 text-3xl font-bold">
           Redefining Finance, One{" "}
@@ -88,7 +88,7 @@ const Career = () => {
         </h2>
       </div>
 
-      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-evenly">
+      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-evenly bg-white">
         <img src={Career1} alt="" width={500} className="my-11" />
         <div className="m-3 rounded-xl border bg-white p-5">
           <form
@@ -152,7 +152,7 @@ const Career = () => {
         </div>
       </div>
 
-      <div className="bg-white p-6 md:px-44 md:py-16">
+      <div className="bg-[#fff2dd] p-6 md:px-44 md:py-16">
         <h2 className="mb-6 text-4xl font-bold text-[#2a4768]">
           Join the Account Wisely Team - Where Talent Meet Opportunities
         </h2>
@@ -218,7 +218,7 @@ const Career = () => {
       </div>
 
       {/* Current Openings */}
-      <div className="px-4.5 py-16" id="current-openings">
+      <div className="px-4.5 py-16 bg-white" id="current-openings">
         <p className="my-5 text-center font-semibold text-[#2a4768]">Career</p>
         <div className="mx-auto max-w-6xl">
           <h2 className="mb-12 text-center text-4xl font-bold">
@@ -352,7 +352,7 @@ const Career = () => {
       </div>
 
       {/* Testimonials */}
-      <div className="px-4.5 py-16">
+      <div className="px-4.5 py-16 bg-[#fff2dd]">
         <div className="mx-auto max-w-4xl">
           <h2 className="mb-12 text-center text-4xl font-bold">
             Team <span className="text-[#2a4768]">Testimonials</span>
@@ -388,7 +388,7 @@ const Career = () => {
       </div>
 
       {/* Application Process */}
-      <div className="bg-gray-50 px-4.5 py-16">
+      <div className="bg-white px-4.5 py-16">
         <div className="mx-auto max-w-4xl">
           <h2 className="mb-6 text-center text-4xl font-bold">
             Our Application <span className="text-[#2a4768]">Process</span>
@@ -474,7 +474,7 @@ const Career = () => {
       </div>
 
       {/* Call to Action */}
-      <div className="px-4.5 py-16 text-center">
+      <div className="px-4.5 py-16 text-center bg-[#fff2dd]">
         <h2 className="mb-6 text-4xl font-bold">
           Ready to <span className="text-[#2a4768]">Join</span> Our Team?
         </h2>

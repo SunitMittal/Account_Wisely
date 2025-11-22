@@ -6,7 +6,7 @@ import { RiMapPin2Fill } from "react-icons/ri";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#294466] px-4 py-8 text-white sm:px-6 sm:py-10 md:px-10">
+    <footer className="bg-[#1a0940] px-4 py-8 text-white sm:px-6 sm:py-10 md:px-10">
       {/* Main Footer Content */}
       <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-1 gap-5 sm:gap-7 md:grid-cols-4">

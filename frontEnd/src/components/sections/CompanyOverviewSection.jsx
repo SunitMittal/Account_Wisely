@@ -1,7 +1,8 @@
 import React from "react";
 import StatCard from "../ui/StatCard";
-import Button from "../ui/Button";
 import { useNavigate } from "react-router-dom";
+import Button from "../Button";
+
 
 const CompanyOverviewSection = () => {
   const navigate = useNavigate();
@@ -13,22 +14,21 @@ const CompanyOverviewSection = () => {
   return (
     <section id="about" aria-labelledby="about-heading" className="py-12 sm:py-16 md:py-20">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="mb-4 text-center">
-          <span className="text-2xl font-bold tracking-wider text-teal-600 uppercase sm:text-2xl">
+        <div className="mb-2 text-center">
+          <span className="lg:text-2xl font-bold tracking-wider text-[#1a0940] uppercase sm:text-2xl">
             Company Overview
           </span>
         </div>
-
         <h2
           id="about-heading"
-          className="mb-6 text-center text-2xl font-bold sm:text-3xl md:text-4xl"
+          className="mb-6 text-center font-bold text-black sm:text-3xl md:text-4xl"
         >
           Efficiency, Accuracy, and Trust Define
-          <span className="text-navy-800 block">AccountWisely</span>
+          <span className="text-navy-800 block text-black">AccountWisely</span>
         </h2>
 
         <div className="mx-auto mb-8 max-w-3xl text-center sm:mb-12">
-          <p className="text-sm text-gray-600 sm:text-base">
+          <p className="text-gray-700 sm:text-base">
             We understand the pressures accounting and CA firms face—tight
             deadlines, growing client demands, and the constant chase to stay
             ahead. That's where we step in as your trusted outsourcing partner.
@@ -47,16 +47,14 @@ const CompanyOverviewSection = () => {
 
         <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-10">
           <div>
-            <p className="mb-4 text-sm text-gray-600 sm:mb-6 sm:text-base">
+            <p className="mb-4 text-gray-700 sm:mb-6 sm:text-base">
               As your dedicated outsourcing partner, we specialize in seamless,
               accurate tax preparation and payroll management. Our expertise
               allows you to deliver exceptional results to your clients while
               freeing up your time.
             </p>
 
-            <Button variant="primary" onClick={handleContactNow}>
-              Contact Now
-            </Button>
+            <Button text="Contact Now" onClick={handleContactNow} />
           </div>
 
           <div className="overflow-hidden rounded-xl">

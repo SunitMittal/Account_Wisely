@@ -3,34 +3,6 @@ import { HelpCircle, ChevronDown, ChevronUp, Plus, Minus } from "lucide-react";
 import Container from "../Layout/Container";
 import { Link } from "react-router-dom";
 
-const FAQItem = ({ question, answer, isOpen, onClick }) => {
-  return (
-    <div className="hover-lift mb-4 overflow-hidden rounded-lg border">
-      <button
-        className={`flex w-full items-center justify-between p-4 text-left transition-all duration-300 ${isOpen
-            ? "bg-[#2a4768] text-white"
-            : "bg-white text-gray-900 hover:bg-blue-50"
-          }`}
-        onClick={onClick}
-      >
-        <span className="font-medium">{question}</span>
-        <div className="transform transition-transform duration-300">
-          {isOpen ? <Minus size={20} /> : <Plus size={20} />}
-        </div>
-      </button>
-
-      <div
-        className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-          }`}
-      >
-        <div className="transform bg-[#2a4768] p-4 text-white transition-transform duration-300">
-          {answer}
-        </div>
-      </div>
-    </div>
-  );
-};
-
 const FAQSection = ({ question, answer, isOpen, onClick }) => {
   const [openFaqId, setOpenFaqId] = useState("faq1");
   const toggleFaq = (id) => {
@@ -108,6 +80,34 @@ const FAQSection = ({ question, answer, isOpen, onClick }) => {
         </div>
       </div>
     </Container>
+  );
+};
+
+const FAQItem = ({ question, answer, isOpen, onClick }) => {
+  return (
+    <div className="hover-lift mb-4 overflow-hidden rounded-lg border">
+      <button
+        className={`flex w-full items-center justify-between p-4 text-left transition-all duration-400 ${isOpen
+            ? "bg-[#2c0f69] text-white"
+            : "bg-white text-black hover:bg-blue-50"
+          }`}
+        onClick={onClick}
+      >
+        <span className="font-medium">{question}</span>
+        <div className="transform transition-transform duration-300">
+          {isOpen ? <Minus size={20} /> : <Plus size={20} />}
+        </div>
+      </button>
+
+      <div
+        className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          }`}
+      >
+        <div className="transform bg-[#8954fc] p-4 text-white transition-transform duration-300">
+          {answer}
+        </div>
+      </div>
+    </div>
   );
 };
 
