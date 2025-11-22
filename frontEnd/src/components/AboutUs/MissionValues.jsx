@@ -71,17 +71,17 @@ const MissionValues = () => {
           }`}
         >
           <div className="mb-4">
-            <p className="mb-1 text-sm font-medium text-blue-700">
+            <p className="mb-1 text-sm font-bold text-[#2e1566]">
               — Our Mission & Core Values
             </p>
-            <h2 className="text-3xl font-bold text-gray-900 md:text-4xl">
+            <h2 className="font-bold text-black lg:text-4xl md:text-3xl">
               Partnering for Growth Through{" "}
-              <span className="text-blue-700">Financial Clarity</span>
+              <span className="text-[#2e1566]">Financial Clarity</span>
             </h2>
           </div>
 
           <div className="relative mt-8">
-            <div className="absolute top-0 right-0 -mt-16 -mr-16 h-32 w-32 text-pink-100 opacity-50">
+            <div className="absolute top-0 right-0 -mt-19 -mr-12 h-30 w-30 text-purple-200 opacity-50">
               <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                 <path
                   fill="currentColor"
@@ -129,6 +129,17 @@ const MissionValues = () => {
             icon={value.icon}
           />
         ))}
+      </div>
+      <div className="relative mt-8">
+        <div className="absolute top-0 right-0 -mt-19 -mr-25 h-30 w-30 text-purple-200 opacity-50">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill="currentColor"
+              d="M45.7,-76.8C58.9,-69.3,69.3,-55.9,76.2,-41.3C83.1,-26.7,86.5,-10.8,84.1,3.9C81.8,18.5,73.6,32,64.5,44.5C55.3,57,45.1,68.5,32.4,73.4C19.6,78.2,4.2,76.4,-11.4,74.2C-27,72,-42.8,69.3,-56.2,61.1C-69.5,52.9,-80.3,39.1,-85.8,23.1C-91.2,7.1,-91.3,-11.2,-86.1,-27.2C-80.9,-43.2,-70.5,-56.9,-57,-65.5C-43.5,-74.1,-27.1,-77.5,-10.9,-77.2C5.2,-76.9,32.5,-84.3,45.7,-76.8Z"
+              transform="translate(100 100)"
+            />
+          </svg>
+        </div>
       </div>
     </Container>
   );

@@ -10,7 +10,7 @@ const About = () => {
   return (
     <div className="flex w-full flex-col">
       <LandingImage title="About Us" link="About" />
-      <div className="py-8 md:py-16 bg-white">
+      <div className="py-8 md:py-16">
         <HeroSection />
       </div>
 
@@ -18,7 +18,7 @@ const About = () => {
         <WhyChooseSection />
       </div>
 
-      <div className="py-8 md:py-16 bg-white">
+      <div className="py-8 md:py-16">
         <WorkingProcess />
       </div>
 
@@ -26,7 +26,7 @@ const About = () => {
         <MissionValues />
       </div>
 
-      <div className="py-8 md:py-16 bg-white">
+      <div className="py-8 md:py-16">
         <FAQSection />
       </div>
     </div>

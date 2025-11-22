@@ -37,7 +37,7 @@ const HomeImageClg = () => {
               <Award className="text-[#492a8a]" />
             </div>
             <div>
-              <p className="text-xl font-bold text-gray-900">97%</p>
+              <p className="text-xl font-bold text-gray-900">97`%</p>
               <p className="text-sm text-gray-600">Customer Satisfaction</p>
             </div>
           </div>

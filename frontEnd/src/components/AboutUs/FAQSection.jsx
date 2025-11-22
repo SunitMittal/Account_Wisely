@@ -3,7 +3,7 @@ import { HelpCircle, ChevronDown, ChevronUp, Plus, Minus } from "lucide-react";
 import Container from "../Layout/Container";
 import { Link } from "react-router-dom";
 
-const FAQSection = ({ question, answer, isOpen, onClick }) => {
+const FAQSection = () => {
   const [openFaqId, setOpenFaqId] = useState("faq1");
   const toggleFaq = (id) => {
     setOpenFaqId(openFaqId === id ? null : id);
@@ -34,11 +34,11 @@ const FAQSection = ({ question, answer, isOpen, onClick }) => {
     <Container>
       <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
         <div className="animate-fade-in">
-          <h2 className="mb-6 text-3xl font-bold text-gray-900 md:text-4xl">
+          <h2 className="mb-6 text-3xl font-bold text-black md:text-4xl">
             Find answers to your most common questions
           </h2>
 
-          <p className="mb-8 text-gray-600">
+          <p className="mb-8 text-gray-700">
             We know you may have questions about our services, processes, and
             how we can support your firm. Here are some frequently asked
             questions:
@@ -46,22 +46,21 @@ const FAQSection = ({ question, answer, isOpen, onClick }) => {
 
           <div className="hover-lift rounded-lg border border-gray-200 bg-white p-6">
             <div className="mb-4 flex items-start">
-              <div className="mr-4 transform rounded-full bg-[#2a4768] p-3 transition-transform duration-300 hover:scale-110 hover:rotate-12">
+              <div className="mr-4 transform rounded-full bg-[#2c0f69] p-3 transition-transform duration-300 hover:scale-110 hover:rotate-12">
                 <HelpCircle className="h-6 w-6 text-white" />
               </div>
               <div>
                 <h3 className="mb-2 text-xl font-semibold text-gray-900">
                   Want to Know More?
                 </h3>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-gray-700">
                   Need additional information? Have questions? We're here to
                   help you take your firm to the next level. Let us show you how
                   AccountWisely can transform your accounting processes.
                 </p>
               </div>
             </div>
-
-            <button className="w-full transform rounded-lg bg-[#2a4768] px-6 py-3 font-medium text-white transition-all duration-300 hover:scale-[1.02] hover:bg-black hover:shadow-lg">
+            <button className="w-full transform rounded-lg bg-gradient-to-r from-[#f58210] via-[#fc9f41] to-[#ffc388] px-6 py-3 font-medium text-white shadow-lg transition-all duration-600 hover:cursor-pointer hover:from-[#ffc388] hover:to-[#f58210] hover:scale-[1.02]">
               <Link to={"/contact"}>We're Here To Help!</Link>
             </button>
           </div>
@@ -87,10 +86,11 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => {
   return (
     <div className="hover-lift mb-4 overflow-hidden rounded-lg border">
       <button
-        className={`flex w-full items-center justify-between p-4 text-left transition-all duration-400 ${isOpen
+        className={`flex w-full items-center justify-between p-4 text-left transition-all duration-400 ${
+          isOpen
             ? "bg-[#2c0f69] text-white"
             : "bg-white text-black hover:bg-blue-50"
-          }`}
+        }`}
         onClick={onClick}
       >
         <span className="font-medium">{question}</span>
@@ -100,8 +100,9 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => {
       </button>
 
       <div
-        className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-          }`}
+        className={`overflow-hidden transition-all duration-500 ease-in-out ${
+          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        }`}
       >
         <div className="transform bg-[#8954fc] p-4 text-white transition-transform duration-300">
           {answer}

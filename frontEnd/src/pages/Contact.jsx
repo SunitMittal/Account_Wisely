@@ -9,6 +9,29 @@ const Contact = () => {
   const [succeeded, setSucceeded] = useState(false);
   const [errors, setErrors] = useState({});
 
+  const FAQS = [
+    {
+      Q: "How can I get in touch with Account Wisely?",
+      A: "You can contact us via our website's contact form, email us at partners@accountwisely.com.",
+    },
+    {
+      Q: "Where is Account Wisely India located?",
+      A: "We provide outsourced accounting services across India, with our operations center based in Mumbai.",
+    },
+    {
+      Q: "How long does it take to receive a response?",
+      A: "We typically respond within 24 business hours. For urgent inquiries, please contact us by phone or live chat.",
+    },
+    {
+      Q: "Who can I contact for sales inquiries?",
+      A: "You can email our sales team at sales@accountwisely.india or fill out the contact form.",
+    },
+    {
+      Q: "Can I book a consultation before partnering with Account Wisely?",
+      A: "Yes! We offer a free trial. Visit our Book a Free Trial page.",
+    },
+  ];
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (submitting) return;
@@ -17,19 +40,28 @@ const Contact = () => {
 
     const formData = new FormData(e.currentTarget);
     const senderEmail = formData.get("email");
-    const subject = `Contact form from ${formData.get("firstname") || "User"} ${formData.get("lastname") || ""}`.trim();
-    const msg = `Name: ${formData.get("firstname")} ${formData.get("lastname")}\nPhone: ${formData.get("phone")}\nMessage: ${formData.get("message")}`;
+    const subject = `Contact form from ${formData.get("firstname") || "User"} ${
+      formData.get("lastname") || ""
+    }`.trim();
+    const msg = `Name: ${formData.get("firstname")} ${formData.get(
+      "lastname"
+    )}\nPhone: ${formData.get("phone")}\nMessage: ${formData.get("message")}`;
 
     try {
-      const res = await fetch(import.meta.env.VITE_API_URL || "http://localhost:4000/send-email", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ senderEmail, subject, msg }),
-      });
+      const res = await fetch(
+        import.meta.env.VITE_API_URL || "http://localhost:4000/send-email",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ senderEmail, subject, msg }),
+        }
+      );
 
       if (!res.ok) {
         const data = await res.json().catch(() => ({}));
-        setErrors({ form: data.msg || "Failed to send message. Please try again." });
+        setErrors({
+          form: data.msg || "Failed to send message. Please try again.",
+        });
       } else {
         setSucceeded(true);
         e.currentTarget.reset();
@@ -42,7 +74,9 @@ const Contact = () => {
   };
 
   if (succeeded) {
-    return <p>Thanks for contacting! We will get back to you as soon as possible.</p>;
+    return (
+      <p>Thanks for contacting! We will get back to you as soon as possible.</p>
+    );
   }
   return (
     <>
@@ -51,20 +85,20 @@ const Contact = () => {
         title="Get in Touch with Account Wisely - Let's Talk Business!"
         link="Contact Us"
       />
-      <div className="flex flex-col gap-4 bg-white pt-8 sm:gap-6 sm:pt-16">
+      <div className="flex flex-col gap-4 pt-8 sm:gap-6 sm:pt-16">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-evenly">
           {/* section 1 */}
           <div className="flex flex-col gap-5 px-4 sm:gap-7 sm:px-6">
             {/* chat */}
             <div>
-              <p className="text-base font-semibold sm:text-lg">Chat with Us</p>
-              <p className="text-sm text-gray-400 sm:text-base">
+              <p className="font-bold lg:text-xl sm:text-lg">Chat with Us</p>
+              <p className="text-gray-500 lg:text-lg sm:text-base">
                 Speak to our friendly team via live chat
               </p>
-              <div className="mt-3 flex items-center gap-2 sm:mt-4">
-                <RiMailSendLine className="h-4 w-4 sm:h-5 sm:w-5" />
+              <div className="flex items-center gap-2 sm:mt-2">
+                <RiMailSendLine className="sm:h-5 sm:w-5" />
                 <a
-                  className="text-sm underline sm:text-base"
+                  className="font-bold sm:text-base underline decoration-2"
                   href="mailto:partners@accountwisely.com"
                 >
                   Shoot Us An Email
@@ -73,29 +107,35 @@ const Contact = () => {
             </div>
             {/* visit */}
             <div>
-              <p className="text-base font-semibold sm:text-lg">Visit Us</p>
-              <p className="text-sm text-gray-400 sm:text-base">Meet use directly at our office</p>
-              <div className="mt-3 flex items-center gap-2 sm:mt-4">
-                <FiMapPin className="h-4 w-4 sm:h-5 sm:w-5" />
+              <p className="font-bold lg:text-xl sm:text-lg">Visit Us</p>
+              <p className="text-gray-500 lg:text-lg sm:text-base">
+                Meet use directly at our office
+              </p>
+              <div className="flex items-center gap-2 sm:mt-2">
+                <FiMapPin className="sm:h-5 sm:w-5 " />
                 <a
                   href="https://maps.google.com/"
                   target="_blank"
-                  className="text-sm underline sm:text-base"
+                  className="font-bold sm:text-base underline decoration-2"
                 >
                   Mumbai - India
                 </a>
               </div>
             </div>
           </div>
+
           {/* section 2 */}
           <div className="my-6 flex flex-col gap-4 px-4 sm:my-8 sm:gap-6 sm:px-6">
             <p className="text-2xl font-bold sm:text-3xl md:text-5xl">
               Ready to get Started?{" "}
-              <span className="text-[#2a4768]">let's chat.</span>
+              <span className="text-[#2e1566]">Let's chat.</span>
             </p>
-            <div className="flex flex-col gap-4 rounded-xl border p-4 sm:gap-6 sm:p-6">
-              <form onSubmit={handleSubmit} className="mx-auto flex max-w-4xl flex-col gap-3 sm:gap-4">
-                <p className="mb-3 text-sm text-gray-400 sm:mb-4 sm:text-base">
+            <div className="flex flex-col gap-4 rounded-xl border border-gray-300 p-4 sm:gap-6 sm:p-6">
+              <form
+                onSubmit={handleSubmit}
+                className="mx-auto flex max-w-4xl flex-col gap-3 sm:gap-4"
+              >
+                <p className="mb-3 text-sm text-gray-700 sm:mb-4 sm:text-base">
                   Please fill out the form below, and a member of our team will
                   get back to you as soon as possible.
                 </p>
@@ -144,13 +184,15 @@ const Contact = () => {
                   className="h-20 w-full resize-none rounded-md border-0 bg-[#eceef6] px-3 py-2 text-sm focus:outline-none sm:h-24 sm:px-4 sm:text-base"
                 />
                 {errors.form && (
-                  <p className="text-xs text-red-600 sm:text-sm">{errors.form}</p>
+                  <p className="text-xs text-red-600 sm:text-sm">
+                    {errors.form}
+                  </p>
                 )}
 
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="h-10 rounded-md bg-gradient-to-r from-[#2b4969] to-[#7cb5be] px-4 py-2 text-sm font-semibold text-white hover:cursor-pointer disabled:opacity-50 sm:h-12 sm:text-base"
+                  className="h-10 rounded-lg bg-gradient-to-r from-[#f58210] via-[#fc9f41] to-[#ffc388] px-4 py-3 text-sm font-semibold text-white shadow-lg transition-all duration-600 hover:from-[#ffc388] hover:to-[#f58210] hover:cursor-pointer disabled:opacity-50 sm:h-12 sm:text-lg hover:shadow-2xl focus:outline-none sm:w-auto hover:scale-[1.01]"
                 >
                   {submitting ? "Sending..." : "Send Message"}
                 </button>
@@ -158,56 +200,86 @@ const Contact = () => {
             </div>
           </div>
         </div>
+
         {/* section 3 */}
+        {/*         
         <div className="mt-12 flex flex-col place-items-center gap-4 bg-[#fff2dd] px-4 py-4 sm:mt-16 sm:gap-6 sm:px-6">
           <div className="w-full max-w-4xl">
+
             <div className="flex flex-col">
-              <p className="rounded-md bg-[#f5f5f5] px-3 py-3 text-sm font-bold sm:px-5 sm:py-4 sm:text-base">
+              <p className="rounded-lg bg-[#e4daf9] px-3 py-3 text-lg font-bold sm:px-6 sm:py-4 sm:text-xl">
                 How can I get in touch with Account Wisely?
               </p>
-              <p className="mt-3 mb-4 text-xs text-gray-500 sm:mt-4 sm:mb-6 sm:text-sm">
-                You can contact us via our website's contact form, email us at
-                partners@accountwisely.com.
+              <p className="rounded-lg mt-3 mb-4 text-xs font-semibold text-gray-600 bg-[#f5f5f5] sm:mt-0 sm:mb-6 sm:text-lg sm:px-6 sm:py-4">
+                You can contact us via our website's contact form, email us at partners@accountwisely.com.
               </p>
             </div>
+
             <div className="flex flex-col">
-              <p className="rounded-md bg-[#f5f5f5] px-3 py-3 text-sm font-bold sm:px-5 sm:py-4 sm:text-base">
+              <p className="rounded-lg bg-[#e4daf9] px-3 py-3 text-lg font-bold sm:px-6 sm:py-4 sm:text-xl">
                 Where is Account Wisely India located?
               </p>
-              <p className="mt-3 mb-4 text-xs text-gray-500 sm:mt-4 sm:mb-6 sm:text-sm">
-                We provide outsourced accounting services to start-ups, CA's and
-                accounting firms across the India, with our operations center
-                based in Ahmedabad, India.
+              <p className="rounded-lg mt-3 mb-4 text-xs font-semibold text-gray-600 bg-[#f5f5f5] sm:mt-0 sm:mb-6 sm:text-lg sm:px-6 sm:py-4">
+                We provide outsourced accounting services to start-ups, CA's and accounting firms across the India, with our operations center based in Mumbai, India.
               </p>
             </div>
             <div className="flex flex-col">
-              <p className="rounded-md bg-[#f5f5f5] px-3 py-3 text-sm font-bold sm:px-5 sm:py-4 sm:text-base">
+              <p className="rounded-lg bg-[#e4daf9] px-3 py-3 text-lg font-bold sm:px-6 sm:py-4 sm:text-xl">
                 How long does it take to receive a response?
               </p>
-              <p className="mt-3 mb-4 text-xs text-gray-500 sm:mt-4 sm:mb-6 sm:text-sm">
-                We typically respond within 24 business hours. For urgent
-                queries, you can reach out via phone or live chat during working
-                hours.
+              <p className="rounded-lg mt-3 mb-4 text-xs font-semibold text-gray-600 bg-[#f5f5f5] sm:mt-0 sm:mb-6 sm:text-lg sm:px-6 sm:py-4">
+                We typically respond within 24 business hours. For urgent queries, you can reach out via phone or live chat during working hours.
               </p>
             </div>
             <div className="flex flex-col">
-              <p className="rounded-md bg-[#f5f5f5] px-3 py-3 text-sm font-bold sm:px-5 sm:py-4 sm:text-base">
+              <p className="rounded-lg bg-[#e4daf9] px-3 py-3 text-lg font-bold sm:px-6 sm:py-4 sm:text-xl">
                 Who can I contact for sales inquiries?
               </p>
-              <p className="mt-3 mb-4 text-xs text-gray-500 sm:mt-4 sm:mb-6 sm:text-sm">
-                For business inquiries, you can reach our sales team at
-                sales@white-bull.India or fill out the contact form, and a
-                representative will get back to you.
+              <p className="rounded-lg mt-3 mb-4 text-xs font-semibold text-gray-600 bg-[#f5f5f5] sm:mt-0 sm:mb-6 sm:text-lg sm:px-6 sm:py-4">
+                For business inquiries, you can reach our sales team at sales@accountwisely.india or fill out the contact form, and a representative will get back to you.
               </p>
             </div>
             <div className="flex flex-col">
-              <p className="rounded-md bg-[#f5f5f5] px-3 py-3 text-sm font-bold sm:px-5 sm:py-4 sm:text-base">
+              <p className="rounded-lg bg-[#e4daf9] px-3 py-3 text-lg font-bold sm:px-6 sm:py-4 sm:text-xl">
                 Can I book a consultation before partnering with Account Wisely?
               </p>
-              <p className="mt-3 mb-6 text-xs text-gray-500 sm:mt-4 sm:mb-8 sm:text-sm">
-                Yes! We offer a free trial so you can experience our services
-                firsthand. Visit our Book a Free Trial page to get started.
+              <p className="rounded-lg mt-3 mb-4 text-xs font-semibold text-gray-600 bg-[#f5f5f5] sm:mt-0 sm:mb-6 sm:text-lg sm:px-6 sm:py-4">
+                Yes! We offer a free trial so you can experience our services firsthand. Visit our Book a Free Trial page to get started.
               </p>
+            </div>
+          </div>
+        </div>
+ */}
+        <div className="mt-12 bg-[#fff2dd] px-4 py-14 sm:mt-16 sm:px-6">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-4xl font-bold text-center text-black mb-14">
+              Frequently Asked Questions
+            </h2>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-9">
+              {FAQS.map((FAQ, i) => (
+                <div
+                  key={i}
+                  className="relative group rounded-3xl p-[2px] bg-gradient-to-r from-[#fc9f41] to-[#ffc388] animate-borderFlow"
+                  style={{ animationDelay: `${i * 0.2}s` }}
+                >
+                  {/* GLASS BACKGROUND CARD */}
+                  <div
+                    className="rounded-3xl backdrop-blur-xl bg-white/40 shadow-xl px-5 py-5 h-full transition-all duration-400 group-hover:shadow-2xl group-hover:-translate-y-3 animate-fadeIn"
+                    style={{ animationDelay: `${i * 0.1}s` }}
+                  >
+                    <div className="flex items-center gap-3 mb-3 px-2">
+                      <h3 className="text-lg font-bold text-black">
+                        {FAQ.Q}
+                      </h3>
+                    </div>
+
+                    <p className="mt-2 font-medium text-gray-700 bg-white/50 rounded-xl px-4 py-4 shadow-inner backdrop-blur-md">
+                      {FAQ.A}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
