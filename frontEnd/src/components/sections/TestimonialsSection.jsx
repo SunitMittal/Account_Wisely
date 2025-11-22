@@ -39,7 +39,7 @@ const TestimonialsSection = () => {
     <section id="testimonials" className="py-20">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mb-4 text-center">
-          <span className="text-2xl font-bold tracking-wider text-teal-600 uppercase">
+          <span className="text-2xl font-bold tracking-wider text-[#1a0940] uppercase">
             Our Success Story
           </span>
         </div>
@@ -59,7 +59,7 @@ const TestimonialsSection = () => {
               Us
             </h2>
 
-            <p className="mb-8 text-lg text-gray-700">
+            <p className="mb-8 text-lg text-gray-800">
               We take pride in the positive experiences and successful outcomes
               we've facilitated for our clients.
             </p>
@@ -78,13 +78,13 @@ const TestimonialsSection = () => {
             <div className="flex space-x-2">
               <button
                 onClick={prevTestimonial}
-                className="bg-navy-100 rounded-full bg-[#2a4768] p-3 text-white transition-colors hover:cursor-pointer hover:bg-black"
+                className="bg-navy-100 rounded-full bg-[#391880] p-3 text-white transition-colors hover:cursor-pointer hover:bg-[#1a0940]"
               >
                 <ChevronLeft size={20} />
               </button>
               <button
                 onClick={nextTestimonial}
-                className="bg-navy-100 rounded-full bg-[#2a4768] p-3 text-white transition-colors hover:cursor-pointer hover:bg-black"
+                className="bg-navy-100 rounded-full bg-[#391880] p-3 text-white transition-colors hover:cursor-pointer hover:bg-[#1a0940]"
               >
                 <ChevronRight size={20} />
               </button>

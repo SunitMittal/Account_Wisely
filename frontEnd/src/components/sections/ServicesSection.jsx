@@ -59,18 +59,11 @@ const ServicesSection = () => {
   return (
     <Container2>
       <div>
-        <div className="md:sticky md:top-8 text-sm font-semibold tracking-wider text-gray-600">
-          <p className="text-2xl font-bold sm:text-2xl">Services</p>
-          <h2 className="mt-2 text-2xl font-bold text-[#2a4768] sm:text-3xl md:max-w-56 md:text-4xl lg:text-5xl">
-            Outsourced Accounting
-          </h2>
-          <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl lg:text-5xl">
-            Services
-          </h2>
-          <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl md:max-w-96 md:text-4xl lg:text-5xl">
-            Designed for Your Firm
-          </h2>
-          <p className="mt-4 max-w-[26rem] text-sm leading-6 font-normal text-gray-600 sm:text-base sm:leading-7">
+        <div className="md:sticky md:top-8 tracking-wider">
+          <p className="text-2xl font-bold text-gray-700">Services</p>
+          <h1 className="mt-2 font-bold text-black sm:text-3xl md:max-w-56 md:text-3xl lg:text-5xl"><span className="text-[#2e1566]">Outsourced Accounting </span>Services Designed for Your Firm
+          </h1>
+          <p className="mt-4 max-w-[26rem] leading-6 text-gray-700 sm:text-base sm:leading-7">
             Managing client accounts can be a drain on your time and resources.
             Account Wisely takes the load off your shoulders with a full range
             of outsourced accounting services designed to meet the unique needs
@@ -81,14 +74,14 @@ const ServicesSection = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2">
+      <div className="grid grid-cols-1 sm:gap-6 md:grid-cols-2">
         {services.map((service) => (
           <div
             key={service.id}
-            className="water-fill-card relative overflow-hidden rounded-lg border bg-white transition-all duration-300"
+            className="water-fill-card relative overflow-hidden rounded-lg border bg-gray-50 transition-all duration-300"
           >
             {/* Water fill overlay */}
-            <div className="water-fill absolute right-0 bottom-0 left-0 z-0 h-0 bg-gradient-to-t from-[#7ab3bd] to-[#2a4768] transition-all duration-700 ease-out"></div>
+            <div className="water-fill absolute right-0 bottom-0 left-0 z-0 h-0 bg-gradient-to-t from-[#f58210] via-[#fc9f41] to-[#ffc388] transition-all duration-800 ease-out"></div>
 
             {/* Card content above the water */}
             <div className="relative z-10">

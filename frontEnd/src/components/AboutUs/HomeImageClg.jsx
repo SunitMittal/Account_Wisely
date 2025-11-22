@@ -24,17 +24,17 @@ const HomeImageClg = () => {
         <div className="relative rounded-xl">
           <TopImage source1={img1} source2={img2} className="z-0" />
 
-          <div className="animate-float-x absolute -top-8 -left-20 md:top-10 md:right-28 z-10 flex w-fit items-center space-x-4 rounded-lg bg-[#fff3f3] p-4 shadow-md transition-transform duration-300 hover:scale-105">
-            <Users className="text-blue-500" />
+          <div className="animate-float-x absolute -top-8 -left-20 md:top-10 md:right-28 z-10 flex w-fit items-center space-x-4 rounded-lg bg-[#fff2dd] p-4 shadow-md transition-transform duration-300 hover:scale-105">
+            <Users className="text-[#492a8a]" />
             <div>
               <p className="text-xl font-bold text-gray-900">10+</p>
               <p className="text-sm text-gray-600">Years of Experience</p>
             </div>
           </div>
 
-          <div className="animate-float-x-reverse absolute -left-10 -bottom-40 md:right-2/5 md:-bottom-16 z-10 flex w-fit flex-col items-start gap-4 space-x-4 rounded-lg bg-[#fff3f3] p-4 shadow-md transition-transform duration-300 hover:scale-105">
-            <div className="rounded-full bg-blue-50 p-3">
-              <Award className="text-blue-500" />
+          <div className="animate-float-x-reverse absolute -left-10 -bottom-40 md:right-2/5 md:-bottom-16 z-10 flex w-fit flex-col items-start gap-4 space-x-4 rounded-lg bg-[#fff2dd] p-4 shadow-md transition-transform duration-300 hover:scale-105">
+            <div className="rounded-full bg-[#e3d6ff] p-3">
+              <Award className="text-[#492a8a]" />
             </div>
             <div>
               <p className="text-xl font-bold text-gray-900">97%</p>
@@ -46,13 +46,13 @@ const HomeImageClg = () => {
         <div className="animate-slide-in space-y-6">
           <div className="mb-3">
             <h2 className="mb-1 text-2xl font-bold text-gray-700">About Us</h2>
-            <h1 className="text-3xl leading-tight font-bold text-gray-900 md:text-4xl lg:text-5xl">
-              <span className="text-[#2a4768]">Financial Solutions </span>
+            <h1 className="leading-tight font-bold text-black md:text-3xl lg:text-5xl">
+              <span className="text-[#2e1566]">Financial Solutions </span>
               to Propel Your Firm's Success
             </h1>
           </div>
 
-          <div className="stagger-animation space-y-4 text-gray-600">
+          <div className="stagger-animation space-y-4 text-gray-700">
             <p>
               The accounting industry is evolving quickly, and staying ahead can
               be challenging. Partner with Account Wisely—your dedicated ally in
@@ -63,8 +63,8 @@ const HomeImageClg = () => {
             </p>
           </div>
 
-          <ul className="my-7 flex flex-col gap-5 font-semibold">
-            <h4 className="text-lg font-bold text-black">
+          <ul className="my-7 flex flex-col gap-5 font-semibold text-gray-800">
+            <h4 className="text-lg font-bold">
               Here's what we bring to the table:
             </h4>
             <li className="flex items-center gap-3 text-lg">

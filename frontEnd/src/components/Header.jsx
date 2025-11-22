@@ -32,7 +32,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="flex gap-2 bg-[#2a4768] px-4 py-2 text-xs text-white sm:justify-center sm:gap-5 sm:px-5 sm:text-sm md:justify-normal md:gap-10 md:px-28 md:text-lg">
+      <div className="flex gap-2 bg-[#1a0940] px-4 py-2 text-xs text-white sm:justify-center sm:gap-5 sm:px-5 sm:text-sm md:justify-normal md:gap-10 md:px-28 md:text-lg">
         <a
           href="mailto:partners@accountwisely.com"
           className="underline-offset-8.5 flex items-center gap-1 hover:underline"
@@ -43,14 +43,14 @@ const Header = () => {
         </a>
       </div>
 
-      <nav className="bg-white shadow-sm">
+      <nav className="shadow-sm">
         <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6 sm:py-5 md:px-10">
           {/* desktop view */}
           <div className="hidden items-center justify-between lg:flex">
             <div className="flex-shrink-0">
               <Link
                 to={"/"}
-                className="flex items-center gap-3 text-3xl font-bold text-[#2a4768] xl:text-5xl"
+                className="flex items-center gap-3 text-3xl font-bold text-[#1a0940] xl:text-5xl"
               >
                 <img
                   src={Logo}
@@ -63,9 +63,9 @@ const Header = () => {
             <div className="flex items-center space-x-4 xl:space-x-6">
               <Link
                 to={"/"}
-                className={`text-lg font-bold xl:text-medium ${
+                className={`text-lg font-bold xl:text-lg ${
                   isActive("/")
-                    ? "text-[#2a4768] underline underline-offset-8"
+                    ? "text-[#1a0940] underline underline-offset-8"
                     : ""
                 }`}
               >
@@ -73,9 +73,9 @@ const Header = () => {
               </Link>
               <Link
                 to={"/about"}
-                className={`text-lg font-bold xl:text-medium ${
+                className={`text-lg font-bold xl:text-lg ${
                   isActive("/about")
-                    ? "text-[#2a4768] underline underline-offset-8"
+                    ? "text-[#1a0940] underline underline-offset-8"
                     : ""
                 }`}
               >
@@ -83,9 +83,9 @@ const Header = () => {
               </Link>
               <div className="group relative">
                 <button
-                  className={`flex items-center text-lg font-bold xl:text-medium ${
+                  className={`flex items-center text-lg font-bold xl:text-lg ${
                     isActive("/services")
-                      ? "text-[#2a4768] underline underline-offset-8"
+                      ? "text-[#1a0940] underline underline-offset-8"
                       : ""
                   }`}
                 >
@@ -107,7 +107,8 @@ const Header = () => {
                     />
                   </svg>
                 </button>
-                <div className="absolute left-0 z-50 hidden min-w-[230px] space-y-2 rounded-lg bg-gradient-to-b from-[#2c4a6a] via-[#578397] to-[#7ab4bd] p-4  group-hover:block text-white">
+                <div className="absolute left-0 z-50 hidden min-w-[230px] space-y-2 rounded-lg bg-gradient-to-b from-[#2a265c] via-[#4e4f8d] to-[#7776b9] p-4  group-hover:block text-white">
+                  {/* bg-[#1a0940] */}
                   <Link
                     to={"/services/accounting"}
                     className="block py-1 underline-offset-8 hover:underline"
@@ -142,9 +143,9 @@ const Header = () => {
               </div>
               <Link
                 to={"/career"}
-                className={`text-lg font-bold xl:text-medium ${
+                className={`text-lg font-bold xl:text-lg ${
                   isActive("/career")
-                    ? "text-[#2a4768] underline underline-offset-8"
+                    ? "text-[#1a0940] underline underline-offset-8"
                     : ""
                 }`}
               >
@@ -152,9 +153,9 @@ const Header = () => {
               </Link>
               <Link
                 to={"/contact"}
-                className={`text-lg font-bold xl:text-medium ${
+                className={`text-lg font-bold xl:text-lg ${
                   isActive("/contact")
-                    ? "text-[#2a4768] underline underline-offset-8"
+                    ? "text-[#1a0940] underline underline-offset-8"
                     : ""
                 }`}
               >
@@ -167,7 +168,7 @@ const Header = () => {
           <div className="flex items-center justify-between lg:hidden">
             <Link
               to={"/"}
-              className="flex items-center gap-3 text-2xl font-bold text-[#2a4768] sm:text-3xl md:text-4xl"
+              className="flex items-center gap-3 text-2xl font-bold text-[#1a0940] sm:text-3xl md:text-4xl"
             >
               <img
                 src={Logo}
@@ -179,7 +180,7 @@ const Header = () => {
             <div className="flex items-center">
               <button
                 onClick={toggleMenu}
-                className="rounded-md bg-white p-2 text-[#2a4768] hover:bg-gray-200 focus:outline-none border"
+                className="rounded-md bg-white p-2 text-[#1a0940] hover:bg-gray-200 focus:outline-none border"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -201,7 +202,7 @@ const Header = () => {
 
           {/* mobile menu dropdown - slide in from right */}
           <div
-            className={`fixed top-0 right-0 z-50 h-full w-full transform bg-[#2a4768] transition-transform duration-300 ease-in-out ${
+            className={`fixed top-0 right-0 z-50 h-full w-full transform bg-[#1a0940] transition-transform duration-300 ease-in-out ${
               isMenuOpen ? "translate-x-0" : "translate-x-full"
             }`}
           >
@@ -211,7 +212,7 @@ const Header = () => {
               </h1>
               <button
                 onClick={closeMenu}
-                className="w-8 rounded-lg bg-white p-2 font-bold text-[#2a4768] sm:w-10 border"
+                className="w-8 rounded-lg bg-white p-2 font-bold text-[#1a0940] sm:w-10 border"
               >
                 X
               </button>
@@ -220,7 +221,7 @@ const Header = () => {
               <Link
                 onClick={closeMenu}
                 to={"/"}
-                className={`block border-b border-[#3a5a7d] px-3 py-4 text-white ${
+                className={`block border-b border-[#1a0940] px-3 py-4 text-white ${
                   isActive("/") ? "font-bold" : ""
                 }`}
               >
@@ -229,7 +230,7 @@ const Header = () => {
               <Link
                 onClick={closeMenu}
                 to={"/about"}
-                className={`block border-b border-[#3a5a7d] px-3 py-4 text-white ${
+                className={`block border-b border-[#1a0940] px-3 py-4 text-white ${
                   isActive("/about") ? "font-bold" : ""
                 }`}
               >
@@ -238,7 +239,7 @@ const Header = () => {
               <div>
                 <button
                   onClick={toggleServicesMenu}
-                  className={`flex w-full items-center justify-between border-b border-[#3a5a7d] px-3 py-4 text-white ${
+                  className={`flex w-full items-center justify-between border-b border-[#1a0940] px-3 py-4 text-white ${
                     isActive("/services") ? "font-bold" : ""
                   }`}
                 >
@@ -315,7 +316,7 @@ const Header = () => {
               <Link
                 onClick={closeMenu}
                 to={"/career"}
-                className={`block border-b border-[#3a5a7d] px-3 py-4 text-white ${
+                className={`block border-b border-[#1a0940] px-3 py-4 text-white ${
                   isActive("/career") ? "font-bold" : ""
                 }`}
               >
@@ -324,7 +325,7 @@ const Header = () => {
               <Link
                 onClick={closeMenu}
                 to={"/contact"}
-                className={`block border-b border-[#3a5a7d] px-3 py-4 text-white ${
+                className={`block border-b border-[#1a0940] px-3 py-4 text-white ${
                   isActive("/contact") ? "font-bold" : ""
                 }`}
               >

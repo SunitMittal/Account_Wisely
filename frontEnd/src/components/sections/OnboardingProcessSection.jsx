@@ -64,14 +64,14 @@ const OnboardingProcessSection = () => {
   return (
     <Container>
       <div className="mb-5 text-center">
-        <p className="text-2xl font-bold tracking-wider text-[#2a4768]">
+        <p className="lg:text-2xl font-bold tracking-wider text-[#1a0940]">
           Client Onboarding Process
         </p>
-        <h2 className="mt-2 text-2xl font-bold md:text-4xl">
-          Onboarding with <span className="text-[#2a4768]">AccountWisely</span>{" "}
+        <h2 className="mt-2 text-2xl font-bold md:text-4xl text-black">
+          Onboarding with <span className="text-[#1a0940]">AccountWisely</span>{" "}
           - Fast, Simple, and Efficient
         </h2>
-        <p className="mt-4 leading-7 font-normal text-gray-600">
+        <p className="mt-4 leading-7 text-gray-700">
           We believe in making it easy for you. Our onboarding process is
           designed for a seamless transition, so you can quickly start seeing
           the benefits of outsourcing to Account Wisely.
@@ -85,7 +85,7 @@ const OnboardingProcessSection = () => {
             className="water-fill-card relative overflow-hidden rounded-lg border bg-white transition-all duration-300"
           >
             {/* Water fill overlay */}
-            <div className="water-fill absolute right-0 bottom-0 left-0 z-0 h-0 bg-gradient-to-t from-[#3d2a78] to-[#1a0940] transition-all duration-700 ease-out"></div>
+            <div className="water-fill absolute right-0 bottom-0 left-0 z-0 h-0 bg-gradient-to-t from-[#f58210] via-[#fc9f41] to-[#ffc388] transition-all duration-800 ease-out"></div>
 
             {/* Card content above the water */}
             <div className="relative z-10">

@@ -14,7 +14,7 @@ const ProcessCard = ({ number, title, content, icon}) => {
         <h3 className="mb-2 text-xl font-bold leading-6 text-gray-900 transition-colors duration-300 group-hover:text-white">
           {number}. {title}
         </h3>
-        <p className="text-base text-gray-600 leading-6 group-hover:text-white">
+        <p className="text-base text-gray-700 leading-6 group-hover:text-white">
           {content}
         </p>
       </div>

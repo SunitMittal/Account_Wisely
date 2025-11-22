@@ -3,13 +3,13 @@ import React from "react";
 const StatCard = ({ value, label }) => {
   return (
     <div
-      className="rounded-xl bg-blue-50 p-4 transition-all duration-300 hover:shadow-md sm:p-6"
+      className="rounded-xl bg-[#fff2dd] p-4 transition-all duration-300 hover:shadow-md sm:p-6"
       data-aos="fade-up"
     >
-      <h3 className="text-[#2a4768] mb-2 text-2xl font-bold sm:text-3xl md:text-4xl">
+      <h3 className="text-[#492a8a] mb-2 text-2xl font-bold sm:text-3xl md:text-4xl">
         {value}
       </h3>
-      <p className="text-xs text-gray-600 sm:text-sm">{label}</p>
+      <p className="text-gray-700 sm:text-sm">{label}</p>
     </div>
   );
 };
