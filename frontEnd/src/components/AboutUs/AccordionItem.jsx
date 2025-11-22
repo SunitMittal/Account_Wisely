@@ -11,7 +11,7 @@ const AccordionItem = ({ id, title, content, isOpen, onToggle }) => {
         aria-controls={`accordion-content-${id}`}
       >
         <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
-        <span className="text-blue-700">
+        <span className="text-[#1a0940]">
           {isOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
         </span>
       </button>
@@ -22,7 +22,7 @@ const AccordionItem = ({ id, title, content, isOpen, onToggle }) => {
           isOpen ? "max-h-96 pb-6 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <p className="text-gray-600">{content}</p>
+        <p className="text-gray-700">{content}</p>
       </div>
     </div>
   );

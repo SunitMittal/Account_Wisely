@@ -35,17 +35,6 @@
   font-family: var(--font-sans);
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 @keyframes slideIn {
   from {
     transform: translateX(-100%);
@@ -66,10 +55,6 @@
     transform: translateY(0);
     opacity: 1;
   }
-}
-
-.animate-fade-in {
-  animation: fadeIn 0.6s ease-out forwards;
 }
 
 .animate-slide-in {
@@ -185,4 +170,56 @@
 
 .animate-float-x-reverse {
   animation: floatXReverse 2s ease-in-out infinite;
+}
+
+
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.7s ease-out forwards;
+}
+
+/* Icon pulse animation */
+@keyframes iconPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+  }
+  50% {
+    transform: scale(1.15);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  }
+}
+
+.animate-iconPulse {
+  animation: iconPulse 1.6s ease-in-out infinite;
+}
+
+/* Floating animated gradient border */
+@keyframes borderFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-borderFlow {
+  background-size: 200% 200%;
+  animation: borderFlow 6s ease infinite;
 }

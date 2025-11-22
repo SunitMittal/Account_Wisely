@@ -37,11 +37,11 @@ const WorkingProcess = () => {
   return (
     <Container>
       <div className="mb-12 text-center">
-        <p className="mb-2 text-sm font-medium tracking-wider text-gray-600 uppercase">
-          Working Process
-        </p>
-        <h2 className="text-3xl font-bold text-gray-900 md:text-4xl">
-          The AccountWisely <span className="text-blue-700">Approach</span>:{" "}
+        <h2 className="mb-2 tracking-wider font-bold uppercase text-gray-700 sm:text-xl lg:text-2xl">
+              Working Process
+        </h2>
+        <h2 className="font-bold text-black lg:text-4xl md:text-3xl">
+          The AccountWisely <span className="text-[#2e1566]">Approach</span>:{" "}
           <br />
           Smarter Outsourcing for Accounting Firms
         </h2>
@@ -54,7 +54,7 @@ const WorkingProcess = () => {
             className="water-fill-card relative overflow-hidden rounded-lg bg-white shadow-md transition-all duration-300"
           >
             {/* Water fill overlay */}
-            <div className="water-fill absolute right-0 bottom-0 left-0 z-0 h-0 bg-blue-300 transition-all duration-700 ease-out"></div>
+            <div className="water-fill absolute right-0 bottom-0 left-0 z-0 h-0 bg-gradient-to-t from-[#f58210] via-[#fc9f41] to-[#ffc388] transition-all duration-800 ease-out"></div>
 
             {/* Card content above the water */}
             <div className="relative z-10">
