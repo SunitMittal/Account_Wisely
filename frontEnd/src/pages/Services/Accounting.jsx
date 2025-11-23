@@ -49,7 +49,6 @@ const Accounting = () => {
               to={"/contact"}
               className="rounded-lg bg-gradient-to-r from-[#f58210] via-[#fc9f41] to-[#ffc388] p-3 text-sm font-semibold text-white shadow-lg transition-all duration-600 hover:-translate-y-1 hover:cursor-pointer hover:from-[#ffc388] hover:to-[#f58210] hover:shadow-2xl sm:p-3 sm:text-base"
             >
-              {/* "w-full rounded-lg bg-gradient-to-r from-[#f58210] via-[#fc9f41] to-[#ffc388] px-4 py-3 text-sm font-semibold tracking-wider text-white shadow-lg transition-all duration-600 hover:-translate-y-1 hover:cursor-pointer hover:from-[#ffc388] hover:to-[#f58210] hover:shadow-2xl focus:outline-none sm:w-auto sm:px-5 sm:py-4 sm:text-lg" */}
               Contact Us
             </Link>
           </div>
@@ -62,7 +61,7 @@ const Accounting = () => {
             className="mx-auto h-auto w-11/12 rounded-2xl"
           />
 
-          <div className="my-6 px-3 sm:my-8 sm:px-4.5">
+          <div className="my-6 lg:px-10 sm:my-8 sm:px-4.5">
             <div>
               <h3 className="text-2xl font-bold sm:text-3xl md:text-4xl">
                 Expert{" "}
