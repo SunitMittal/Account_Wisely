@@ -202,54 +202,6 @@ const Contact = () => {
         </div>
 
         {/* section 3 */}
-        {/*         
-        <div className="mt-12 flex flex-col place-items-center gap-4 bg-[#fff2dd] px-4 py-4 sm:mt-16 sm:gap-6 sm:px-6">
-          <div className="w-full max-w-4xl">
-
-            <div className="flex flex-col">
-              <p className="rounded-lg bg-[#e4daf9] px-3 py-3 text-lg font-bold sm:px-6 sm:py-4 sm:text-xl">
-                How can I get in touch with Account Wisely?
-              </p>
-              <p className="rounded-lg mt-3 mb-4 text-xs font-semibold text-gray-600 bg-[#f5f5f5] sm:mt-0 sm:mb-6 sm:text-lg sm:px-6 sm:py-4">
-                You can contact us via our website's contact form, email us at partners@accountwisely.com.
-              </p>
-            </div>
-
-            <div className="flex flex-col">
-              <p className="rounded-lg bg-[#e4daf9] px-3 py-3 text-lg font-bold sm:px-6 sm:py-4 sm:text-xl">
-                Where is Account Wisely India located?
-              </p>
-              <p className="rounded-lg mt-3 mb-4 text-xs font-semibold text-gray-600 bg-[#f5f5f5] sm:mt-0 sm:mb-6 sm:text-lg sm:px-6 sm:py-4">
-                We provide outsourced accounting services to start-ups, CA's and accounting firms across the India, with our operations center based in Mumbai, India.
-              </p>
-            </div>
-            <div className="flex flex-col">
-              <p className="rounded-lg bg-[#e4daf9] px-3 py-3 text-lg font-bold sm:px-6 sm:py-4 sm:text-xl">
-                How long does it take to receive a response?
-              </p>
-              <p className="rounded-lg mt-3 mb-4 text-xs font-semibold text-gray-600 bg-[#f5f5f5] sm:mt-0 sm:mb-6 sm:text-lg sm:px-6 sm:py-4">
-                We typically respond within 24 business hours. For urgent queries, you can reach out via phone or live chat during working hours.
-              </p>
-            </div>
-            <div className="flex flex-col">
-              <p className="rounded-lg bg-[#e4daf9] px-3 py-3 text-lg font-bold sm:px-6 sm:py-4 sm:text-xl">
-                Who can I contact for sales inquiries?
-              </p>
-              <p className="rounded-lg mt-3 mb-4 text-xs font-semibold text-gray-600 bg-[#f5f5f5] sm:mt-0 sm:mb-6 sm:text-lg sm:px-6 sm:py-4">
-                For business inquiries, you can reach our sales team at sales@accountwisely.india or fill out the contact form, and a representative will get back to you.
-              </p>
-            </div>
-            <div className="flex flex-col">
-              <p className="rounded-lg bg-[#e4daf9] px-3 py-3 text-lg font-bold sm:px-6 sm:py-4 sm:text-xl">
-                Can I book a consultation before partnering with Account Wisely?
-              </p>
-              <p className="rounded-lg mt-3 mb-4 text-xs font-semibold text-gray-600 bg-[#f5f5f5] sm:mt-0 sm:mb-6 sm:text-lg sm:px-6 sm:py-4">
-                Yes! We offer a free trial so you can experience our services firsthand. Visit our Book a Free Trial page to get started.
-              </p>
-            </div>
-          </div>
-        </div>
- */}
         <div className="mt-12 bg-[#fff2dd] px-4 py-14 sm:mt-16 sm:px-6">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl font-bold text-center text-black mb-14">
