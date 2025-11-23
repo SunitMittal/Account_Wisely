@@ -107,7 +107,7 @@ const Footer = () => {
                 <a
                   href="https://maps.google.com/"
                   target="_blank"
-                  className="text-sm sm:text-base"
+                  className="text-sm sm:text-base hover:text-gray-300"
                 >
                   Mumbai - India
                 </a>
@@ -116,7 +116,7 @@ const Footer = () => {
                 <IoMdMail className="mr-2 mt-0.5 h-4 w-4 flex-shrink-0" />
                 <a
                   href="mailto:partners@accountwisely.com"
-                  className="text-sm sm:text-base"
+                  className="text-sm sm:text-base hover:text-gray-300"
                 >
                   partners@accountwisely.com
                 </a>
