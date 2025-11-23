@@ -37,20 +37,21 @@ const TaxReturn = () => {
         link="Services / Tax Return Preparation"
       />
 
-      <div className="md:my-28 md:grid md:grid-cols-[400px_minmax(900px,_1fr)_100px] md:justify-center md:px-72 bg-white">
+      <div className="md:my-25 md:grid md:grid-cols-[400px_minmax(900px,_1fr)_100px] md:justify-center md:px-72">
         {/* left side */}
-        <div className="mt-10 md:sticky md:top-2 md:h-fit">
+        <div className="mt-6 md:sticky md:top-2 md:h-fit lg:mt-10">
           <ServiceList />
-          <div className="mx-auto my-8 w-11/12 rounded-2xl border border-[#2a4768] bg-white p-4.5">
-            <TbPhoneCalling className="text-6xl text-[#2a4768]" />
-            <h2 className="text-lg font-bold">Need Help?</h2>
-            <p className="pt-2 pb-5 text-gray-500">
+
+          <div className="mx-auto my-6 max-w-96 rounded-2xl border border-[#1a0940] bg-white p-4 sm:my-8 sm:p-4.5">
+            <TbPhoneCalling className="text-4xl text-[#2e1566] sm:text-6xl" />
+            <h2 className="text-base font-bold sm:text-lg">Need Help?</h2>
+            <p className="pt-2 pb-4 text-sm text-gray-600 sm:pb-5 sm:text-base">
               Get in touch and let us know how we can help touch as soon as
               possible.
             </p>
             <Link
               to={"/contact"}
-              className="rounded-md bg-linear-to-r from-[#2b4969] to-[#7cb5be] px-4 py-2 font-semibold text-white hover:cursor-pointer"
+              className="rounded-lg bg-gradient-to-r from-[#f58210] via-[#fc9f41] to-[#ffc388] p-3 text-sm font-semibold text-white shadow-lg transition-all duration-600 hover:-translate-y-1 hover:cursor-pointer hover:from-[#ffc388] hover:to-[#f58210] hover:shadow-2xl sm:p-3 sm:text-base"
             >
               Contact Us
             </Link>
@@ -64,12 +65,12 @@ const TaxReturn = () => {
             className="mx-auto h-auto w-11/12 rounded-2xl"
           />
 
-          <div className="px-5 py-5">
+          <div className="px-8 py-5">
             <div>
-              <h2 className="text-left text-4xl font-bold text-[#2a4768]">
+              <h2 className="text-2xl font-bold sm:text-3xl md:text-4xl">
                 Tax Return Season Doesn’t Have to Feel Like a Never-Ending Audit
               </h2>
-              <p className="mt-4 mb-5 text-justify text-gray-500">
+              <p className="mt-3 text-justify text-gray-600">
                 <span className="font-bold">Tax return season </span>can feel
                 like juggling numbers while walking a financial tightrope.
                 <span className="font-bold">
@@ -80,7 +81,7 @@ const TaxReturn = () => {
                 is here to take that burden off your shoulders.
               </p>
 
-              <div className="mt-4 mb-5 text-justify text-gray-500">
+              <div className="mt-2 text-justify text-gray-600">
                 Our outsourced tax return preparation services are designed
                 exclusively for India accounting firms and CAs who want to:
                 <ul>
@@ -99,7 +100,7 @@ const TaxReturn = () => {
                 </ul>
               </div>
 
-              <p className="mt-4 mb-4 text-justify text-gray-500">
+              <p className="my-2 text-justify text-gray-600">
                 With Account Wisely, your clients will never know we’re working
                 behind the scenes—but they’ll certainly notice the flawless
                 service you provide.
@@ -107,7 +108,7 @@ const TaxReturn = () => {
             </div>
 
             <div>
-              <h2 className="text-left text-4xl font-bold text-[#2a4768]">
+              <h2 className="mt-4 text-2xl font-bold sm:text-3xl md:text-4xl text-[#2e1566]">
                 The Real Struggle – And How We Solve It
               </h2>
               <h3 className="text-left text-3xl font-bold">
@@ -115,7 +116,7 @@ const TaxReturn = () => {
                 Checkmate
               </h3>
 
-              <p className="mt-4 mb-5 text-justify text-gray-500">
+              <p className="mt-3 mb-2 text-justify text-gray-600">
                 You know the struggle.
                 <span className="font-bold">
                   {" "}
@@ -126,7 +127,7 @@ const TaxReturn = () => {
                 of growing your business.
               </p>
 
-              <div className="mt-4 mb-5 text-justify text-gray-500">
+              <div className="text-justify text-gray-600">
                 We’ve seen it all:
                 <ul>
                   <li className="font-bold">
@@ -143,7 +144,7 @@ const TaxReturn = () => {
                 </ul>
               </div>
 
-              <p className="mt-4 mb-4 text-justify text-gray-500">
+              <p className="my-2 text-justify text-gray-600">
                 That’s where Account Wisely steps in—to ensure
                 <span className="font-bold">
                   {" "}
@@ -155,21 +156,21 @@ const TaxReturn = () => {
             </div>
 
             <div>
-              <h2 className="text-left text-4xl font-bold text-[#2a4768]">
+              <h2 className="mt-3 text-2xl font-bold sm:text-3xl md:text-4xl text-[#2e1566]">
                 Why Outsource Tax Return Preparation to Account Wisely?
               </h2>
               <h3 className="text-left text-3xl font-bold">
                 More Accuracy, Less Stress—It’s a Smart Choice
               </h3>
 
-              <p className="mt-4 mb-5 text-justify text-gray-500">
+              <p className="mt-3 text-justify text-gray-600">
                 Outsourcing your tax return preparation isn’t just about saving
                 time—it’s about
                 <span className="font-bold"> working smarter. </span>
                 Here’s why firms across the India trust Account Wisely:
               </p>
 
-              <ul className="mt-4 mb-5 text-justify text-gray-500">
+              <ul className="my-2 text-justify text-gray-600">
                 <li>
                   <span className="font-bold">📌 Cost-Effective – </span>No need
                   for extra in-house staff. Get expert tax services when you
@@ -193,7 +194,7 @@ const TaxReturn = () => {
             </div>
 
             <div>
-              <h2 className="text-left text-4xl font-bold text-[#2a4768]">
+              <h2 className="mt-3 text-2xl font-bold sm:text-3xl md:text-4xl text-[#2e1566]">
                 What We Offer – Tailored Tax Solutions for India Accounting
                 Firms
               </h2>
@@ -201,12 +202,12 @@ const TaxReturn = () => {
                 More Than Just Tax Filing—We’re Your Tax Partner
               </h3>
 
-              <p className="mt-4 mb-5 text-justify text-gray-500">
+              <p className="my-2 text-justify text-gray-600">
                 We don’t believe in one-size-fits-all. Your clients have unique
                 tax needs, and we tailor our services accordingly.
               </p>
 
-              <ul className="mt-4 mb-5 text-justify text-gray-500">
+              <ul className="text-justify text-gray-600">
                 <li>
                   <span className="font-bold">
                     ✅ Personalized Tax Filing Solutions –{" "}
@@ -227,7 +228,7 @@ const TaxReturn = () => {
                 </li>
               </ul>
 
-              <p className="mt-4 mb-4 text-justify text-gray-500">
+              <p className="my-2 text-justify text-gray-600">
                 When you work with us, your clients will never know that we’re
                 doing the heavy lifting behind the scenes—but they’ll certainly
                 notice the difference in service.
@@ -235,7 +236,7 @@ const TaxReturn = () => {
             </div>
 
             <div>
-              <h2 className="text-left text-4xl font-bold text-[#2a4768]">
+              <h2 className="mt-3 text-2xl font-bold sm:text-3xl md:text-4xl text-[#2e1566]">
                 Why Choose Account Wisely for Your Firm’s Tax Return
                 Preparation?
               </h2>
@@ -243,7 +244,7 @@ const TaxReturn = () => {
                 Your Secret Weapon for Stress-Free Tax Season
               </h3>
 
-              <p className="mt-4 mb-5 text-justify text-gray-500">
+              <p className="mt-3 mb-1 text-justify text-gray-600">
                 Account Wisely has earned the trust of accounting firms across
                 the India for a reason. We offer
                 <span className="font-bold">
@@ -253,7 +254,7 @@ const TaxReturn = () => {
                 tax return preparation services that help your firm:
               </p>
 
-              <ul className="mt-4 mb-5 text-justify text-gray-500">
+              <ul className="mb-2 text-justify text-gray-600">
                 <li>
                   <span className="font-bold">
                     ✅ Stay Ahead of Deadlines –{" "}
@@ -277,7 +278,7 @@ const TaxReturn = () => {
                 </li>
               </ul>
 
-              <p className="mt-4 mb-4 text-justify text-gray-500">
+              <p className="mb-3 text-justify text-gray-500">
                 When you partner with Account Wisely, your clients will never
                 know we exist—but they’ll definitely feel the difference in your
                 service quality.
@@ -285,7 +286,7 @@ const TaxReturn = () => {
             </div>
 
             <div>
-              <h2 className="text-4xl font-bold text-[#2a4768]">
+              <h2 className="text-2xl font-bold sm:text-3xl md:text-4xl text-[#2e1566]">
                 Comprehensive Tax Return Services for Individual and Business
                 Clients
               </h2>
@@ -293,11 +294,11 @@ const TaxReturn = () => {
                 From Sole Traders to Large Corporations—We Cover It All
               </h3>
 
-              <p className="mt-4 mb-5 text-justify text-gray-500">
+              <p className="mt-3 mb-1 text-justify text-gray-600">
                 Account Wisely provides tax return preparation for:
               </p>
 
-              <ul className="mt-4 mb-5 text-justify text-gray-500">
+              <ul className="mb-4 text-justify text-gray-600">
                 <li>
                   <span className="font-bold">
                     📌 Individual Tax Returns –{" "}
@@ -319,7 +320,7 @@ const TaxReturn = () => {
                 </li>
               </ul>
 
-              <p className="mb-10 rounded-2xl bg-[#2a4768] px-8 py-10 text-lg text-white">
+              <p className="rounded-2xl bg-[#1a0940] px-4 py-6 text-white sm:px-5 sm:py-6 md:text-xl">
                 Streamline account reconciliation with our
                 <span className="font-bold">
                   {" "}
@@ -331,20 +332,20 @@ const TaxReturn = () => {
             </div>
 
             <div>
-              <h2 className="text-4xl font-bold text-[#2a4768]">
+              <h2 className="mt-4 text-2xl font-bold sm:text-3xl md:text-4xl text-[#2e1566]">
                 Save Time, Reduce Stress, and Stay Compliant with Account Wisely
               </h2>
               <h3 className="text-3xl font-bold">
                 Tax Season Without the Chaos—Sounds Good, Right?
               </h3>
 
-              <p className="mt-4 mb-5 text-justify text-gray-500">
+              <p className="mt-2 mb-1 text-justify text-gray-600">
                 Managing tax returns in-house can quickly become
                 overwhelming—especially during peak seasons. By outsourcing to
                 Account Wisely, your firm can:
               </p>
 
-              <ul className="mt-4 mb-5 text-justify text-gray-500">
+              <ul className="mb-4 text-justify text-gray-600">
                 <li>
                   <span className="font-bold">✔ Minimize Errors – </span>Reduce
                   the risk of costly penalties.
@@ -361,23 +362,23 @@ const TaxReturn = () => {
             </div>
 
             <div>
-              <h2 className="text-4xl font-bold text-[#2a4768]">
+              <h2 className="text-2xl font-bold sm:text-3xl md:text-4xl text-[#2e1566]">
                 Trusted by Accounting Firms Across the India
               </h2>
               <h3 className="text-3xl font-bold">
                 Join the Growing List of Firms Who Trust Account Wisely
               </h3>
 
-              <p className="mt-4 mb-5 text-justify text-gray-500">
+              <p className="mt-3 text-justify text-gray-600">
                 We’ve built our reputation on
                 <span className="font-bold">
                   {" "}
                   accuracy, efficiency, and compliance,{" "}
                 </span>
-                helping India accounting firms
+                helping India accounting firms.
               </p>
 
-              <p className="mt-4 mb-5 text-justify text-gray-500">
+              <p className="mt-1 mb-4 text-justify text-gray-600">
                 Don’t let tax season drain your firm’s time and resources.
                 <span className="font-bold">
                   {" "}
@@ -388,10 +389,10 @@ const TaxReturn = () => {
             </div>
 
             <div>
-              <h2 className="text-4xl font-bold text-[#2a4768]">
+              <h2 className="text-2xl font-bold sm:text-2xl md:text-4xl">
                 Start Outsourcing Your Tax Return Preparation Today
               </h2>
-              <p className="mt-4 mb-5 text-justify text-gray-500">
+              <p className="mt-3 text-justify text-gray-600">
                 Why struggle with tax return preparation when you can
                 <span className="font-bold"> outsource it with confidence</span>
                 ? Account Wisely’s team of tax experts is ready to streamline
@@ -403,7 +404,7 @@ const TaxReturn = () => {
                 for your firm.
               </p>
 
-              <p className="mt-4 mb-5 text-justify text-gray-500">
+              <p className="mt-2 text-justify text-gray-600">
                 <span className="font-bold">📞 Contact us today </span>to learn
                 more about how we can support your firm through tax season and
                 beyond.
