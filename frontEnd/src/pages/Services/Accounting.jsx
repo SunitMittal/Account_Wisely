@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import LandingImage from "../../components/LandingImage";
 import ServiceList from "../../components/ServiceList";
 import { Link } from "react-router-dom";
@@ -7,35 +7,24 @@ import { TbPhoneCalling } from "react-icons/tb";
 import { FaCheckCircle } from "react-icons/fa";
 
 const Accounting = () => {
-  const faqs = [
+  const FAQS = [
     {
-      question:
-        "Why should CA and accounting firms consider outsourced accounting?",
-      answer:
-        "Outsourcing accounting – So you don’t need to manage an internal team, allowing you to reduce costs, increase accuracy, and focus on growing your business.",
+      Q: "Why should CA and accounting firms consider outsourced accounting?",
+      A: "Outsourcing accounting – So you don’t need to manage an internal team, allowing you to reduce costs, increase accuracy, increase efficiency, and focus on growing your business.",
     },
     {
-      question: "Why is Account Wisely a trusted partner for accounting firms?",
-      answer:
-        "Account Wisely offers reliable, white-label solutions customized to meet the unique needs of accounting firms. With a focus on precision and efficiency, we help firms deliver exceptional service to their",
+      Q: "Why is Account Wisely a trusted partner for accounting firms?",
+      A: "Account Wisely offers reliable, white-label solutions customized to meet the unique needs of accounting firms. With a focus on precision and efficiency, we help firms deliver exceptional service to their",
     },
     {
-      question:
-        "What sets Account Wisely apart from other outsourced providers?",
-      answer:
-        "Our white-label services are designed to integrate seamlessly into your firm’s operations, giving you the flexibility and precision you need, with the expertise you can rely on.",
+      Q: "What sets Account Wisely apart from other outsourced providers?",
+      A: "Our white-label services are designed to integrate seamlessly into your firm’s operations, giving you the flexibility and precision you need, with the expertise you can rely on.",
     },
     {
-      question: "Can Account Wisely help with regulatory compliance?",
-      answer:
-        "Absolutely. Account Wisely ensures that your clients’ financial accounts are accurate and compliant with India standards, reducing risks and keeping everything in line with the latest regulations.",
+      Q: "Can Account Wisely help with regulatory compliance?",
+      A: "Absolutely. Account Wisely ensures that your clients’ financial accounts are accurate and compliant with India standards, reducing risks and keeping everything in line with the latest regulations.",
     },
   ];
-  const [openIndex, setOpenIndex] = useState(null);
-
-  const toggleFAQ = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
 
   return (
     <>
@@ -76,11 +65,11 @@ const Accounting = () => {
             <div>
               <h3 className="text-2xl font-bold sm:text-3xl md:text-4xl">
                 Expert{" "}
-                <span className="text-[#2a4768]">Accounting Solutions</span> for
+                <span className="text-[#2e1566]">Accounting Solutions</span> for
                 start-ups & Accounting Firms in the India – Boost Efficiency &
                 Compliance
               </h3>
-              <p className="my-4 text-justify text-sm leading-6 text-gray-500 sm:my-5 sm:leading-7 sm:text-base">
+              <p className="my-3 text-justify leading-6 text-gray-600 sm:my-4 sm:leading-6 sm:text-base">
                 As your accounting firm grows, so do the complexities of
                 managing financial operations.{" "}
                 <span className="font-semibold text-gray-600">
@@ -94,7 +83,7 @@ const Accounting = () => {
                 .
               </p>
 
-              <p className="my-4 text-justify text-sm leading-6 text-gray-500 sm:my-5 sm:leading-7 sm:text-base">
+              <p className="my-4 text-justify leading-6 text-gray-600 sm:my-3 sm:leading-6">
                 With our{" "}
                 <span className="font-semibold text-gray-600">
                   expert accounting solutions
@@ -103,8 +92,8 @@ const Accounting = () => {
                 costs, and enhance service quality—without hiring in-house
                 staff.
               </p>
-              <p className="my-4 text-justify text-sm leading-6 text-gray-500 sm:my-5 sm:leading-7 sm:text-base">
-                <span className="font-semibold text-gray-600">Pain Point:</span>{" "}
+              <p className="my-4 text-justify leading-6 text-gray-600 sm:my-4 sm:leading-6 sm:text-base">
+                <span className="font-semibold">Pain Point:</span>{" "}
                 Growing your client base and meeting increasing demands doesn't
                 have to come at the expense of quality. With Account Wisely, you
                 can scale effortlessly, focusing on building stronger client
@@ -453,36 +442,40 @@ const Accounting = () => {
       </div>
 
       {/* FAQs */}
-      <div className="items-center bg-white px-3 py-8 sm:px-4.5 sm:py-10 md:py-28">
-        <p className="text-center text-sm font-semibold text-[#2a4768] sm:text-base">FAQs</p>
-        <h2 className="text-center text-2xl font-bold sm:text-3xl md:text-5xl">
-          Everything You Need to Know About{" "}
-          <span className="text-[#2a4768]">Outsourced Accounting</span>
-        </h2>
-        <p className="my-4 text-center text-sm text-gray-500 sm:my-5 sm:text-base">
-          Discover helpful answers to your most pressing financial questions.
-          We're here to assist you every step of the way!{" "}
-        </p>
-        <div className="mx-auto max-w-lg p-3 sm:p-4 md:max-w-7xl">
-          {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className="border-b border-gray-200 last:border-none"
-            >
-              <button
-                className="flex w-full items-center justify-between py-3 text-left text-sm font-semibold hover:cursor-pointer sm:py-4 sm:text-base md:py-6 md:text-xl"
-                onClick={() => toggleFAQ(index)}
+      <div className="bg-[#fff2dd] px-3 py-8 sm:px-4.5 sm:py-10 md:py-24">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-lg font-bold text-center text-black">FAQs</h2>
+          <h2 className="text-center text-2xl font-bold sm:text-3xl md:text-5xl">
+            Everything You Need to Know About{" "}
+            <span className="text-[#2e1566]">Outsourced Accounting</span>
+          </h2>
+          <p className="my-3 text-center text-gray-600 sm:my-3 lg:mb-10">
+            Discover helpful answers to your most pressing financial questions.
+            We're here to assist you every step of the way!{" "}
+          </p>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7">
+            {FAQS.map((FAQ, i) => (
+              <div
+                key={i}
+                className="relative group rounded-3xl p-[2px] bg-gradient-to-r from-[#fc9f41] to-[#ffc388] animate-borderFlow"
+                style={{ animationDelay: `${i * 0.2}s` }}
               >
-                {faq.question}
-                <span className="text-lg sm:text-xl">
-                  {openIndex === index ? "−" : "+"}
-                </span>
-              </button>
-              {openIndex === index && (
-                <p className="pb-3 text-sm text-gray-400 sm:pb-4 sm:text-base md:text-xl">{faq.answer}</p>
-              )}
-            </div>
-          ))}
+                <div
+                  className="rounded-3xl backdrop-blur-xl bg-white/40 shadow-xl px-5 py-5 h-full transition-all duration-400 group-hover:shadow-2xl group-hover:-translate-y-3 animate-fadeIn"
+                  style={{ animationDelay: `${i * 0.1}s` }}
+                >
+                  <div className="flex items-center gap-3 mb-3 px-3">
+                    <h3 className="text-lg font-bold text-black">{FAQ.Q}</h3>
+                  </div>
+
+                  <p className="mt-2 text-gray-700 bg-white/50 rounded-xl px-3 py-4 shadow-inner backdrop-blur-md">
+                    {FAQ.A}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import LandingImage from "../../components/LandingImage";
 import { Link } from "react-router-dom";
 import { TbPhoneCalling } from "react-icons/tb";
@@ -6,35 +6,29 @@ import OutsourceYearEnd from "../../assets/outsourced-yearend.webp";
 import ServiceList from "../../components/ServiceList";
 
 const Payroll = () => {
-  const faqs = [
+  const FAQS = [
     {
-      question: "Why should my accounting firm outsource payroll services?",
-      answer:
+      Q: "Why should my accounting firm outsource payroll services?",
+      A:
         "Outsourcing payroll helps reduce administrative costs, ensures compliance with India tax regulations, and saves valuable time, allowing you to focus on client growth.",
     },
     {
-      question: "What payroll services does Account Wisely offer for CA firms?",
-      answer:
+      Q: "What payroll services does Account Wisely offer for CA firms?",
+      A:
         "Account Wisely provides comprehensive payroll services, including payroll processing, tax filings, statutory deductions, and year-end reports tailored to your clients' needs.",
     },
     {
-      question:
+      Q:
         "How does Account Wisely stay compliant with India payroll regulations?",
-      answer:
+      A:
         "We keep up-to-date with the latest regulations and use advanced payroll software to ensure accurate tax filings and timely payments.",
     },
     {
-      question: "Can Account Wisely handle payroll for remote teams?",
-      answer:
+      Q: "Can Account Wisely handle payroll for remote teams?",
+      A:
         "Yes! We specialize in managing payroll for remote teams, ensuring accurate and timely payments, regardless of location.",
     },
   ];
-
-  const [openIndex, setOpenIndex] = useState(null);
-
-  const toggleFAQ = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
 
   return (
     <>
@@ -43,7 +37,7 @@ const Payroll = () => {
         link="Services / Payroll Services"
       />
 
-      <div className="md:my-28 md:grid md:grid-cols-[400px_minmax(900px,_1fr)_100px] md:justify-center md:px-72">
+      <div className="md:my-28 md:grid md:grid-cols-[400px_minmax(900px,_1fr)_100px] md:justify-center md:px-72 bg-white">
         {/* left part */}
         <div className="mt-10 md:sticky md:top-2 md:h-fit">
           <ServiceList />
@@ -420,36 +414,40 @@ const Payroll = () => {
       </div>
 
       {/* FAQs */}
-      <div className="items-center bg-white px-4.5 py-10 md:py-28">
-        <p className="text-center font-semibold text-[#2a4768]">FAQs</p>
-        <h2 className="text-center text-3xl font-bold md:text-5xl">
-          Everything You Need to Know About{" "}
-          <span className="text-[#2a4768]">Outsourced Accounting</span>
-        </h2>
-        <p className="my-5 text-center text-gray-500">
-          Discover helpful answers to your most pressing financial questions.
-          We’re here to assist you every step of the way!{" "}
-        </p>
-        <div className="mx-auto max-w-lg p-4 md:max-w-7xl">
-          {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className="border-b border-gray-200 last:border-none"
-            >
-              <button
-                className="flex w-full items-center justify-between py-4 text-left font-semibold hover:cursor-pointer md:py-6 md:text-xl"
-                onClick={() => toggleFAQ(index)}
+      <div className="bg-[#fff2dd] px-3 py-8 sm:px-4.5 sm:py-10 md:py-24">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-lg font-bold text-center text-black">FAQs</h2>
+          <h2 className="text-center text-2xl font-bold sm:text-3xl md:text-5xl">
+            Everything You Need to Know About{" "}
+            <span className="text-[#2e1566]">Outsourced Accounting</span>
+          </h2>
+          <p className="my-3 text-center text-gray-600 sm:my-3 lg:mb-10">
+            Discover helpful answers to your most pressing financial questions.
+            We're here to assist you every step of the way!{" "}
+          </p>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7">
+            {FAQS.map((FAQ, i) => (
+              <div
+                key={i}
+                className="relative group rounded-3xl p-[2px] bg-gradient-to-r from-[#fc9f41] to-[#ffc388] animate-borderFlow"
+                style={{ animationDelay: `${i * 0.2}s` }}
               >
-                {faq.question}
-                <span className="text-xl">
-                  {openIndex === index ? "−" : "+"}
-                </span>
-              </button>
-              {openIndex === index && (
-                <p className="pb-4 text-gray-400 md:text-xl">{faq.answer}</p>
-              )}
-            </div>
-          ))}
+                <div
+                  className="rounded-3xl backdrop-blur-xl bg-white/40 shadow-xl px-5 py-5 h-full transition-all duration-400 group-hover:shadow-2xl group-hover:-translate-y-3 animate-fadeIn"
+                  style={{ animationDelay: `${i * 0.1}s` }}
+                >
+                  <div className="flex items-center gap-3 mb-3 px-3">
+                    <h3 className="text-lg font-bold text-black">{FAQ.Q}</h3>
+                  </div>
+
+                  <p className="mt-2 text-gray-700 bg-white/50 rounded-xl px-3 py-4 shadow-inner backdrop-blur-md">
+                    {FAQ.A}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </>

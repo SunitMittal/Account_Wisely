@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import LandingImage from "../../components/LandingImage";
 import { Link } from "react-router-dom";
 import { TbPhoneCalling } from "react-icons/tb";
@@ -6,35 +6,24 @@ import OutsourceYearEnd from "../../assets/outsourced-yearend.webp";
 import ServiceList from "../../components/ServiceList";
 
 const FinancialAnalysis = () => {
-  const faqs = [
+  const FAQS = [
     {
-      question: "How can financial analysis help my clients’ business?",
-      answer:
-        "Financial analysis provides valuable insights into business performance, helping clients make informed decisions, optimize cash flow, and plan for future growth.",
+      Q: "How can financial analysis help my clients’ business?",
+      A: "Financial analysis provides valuable insights into business performance, helping clients make informed decisions, optimize cash flow, and plan for future growth.",
     },
     {
-      question:
-        "What makes Account Wisely’s financial analysis services different?",
-      answer:
-        "Account Wisely offers tailored financial reports that are easy to understand and relevant to your clients’ needs. Our team provides actionable insights that help clients make better business decisions.",
+      Q: "What makes Account Wisely’s financial analysis services different?",
+      A: "Account Wisely offers tailored financial reports that are easy to understand and relevant to your clients’ needs. Our team provides actionable insights that help clients make better business decisions.",
     },
     {
-      question: "Can Account Wisely work with businesses of any size?",
-      answer:
-        "Yes, we work with businesses of all sizes, from startups to large enterprises. Our services scale to meet the unique needs of each client.",
+      Q: "Can Account Wisely work with businesses of any size?",
+      A: "Yes, we work with businesses of all sizes, from startups to large enterprises. Our services scale to meet the unique needs of each client.",
     },
     {
-      question: "How can I be sure that Account Wisely’s reports are accurate?",
-      answer:
-        "Our team of experienced financial analysts uses reliable methods and tools to ensure that all reports are accurate and reflect your clients' true financial position.",
+      Q: "How can I be sure that Account Wisely’s reports are accurate?",
+      A: "Our team of experienced financial analysts uses reliable methods and tools to ensure that all reports are accurate and reflect your clients' true financial position.",
     },
   ];
-
-  const [openIndex, setOpenIndex] = useState(null);
-
-  const toggleFAQ = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
 
   return (
     <>
@@ -43,7 +32,7 @@ const FinancialAnalysis = () => {
         link="Services / Financial Analysis Services"
       />
 
-      <div className="md:my-28 md:grid md:grid-cols-[400px_minmax(900px,_1fr)_100px] md:justify-center md:px-72">
+      <div className="md:my-28 md:grid md:grid-cols-[400px_minmax(900px,_1fr)_100px] md:justify-center md:px-72 bg-white">
         {/* left part */}
         <div className="mt-10 md:sticky md:top-2 md:h-fit">
           <ServiceList />
@@ -445,36 +434,40 @@ const FinancialAnalysis = () => {
       </div>
 
       {/* FAQs */}
-      <div className="items-center bg-white px-4.5 py-10 md:py-28">
-        <p className="text-center font-semibold text-[#2a4768]">FAQs</p>
-        <h2 className="text-center text-3xl font-bold md:text-5xl">
-          Everything You Need to Know About{" "}
-          <span className="text-[#2a4768]">Outsourced Accounting</span>
-        </h2>
-        <p className="my-5 text-center text-gray-500">
-          Discover helpful answers to your most pressing financial questions.
-          We’re here to assist you every step of the way!{" "}
-        </p>
-        <div className="mx-auto max-w-lg p-4 md:max-w-7xl">
-          {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className="border-b border-gray-200 last:border-none"
-            >
-              <button
-                className="flex w-full items-center justify-between py-4 text-left font-semibold hover:cursor-pointer md:py-6 md:text-xl"
-                onClick={() => toggleFAQ(index)}
+      <div className="bg-[#fff2dd] px-3 py-8 sm:px-4.5 sm:py-10 md:py-24">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-lg font-bold text-center text-black">FAQs</h2>
+          <h2 className="text-center text-2xl font-bold sm:text-3xl md:text-5xl">
+            Everything You Need to Know About{" "}
+            <span className="text-[#2e1566]">Outsourced Accounting</span>
+          </h2>
+          <p className="my-3 text-center text-gray-600 sm:my-3 lg:mb-10">
+            Discover helpful answers to your most pressing financial questions.
+            We're here to assist you every step of the way!{" "}
+          </p>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7">
+            {FAQS.map((FAQ, i) => (
+              <div
+                key={i}
+                className="relative group rounded-3xl p-[2px] bg-gradient-to-r from-[#fc9f41] to-[#ffc388] animate-borderFlow"
+                style={{ animationDelay: `${i * 0.2}s` }}
               >
-                {faq.question}
-                <span className="text-xl">
-                  {openIndex === index ? "−" : "+"}
-                </span>
-              </button>
-              {openIndex === index && (
-                <p className="pb-4 text-gray-400 md:text-xl">{faq.answer}</p>
-              )}
-            </div>
-          ))}
+                <div
+                  className="rounded-3xl backdrop-blur-xl bg-white/40 shadow-xl px-5 py-5 h-full transition-all duration-400 group-hover:shadow-2xl group-hover:-translate-y-3 animate-fadeIn"
+                  style={{ animationDelay: `${i * 0.1}s` }}
+                >
+                  <div className="flex items-center gap-3 mb-3 px-3">
+                    <h3 className="text-lg font-bold text-black">{FAQ.Q}</h3>
+                  </div>
+
+                  <p className="mt-2 text-gray-700 bg-white/50 rounded-xl px-3 py-4 shadow-inner backdrop-blur-md">
+                    {FAQ.A}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </>
