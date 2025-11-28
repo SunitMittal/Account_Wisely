@@ -24,7 +24,7 @@ const Contact = () => {
     },
     {
       Q: "Who can I contact for sales inquiries?",
-      A: "You can email our sales team at sales@accountwisely.india or fill out the contact form",
+      A: "You can email our sales team at info@accountwisely.com or fill out the contact form",
     },
     {
       Q: "Can I book a consultation before partnering with Account Wisely?",
