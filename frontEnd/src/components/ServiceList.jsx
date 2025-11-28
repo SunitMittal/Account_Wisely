@@ -20,6 +20,17 @@ const ServiceList = () => {
             <MdOutlineKeyboardArrowRight className="text-[#2a4768]" />
           </Link>
         </li>
+        <li className="border-b border-gray-200 py-3.5 pr-4 hover:text-[#2a4768]">
+          <Link
+            to="/services/virtualCFO"
+            className="flex items-center justify-between"
+          >
+            <p className="text-gray-400 hover:text-[#2a4768]">
+              Virtual CFO Services
+            </p>
+            <MdOutlineKeyboardArrowRight className="text-[#2a4768]" />
+          </Link>
+        </li>
         <li className="border-b border-gray-200 py-3.5 pr-4">
           <Link
             to="/services/taxreturn"

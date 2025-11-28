@@ -63,6 +63,14 @@ const Footer = () => {
               </li>
               <li>
                 <Link
+                  to={"/services/virtualCFO"}
+                  className="text-sm hover:text-gray-300 duration-300 sm:text-base"
+                >
+                  Virtual CFO Services
+                </Link>
+              </li>
+              <li>
+                <Link
                   to={"/services/taxreturn"}
                   className="text-sm hover:text-gray-300 duration-300 sm:text-base"
                 >
@@ -115,10 +123,10 @@ const Footer = () => {
               <li className="flex items-start">
                 <IoMdMail className="mr-2 mt-0.5 h-4 w-4 flex-shrink-0" />
                 <a
-                  href="mailto:partners@accountwisely.com"
+                  href="mailto:info@accountwisely.com"
                   className="text-sm sm:text-base hover:text-gray-300"
                 >
-                  partners@accountwisely.com
+                  info@accountwisely.com
                 </a>
               </li>
             </ul>

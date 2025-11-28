@@ -48,7 +48,7 @@ const HomeImageClg = () => {
             <h2 className="mb-1 text-2xl font-bold text-gray-700">About Us</h2>
             <h1 className="leading-tight font-bold text-black md:text-3xl lg:text-5xl">
               <span className="text-[#2e1566]">Financial Solutions </span>
-              to Propel Your Firm's Success
+              to Propel Your Business Success
             </h1>
           </div>
 

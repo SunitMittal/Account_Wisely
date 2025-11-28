@@ -2,38 +2,33 @@ import React from "react";
 import LandingImage from "../../components/LandingImage";
 import { Link } from "react-router-dom";
 import { TbPhoneCalling } from "react-icons/tb";
-import OutsourceYearEnd from "../../assets/outsourced-yearend.webp";
+import PayrollServicesImg from "../../assets/payroll-services.webp";
 import ServiceList from "../../components/ServiceList";
 
 const Payroll = () => {
   const FAQS = [
     {
-      Q: "Why should my accounting firm outsource payroll services?",
-      A:
-        "Outsourcing payroll helps reduce administrative costs, ensures compliance with India tax regulations, and saves valuable time, allowing you to focus on client growth.",
+      Q: "Why should my company outsource payroll services?",
+      A: "Outsourcing payroll helps reduce administrative costs, ensures compliance with India tax regulations, and saves valuable time, allowing you to focus on client growth.",
     },
     {
-      Q: "What payroll services does Account Wisely offer for CA firms?",
-      A:
-        "Account Wisely provides comprehensive payroll services, including payroll processing, tax filings, statutory deductions, and year-end reports tailored to your clients' needs.",
+      Q: "What payroll services does Account Wisely offer?",
+      A: "Account Wisely provides comprehensive payroll services, including payroll processing, tax filings, statutory deductions, and year-end reports tailored to your clients' needs.",
     },
     {
-      Q:
-        "How does Account Wisely stay compliant with India payroll regulations?",
-      A:
-        "We keep up-to-date with the latest regulations and use advanced payroll software to ensure accurate tax filings and timely payments.",
+      Q: "How does Account Wisely stay compliant with India payroll regulations?",
+      A: "We keep up-to-date with the latest regulations and use advanced payroll software to ensure accurate tax filings and timely payments.",
     },
     {
       Q: "Can Account Wisely handle payroll for remote teams?",
-      A:
-        "Yes! We specialize in managing payroll for remote teams, ensuring accurate and timely payments, regardless of location.",
+      A: "Yes! We specialize in managing payroll for remote teams, ensuring accurate and timely payments, regardless of location.",
     },
   ];
 
   return (
     <>
       <LandingImage
-        title="Outsourced Payroll Services for CA & Accounting Firms in India"
+        title="Outsourced Payroll Services"
         link="Services / Payroll Services"
       />
 
@@ -61,20 +56,20 @@ const Payroll = () => {
         {/* right part */}
         <div>
           <img
-            src={OutsourceYearEnd}
+            src={PayrollServicesImg}
             className="mx-auto h-auto w-11/12 rounded-2xl"
           />
 
-          <div className="px-8 py-5">
+          <div className="my-6 lg:px-10 sm:my-6 sm:px-4.5">
             <div>
-              <h2 className="text-2xl font-bold sm:text-3xl md:text-4xl">
+              <h2 className="text-3xl font-bold sm:text-2xl md:text-3xl">
                 <span className="text-[#2e1566]">
                   Expert Payroll Solutions{" "}
                 </span>
                 for Your Clients’ Needs
               </h2>
 
-              <p className="mt-3 mb-2 text-justify text-gray-600">
+              <p className="mb-2 mt-3 text-justify leading-7 text-gray-600 sm:mb-2 sm:mt-3 sm:leading-7 sm:text-lg">
                 Managing payroll is a bit like juggling—except the balls are
                 <span className="font-bold">
                   {" "}
@@ -87,11 +82,12 @@ const Payroll = () => {
                 </span>
               </p>
 
-              <p className="mb-2 text-justify text-gray-600">
+              <p className="mb-2 text-justify leading-7 text-gray-600 sm:mb-2 sm:leading-7 sm:text-lg">
                 That’s where Account Wisely steps in. We specialize in
                 <span className="font-bold">
                   {" "}
-                  outsourced payroll services for India CA and accounting firms,{" "}
+                  outsourced payroll services for Indian businesses and
+                  accounting firms,{" "}
                 </span>
                 taking the burden off your hands while ensuring compliance,
                 accuracy, and efficiency. Whether it’s
@@ -103,7 +99,7 @@ const Payroll = () => {
                 <span className="font-bold"> —so you don’t have to.</span>
               </p>
 
-              <p className="mb-2 text-justify text-gray-600">
+              <p className="mb-3 text-justify leading-7 text-gray-600 sm:mb-3 sm:leading-7 sm:text-lg">
                 Partnering with Account Wisely means your firm can focus on what
                 really matters—helping your clients grow—while we make sure
                 their employees get paid accurately and on time. With our team
@@ -112,7 +108,7 @@ const Payroll = () => {
                 a concern.
               </p>
 
-              <p className="mb-4 text-justify text-gray-600">
+              <p className="mb-4 text-justify leading-7 text-gray-600 sm:mb-4 sm:leading-7 sm:text-lg">
                 <span className="font-bold">Pain Point: </span>Payroll can be a
                 headache, especially when it involves tax filings and tricky
                 deductions. Account Wisely helps eliminate these headaches with
@@ -122,11 +118,11 @@ const Payroll = () => {
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold sm:text-3xl md:text-4xl">
+              <h2 className="text-3xl font-bold sm:text-2xl md:text-3xl">
                 Why Outsource Payroll Services?
               </h2>
 
-              <p className="mt-3 mb-1 text-justify text-gray-600">
+              <p className="mb-1 mt-3 text-justify leading-7 text-gray-600 sm:mb-1 sm:mt-3 sm:leading-7 sm:text-lg">
                 Let’s be honest—handling payroll internally is like
                 <span className="font-bold">
                   {" "}
@@ -143,7 +139,7 @@ const Payroll = () => {
                 payroll outsourcing:
               </p>
 
-              <ul className="mb-4 text-justify text-gray-600">
+              <ul className="text-justify leading-7 text-gray-600 sm:leading-7 sm:text-lg sm:pl-7">
                 <li className="list-disc">
                   <span className="font-bold">✅ Accuracy & Compliance: </span>
                   No more last-minute tax panic—we ensure error-free payroll
@@ -169,19 +165,17 @@ const Payroll = () => {
                   </span>
                 </li>
               </ul>
-              <p className="rounded-2xl bg-[#1a0940] px-4 py-6 text-white sm:p-7 md:text-xl">
-                Looking for more support? Check out our
-                <span className="font-bold"> Tax Preparation Services </span>to
-                help your clients stay compliant and optimize their tax
-                strategies.
-              </p>
             </div>
 
             <div>
-              <h2 className="mt-4 text-2xl font-bold sm:text-3xl md:text-4xl">
-                What We Offer: <span className="text-[#2e1566]">Comprehensive Payroll Services Tailored for India CA Firms</span>
+              <h2 className="mt-4 text-3xl font-bold sm:text-2xl md:text-3xl">
+                What We Offer:{" "}
+                <span className="text-[#2e1566]">
+                  Comprehensive Payroll Services Tailored for India Companies
+                </span>
               </h2>
-              <p className="mt-3 mb-1 text-justify text-gray-600">
+
+              <p className=" mb-1 mt-3 text-justify leading-7 text-gray-600 sm:mb-1 sm:mt-3 sm:leading-7 sm:text-lg">
                 Outsourcing payroll means you get
                 <span className="font-bold">
                   {" "}
@@ -190,32 +184,39 @@ const Payroll = () => {
                 with:
               </p>
 
-              <p className="mb-4 text-justify text-gray-600">
-                <span className="font-bold">✔ Payroll processing </span>& wage
-                calculations.<br></br>
-                <span className="font-bold">✔ Statutory deductions </span>
-                (National Insurance, pensions, student loans).<br></br>
-                <span className="font-bold">✔ Tax Filing </span>
-                <br></br>
-                <span className="font-bold">✔ Payslip generation </span>&
-                payroll reports.<br></br>
-                <span className="font-bold">
-                  ✔ Auto-enrolment pension contributions{" "}
-                </span>
-                & RTI submissions.<br></br>
-              </p>
+              <ul className="mb-4 text-justify leading-7 text-gray-600 sm:pl-7 sm:mb-4 sm:leading-7 sm:text-lg">
+                <li>
+                  <span className="font-bold">✔ Payroll processing </span>& wage
+                  calculations.
+                </li>
+                <li>
+                  <span className="font-bold">✔ Statutory deductions </span>
+                  (National Insurance, pensions, student loans)
+                </li>
+                <li>
+                  <span className="font-bold">✔ Tax Filing </span>
+                </li>
+                <li>
+                  <span className="font-bold">✔ Payslip generation </span>&
+                  payroll reports
+                </li>
+                <li>
+                  <span className="font-bold">
+                    ✔ Auto-enrolment pension contributions{" "}
+                  </span>
+                  & RTI submissions
+                </li>
+              </ul>
             </div>
 
             <div>
-              <h3 className="text-3xl font-bold sm:text-4xl md:text-4xl">
-                <span className="text-[#2e1566]">The Real Pain Point: </span>
-                Payroll Errors = Fines & Unhappy Clients
-              </h3>
-              <h3 className="text-left text-3xl font-bold">
-                Why Payroll Compliance Matters for India CA Firms
+              <h3 className="text-3xl font-bold sm:text-2xl md:text-3xl">
+                The Real Pain Point:
+                <span className="text-[#2e1566]"> Payroll Errors = Fines </span>
+                &<span className="text-[#2e1566]"> Unhappy Clients</span>
               </h3>
 
-              <p className="mt-3 mb-2 text-justify text-gray-600">
+              <p className="mb-2 mt-3 text-justify leading-7 text-gray-600 sm:mb-2 sm:mt-3 sm:leading-7 sm:text-lg">
                 Getting payroll wrong isn’t just embarrassing—it can be
                 <span className="font-bold"> costly and legally risky. </span>
                 Late filings? Incorrect deductions?
@@ -225,11 +226,11 @@ const Payroll = () => {
                 </span>
               </p>
 
-              <p className="mb-1 text-justify text-gray-600">
+              <p className="mb-1 text-justify leading-7 text-gray-600 sm:mb-1 sm:leading-7 sm:text-lg">
                 Account Wisely ensures that:
               </p>
 
-              <ul className="mb-4 text-justify text-gray-600">
+              <ul className="mb-4 text-justify leading-7 text-gray-600 sm:pl-7 sm:mb-4 sm:leading-7 sm:text-lg">
                 <li className="list-disc">
                   <span className="font-bold">No miscalculations— </span>so
                   clients don’t come knocking.
@@ -250,11 +251,11 @@ const Payroll = () => {
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold sm:text-3xl md:text-4xl">
+              <h2 className="text-3xl font-bold sm:text-2xl md:text-3xl">
                 Why Choose Account Wisely?
               </h2>
 
-              <p className="mt-3 mb-1 text-justify text-gray-600">
+              <p className="mb-1 mt-3 text-justify leading-7 text-gray-600 sm:mb-1 sm:mt-3 sm:leading-7 sm:text-lg">
                 We’re not just a payroll provider—we’re
                 <span className="font-bold"> your firm’s secret weapon </span>
                 for streamlined, stress-free payroll services. Here’s why
@@ -265,7 +266,7 @@ const Payroll = () => {
                 partner with us:
               </p>
 
-              <ul className="mb-4 text-justify text-gray-600">
+              <ul className="mb-4 text-justify leading-7 text-gray-600 sm:pl-7 sm:mb-4 sm:leading-7 sm:text-lg">
                 <li>
                   <span className="font-bold">📌 Industry Expertise: </span>From
                   small businesses to large enterprises,
@@ -297,7 +298,7 @@ const Payroll = () => {
                 </li>
               </ul>
 
-              <p className="rounded-2xl bg-[#1a0940] px-4 py-6 text-white sm:p-8 md:text-xl">
+              <p className="rounded-2xl bg-[#1a0940] px-8 py-6 text-white sm:px-8 sm:py-6 md:text-xl">
                 For further financial management support, explore our
                 <span className="font-bold">
                   {" "}
@@ -307,74 +308,19 @@ const Payroll = () => {
             </div>
 
             <div>
-              <h2 className=" mt-4 text-2xl font-bold sm:text-3xl md:text-4xl text-[#2e1566]">
-                Simplifying Payroll for India Accounting Firms
-              </h2>
-              <h3 className="text-3xl font-bold">
-                Say Goodbye to Payroll Stress & Compliance Worries
-              </h3>
-
-              <p className="mt-3 mb-1 text-justify text-gray-600">
-                Handling payroll in-house is like doing
-                <span className="font-bold">
+              <h2 className="mt-4 text-3xl font-bold sm:text-2xl md:text-3xl md:mt-4">
+                Conclusion:
+                <span className="text-[#2e1566]">
                   {" "}
-                  manual bookkeeping in the era of cloud accounting—it’s slow,
-                  risky, and unnecessary.{" "}
+                  Let’s Handle Payroll—You Handle Growth
                 </span>
-                Account Wisely’s
-                <span className="font-bold"> outsourced payroll services </span>
-                ensure:
-              </p>
-
-              <ul className="mb-4 text-justify text-gray-600">
-                <li>
-                  <span className="font-bold">🚀 100% Payroll Accuracy – </span>
-                  No miscalculations, no delays.
-                </li>
-                <li>
-                  <span className="font-bold">🚀 Timely Payments – </span>
-                  Employees paid on time, every time.
-                </li>
-                <li>
-                  <span className="font-bold">🚀 Ind-AS Compliance – </span>
-                  Every tax, deduction, and filing done
-                  <span className="font-bold"> correctly.</span>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h2 className="text-2xl font-bold sm:text-3xl md:text-4xl">
-                Trusted Payroll Services for India CA & Accounting Firms
               </h2>
 
-              <p className="my-3 text-justify text-gray-600">
-                Account Wisely has built a solid reputation for providing
-                <span className="font-bold">
-                  {" "}
-                  reliable, scalable, and fully compliant payroll services{" "}
-                </span>
-                for India accountants. Whether your clients are
-                <span className="font-bold">
-                  {" "}
-                  small businesses or large enterprises,{" "}
-                </span>
-                we ensure their payroll runs smoothly, keeping
-                <span className="font-bold"> penalties at bay</span>.
-              </p>
-            </div>
-
-            <div>
-              <h2 className="text-2xl font-bold sm:text-3xl md:text-4xl">
-                Conclusion: 
-                <span className="text-[#2e1566]"> Let’s Handle Payroll—You Handle Growth</span>
-              </h2>
-
-              <p className="mt-3 mb-1 text-justify text-gray-600">
+              <p className="mb-1 mt-3 text-justify leading-7 text-gray-600 sm:mb-1 sm:mt-3 sm:leading-7 sm:text-lg">
                 Outsourcing payroll to Account Wisely means:
               </p>
 
-              <ul className="mb-3 text-justify text-gray-600">
+              <ul className="mb-2 text-justify leading-7 text-gray-600 sm:mb-2 sm:leading-7 sm:pl-7 sm:text-lg">
                 <li>
                   <span className="font-bold">✔ Fewer payroll headaches</span>
                 </li>
@@ -388,21 +334,12 @@ const Payroll = () => {
                 </li>
               </ul>
 
-              <p className="mb-4 text-justify text-gray-600">
+              <p className="text-justify leading-7 text-gray-600 sm:leading-7 sm:text-lg">
                 <span className="font-bold">
                   📢 Ready to simplify payroll for your clients? Let’s talk.
                   Contact Account Wisely today
-                </span> and leave payroll processing to the experts. 🎯
-              </p>
-
-              <p className="rounded-2xl bg-[#1a0940] px-4 py-6 text-white sm:px-8 sm:py-8 md:text-xl">
-                Interested in other services to support your firm? Learn more
-                about our
-                <span className="font-bold">
-                  {" "}
-                  Outsourced Accounting Services{" "}
-                </span>
-                designed to streamline your clients’ financial operations.
+                </span>{" "}
+                and leave payroll processing to the experts. 🎯
               </p>
             </div>
           </div>
@@ -410,18 +347,18 @@ const Payroll = () => {
       </div>
 
       {/* FAQs */}
-      <div className="bg-[#fff2dd] px-3 py-8 sm:px-4.5 sm:py-10 md:py-24">
+      <div className="bg-[#fff2dd] px-4 py-14 sm:px-4 sm:py-8 md:py-14">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-lg font-bold text-center text-black">FAQs</h2>
-          <h2 className="text-center text-2xl font-bold sm:text-3xl md:text-5xl">
+          <h2 className="text-center text-4xl font-bold sm:text-3xl md:text-4xl">
             Everything You Need to Know About{" "}
-            <span className="text-[#2e1566]">Outsourced Accounting</span>
+            <span className="text-[#2e1566]">Payroll Outsourcing</span>
           </h2>
-          <p className="my-3 text-center text-gray-600 sm:my-3 lg:mb-10">
+          <p className="my-3 text-center text-gray-600 sm:my-3 lg:mb-8 text-lg">
             Discover helpful answers to your most pressing financial questions.
             We're here to assist you every step of the way!{" "}
           </p>
-          
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7">
             {FAQS.map((FAQ, i) => (
               <div
