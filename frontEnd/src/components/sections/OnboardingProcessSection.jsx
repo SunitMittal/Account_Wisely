@@ -43,12 +43,12 @@ const OnboardingProcessSection = () => {
     },
     {
       id: 4,
-      title: "Complimentary 20-Hour Trial",
+      title: "Complimentary Consultation Call ",
       icon: (
         <CirclePercent className="h-8 w-8 text-[#2a4768] group-hover:text-white" />
       ),
       content:
-        "You can try our services risk-free with a 20-hour trial. This gives you a chance to see how we can reduce your workload and improve your firm’s operations.",
+        "You can avail a complimentary service call with us which gives you a chance to discuss your finance and a complementary review of your books of accounts to see how we can reduce your workload and improve your company’s finance operations.",
     },
     {
       id: 5,

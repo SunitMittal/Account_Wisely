@@ -40,7 +40,7 @@ const HeroSection = () => {
             <h1 className="leading-tight font-bold text-black sm:text-3xl md:text-4xl lg:text-5xl">
               Expert Outsourced{" "}
               <span className="text-[#2e1566]">Accounting Services</span> for
-              Indian Start-Ups & CA Firms — Save Time & Cut Costs
+              Indian Startups & CA Firms — Save Time & Cut Costs
             </h1>
           </div>
 

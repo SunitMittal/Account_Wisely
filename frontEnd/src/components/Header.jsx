@@ -108,12 +108,17 @@ const Header = () => {
                   </svg>
                 </button>
                 <div className="absolute left-0 z-50 hidden min-w-[230px] space-y-2 rounded-lg bg-gradient-to-b from-[#2a265c] via-[#4e4f8d] to-[#7776b9] p-4  group-hover:block text-white">
-                  {/* bg-[#1a0940] */}
                   <Link
                     to={"/services/accounting"}
                     className="block py-1 underline-offset-8 hover:underline"
                   >
                     Accounting Services
+                  </Link>
+                  <Link
+                    to={"/services/virtualCFO"}
+                    className="block py-1 underline-offset-8 hover:underline"
+                  >
+                    Virtual CFO Services
                   </Link>
                   <Link
                     to={"/services/taxreturn"}
@@ -271,6 +276,15 @@ const Header = () => {
                       }`}
                     >
                       Accounting Services
+                    </Link>
+                    <Link
+                      onClick={closeMenu}
+                      to={"/services/accounting"}
+                      className={`py-1 text-white underline-offset-8 hover:underline ${
+                        isActive("/services/virtualCFO") ? "font-bold" : ""
+                      }`}
+                    >
+                      Virtual CFO Services
                     </Link>
                     <Link
                       onClick={closeMenu}

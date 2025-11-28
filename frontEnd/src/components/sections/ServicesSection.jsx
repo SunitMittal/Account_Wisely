@@ -16,30 +16,6 @@ const ServicesSection = () => {
   const services = [
     {
       id: 1,
-      title: "Tax Return Preparation",
-      icon: <FilePen className="h-8 w-8 group-hover:text-white" />,
-      content:
-        "Simplify tax season with our preparation and filing services that take the stress out of tax returns.",
-      path: "/services/taxreturn",
-    },
-    {
-      id: 2,
-      title: "Payroll Services",
-      icon: <HandCoins className="h-8 w-8 group-hover:text-white" />,
-      content:
-        "Timely, accurate payroll, every time. We make sure your clients' payroll is compliant with UK regulations, without the hassle.",
-      path: "/services/payroll",
-    },
-    {
-      id: 3,
-      title: "GST Return Filing",
-      icon: <Banknote className="h-8 w-8 group-hover:text-white" />,
-      content:
-        "We handle GST returns with precision and efficiency, ensuring compliance with Ind-AS.",
-      path: "/services/GST",
-    },
-    {
-      id: 4,
       title: "Accounting Services",
       icon: <FileText className="h-8 w-8 group-hover:text-white" />,
       content:
@@ -47,7 +23,39 @@ const ServicesSection = () => {
       path: "/services/accounting",
     },
     {
+      id: 2,
+      title: "Virtual CFO Services",
+      icon: <FileText className="h-8 w-8 group-hover:text-white" />,
+      content:
+        "We manage your clients' financial records, ensuring accuracy and compliance without taking up your time.",
+      path: "/services/virtualCFO",
+    },
+    {
+      id: 3,
+      title: "Tax Return Preparation",
+      icon: <FilePen className="h-8 w-8 group-hover:text-white" />,
+      content:
+        "Simplify tax season with our preparation and filing services that take the stress out of tax returns.",
+      path: "/services/taxreturn",
+    },
+    {
+      id: 4,
+      title: "Payroll Services",
+      icon: <HandCoins className="h-8 w-8 group-hover:text-white" />,
+      content:
+        "Timely, accurate payroll, every time. We make sure your clients' payroll is compliant with UK regulations, without the hassle.",
+      path: "/services/payroll",
+    },
+    {
       id: 5,
+      title: "GST Return Filing",
+      icon: <Banknote className="h-8 w-8 group-hover:text-white" />,
+      content:
+        "We handle GST returns with precision and efficiency, ensuring compliance with Ind-AS.",
+      path: "/services/GST",
+    },
+    {
+      id: 6,
       title: "Financial Analysis",
       icon: <ChartSpline className="h-8 w-8 group-hover:text-white" />,
       content:

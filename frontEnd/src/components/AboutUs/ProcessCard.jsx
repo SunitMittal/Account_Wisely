@@ -5,7 +5,7 @@ const ProcessCard = ({ number, title, content, icon}) => {
     <div className="hover-lift group flex h-full flex-col overflow-hidden rounded-lg">
       <div className="flex-grow p-6 mb-10">
         <div className="mb-4 flex items-center">
-          <div className="mr-3 rounded-full p-3 transition-colors duration-300">
+          <div className="mr-3 rounded-full py-2 px-3 transition-colors duration-300">
             <div className="transform transition-transform duration-300 group-hover:scale-110">
               {icon}
             </div>
