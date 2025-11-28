@@ -2,9 +2,7 @@ import React from "react";
 import LandingImage from "../../components/LandingImage";
 import ServiceList from "../../components/ServiceList";
 import { Link } from "react-router-dom";
-import OutsourceAccounting from "../../assets/outsourced-accounting.webp";
 import { TbPhoneCalling } from "react-icons/tb";
-import { FaCheckCircle } from "react-icons/fa";
 
 const Accounting = () => {
   const FAQS = [
@@ -29,14 +27,13 @@ const Accounting = () => {
   return (
     <>
       <LandingImage
-        title="Outsourced Accounting Services for Indian Accounting Firms to Startups & Accounting Firms"
+        title="Accounting Services"
         link="Services / Accounting Services"
-        // className="text-[#2e1566]"
       />
 
-      <div className="md:my-25 md:grid md:grid-cols-[300px_minmax(600px,_1fr)_50px] md:justify-center md:px-4 lg:grid-cols-[400px_minmax(900px,_1fr)_100px] lg:px-72">
+      <div className="md:my-20 md:grid md:grid-cols-[400px_minmax(900px,_1fr)_100px] md:justify-center md:px-50">
         {/* left part */}
-        <div className="mt-6 md:sticky md:top-2 md:h-fit lg:mt-10">
+        <div className="mt-6 md:sticky md:top-2 md:h-fit lg:mt-8">
           <ServiceList />
 
           <div className="mx-auto my-6 max-w-96 rounded-2xl border border-[#1a0940] bg-white p-4 sm:my-8 sm:p-4.5">
@@ -56,12 +53,6 @@ const Accounting = () => {
         </div>
 
         {/* right part */}
-        <div>
-          <img
-            src={OutsourceAccounting}
-            className="mx-auto h-auto w-11/12 rounded-2xl"
-          />
-
           <div className="my-6 lg:px-10 sm:my-8 sm:px-4.5">
             <div>
               <h3 className="text-3xl font-bold sm:text-2xl md:text-3xl">
@@ -176,137 +167,7 @@ const Accounting = () => {
                 can keep your focus on delivering value to your clients,
                 confidently and efficiently.
               </p>
-              <p className="rounded-2xl bg-[#1a0940] px-8 py-6 text-white sm:px-8 sm:py-6 md:text-xl">
-                Want to simplify your firm's payables and receivables? Explore
-                our{" "}
-                <Link to={"/services/payroll"} className="font-bold">
-                  Outsoured Payroll Services
-                </Link>{" "}
-                to enhance cash flow and financial control.
-              </p>
             </div>
-
-            {/* 
-            <div>
-              <h2 className="mt-4 mb-4 text-2xl font-bold sm:mt-5 sm:mb-2 sm:text-3xl md:text-4xl">
-                <span className="text-[#2e1566]">Why Account Wisely?</span>{" "}
-                Outsourced Accounting for{" "}
-                <span className="text-[#2e1566]">Efficiency & Savings!</span>
-              </h2>
-              <p className="my-2 text-justify leading-6 text-gray-600">
-                Choosing Account Wisely means more than just outsourcing—it’s
-                about having a reliable partner that strengthens your firm’s
-                foundation. Whether you’re a small CA practice or an established
-                accounting firm, we adapt our solutions to meet your needs.
-              </p>
-              <h3 className="text-2xl font-bold">
-                Focus on Growth While We Handle the Numbers
-              </h3>
-              <p className="mt-1 leading-6 text-gray-600">
-                Growing an accounting practice should mean{" "}
-                <span className="font-bold text-gray-600">
-                  more revenue, not more stress.
-                </span>{" "}
-                With our outsourced accounting services, you can:
-              </p>
-              <ul className="text-gray-600">
-                <li>
-                  ✔ Spend more time building{" "}
-                  <span className="font-bold text-gray-600">
-                    client relationships
-                  </span>
-                </li>
-                <li>
-                  ✔ Reduce internal workload &{" "}
-                  <span className="font-bold text-gray-600">
-                    increase efficiency
-                  </span>
-                </li>
-                <li>
-                  ✔ Ensure{" "}
-                  <span className="font-bold text-gray-600">
-                    accurate financial reporting & tax compliance
-                  </span>
-                </li>
-                <li>✔ Avoid costly hiring & training expenses</li>
-              </ul>
-
-              <h3 className="my-2 text-2xl font-bold">
-                The Account Wisely Advantage
-              </h3>
-              <div className="leading-6 text-gray-600">
-                Unlike generic outsourcing providers, we specialize in
-                supporting{" "}
-                <span className="font-bold text-gray-600">
-                  India-based CA and accounting firms.
-                </span>{" "}
-                We ensure that:
-                <ul className="list-disc pl-7 text-gray-600">
-                  <li>
-                    Every report is{" "}
-                    <span className="font-bold text-gray-600">
-                      accurate and audit-ready
-                    </span>
-                  </li>
-                  <li>
-                    You meet{" "}
-                    <span className="font-bold text-gray-600">
-                      India tax deadlines without last-minute rushes
-                    </span>
-                  </li>
-                  <li>
-                    Your firm stays ahead with{" "}
-                    <span className="font-bold text-gray-600">
-                      real-time financial insights
-                    </span>
-                  </li>
-                </ul>
-                <ul className="my-4">
-                  <li className="grid auto-cols-auto grid-flow-col">
-                    <FaCheckCircle className="text-2xl text-[#1a0940]" />
-                    <div className="ml-3">
-                      <span className="font-bold text-gray-600">
-                        Cost-Efficient:{" "}
-                      </span>
-                      Avoid the high costs of maintaining an in-house accounting
-                      team. Account Wisely provides fully flexible services at
-                      affordable rates.
-                    </div>
-                  </li>
-                  <li className="grid auto-cols-auto grid-flow-col">
-                    <FaCheckCircle className="text-2xl text-[#1a0940]" />
-                    <div className="ml-3">
-                      <span className="font-bold text-gray-600">
-                        Industry Expertise:{" "}
-                      </span>{" "}
-                      With years of experience working with accounting firms, we
-                      understand the unique challenges and regulations you
-                      face—and we have the solutions to keep you ahead.
-                    </div>
-                  </li>
-                  <li className="grid auto-cols-auto grid-flow-col">
-                    <FaCheckCircle className="text-2xl text-[#1a0940]" />
-                    <div className="ml-3">
-                      <span className="font-bold text-gray-600">
-                        Scalable Support:{" "}
-                      </span>
-                      As your firm grows, so do we. Account Wisely scales its
-                      services to meet the demands of your expanding client
-                      base, ensuring consistent quality and efficiency.
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <p className="rounded-2xl bg-[#1a0940] px-4 py-6 text-white sm:px-8 sm:py-8 md:text-xl">
-                Need expert help with tax prep? Explore our{" "}
-                <Link to={"/services/taxreturn"} className="font-bold">
-                  Tax Preparation Services
-                </Link>{" "}
-                to ensure your clients get the accurate and compliant filings
-                they deserve.
-              </p>
-            </div>
-             */}
 
             <div>
               <h2 className="mt-5 mb-2 text-3xl font-bold sm:mt-5 sm:mb-2 sm:text-2xl md:text-3xl">
@@ -439,7 +300,6 @@ const Accounting = () => {
             </div>
           </div>
         </div>
-      </div>
 
       {/* FAQs */}
       <div className="bg-[#fff2dd] px-4 py-14 sm:px-4 sm:py-8 md:py-14">

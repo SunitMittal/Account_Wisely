@@ -2,7 +2,7 @@ import React from "react";
 import {
   BookOpen,
   Landmark,
-  FileCheck,
+  UserStar,
   FilePen,
   HandCoins,
   Banknote,
@@ -25,7 +25,7 @@ const ServicesSection = () => {
     {
       id: 2,
       title: "Virtual CFO Services",
-      icon: <FileText className="h-8 w-8 group-hover:text-white" />,
+      icon: <UserStar className="h-8 w-8 group-hover:text-white" />,
       content:
         "We manage your clients' financial records, ensuring accuracy and compliance without taking up your time.",
       path: "/services/virtualCFO",
