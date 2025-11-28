@@ -12,23 +12,23 @@ const Contact = () => {
   const FAQS = [
     {
       Q: "How can I get in touch with Account Wisely?",
-      A: "You can contact us via our website's contact form, email us at partners@accountwisely.com.",
+      A: "You can contact us via our website's contact form, email us at info@accountwisely.com",
     },
     {
       Q: "Where is Account Wisely India located?",
-      A: "We provide outsourced accounting services across India, with our operations center based in Mumbai.",
+      A: "We provide outsourced accounting services across India, with our operations center based in Mumbai",
     },
     {
       Q: "How long does it take to receive a response?",
-      A: "We typically respond within 24 business hours. For urgent inquiries, please contact us by phone or live chat.",
+      A: "We typically respond within 24 business hours. For urgent inquiries, please contact us by phone or live chat",
     },
     {
       Q: "Who can I contact for sales inquiries?",
-      A: "You can email our sales team at sales@accountwisely.india or fill out the contact form.",
+      A: "You can email our sales team at sales@accountwisely.india or fill out the contact form",
     },
     {
       Q: "Can I book a consultation before partnering with Account Wisely?",
-      A: "Yes! We offer a free trial. Visit our Book a Free Trial page.",
+      A: "Yes! We offer a free trial. Visit our Book a Free Trial page",
     },
   ];
 
@@ -99,7 +99,7 @@ const Contact = () => {
                 <RiMailSendLine className="sm:h-5 sm:w-5" />
                 <a
                   className="font-bold sm:text-base underline decoration-2"
-                  href="mailto:partners@accountwisely.com"
+                  href="mailto:info@accountwisely.com"
                 >
                   Shoot Us An Email
                 </a>
@@ -114,7 +114,7 @@ const Contact = () => {
               <div className="flex items-center gap-2 sm:mt-2">
                 <FiMapPin className="sm:h-5 sm:w-5 " />
                 <a
-                  href="https://maps.google.com/"
+                  href="https://maps.app.goo.gl/nwohfKm27YrRRDyg6"
                   target="_blank"
                   className="font-bold sm:text-base underline decoration-2"
                 >
