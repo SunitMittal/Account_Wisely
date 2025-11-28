@@ -27,7 +27,7 @@ const ServicesSection = () => {
       title: "Virtual CFO Services",
       icon: <UserStar className="h-8 w-8 group-hover:text-white" />,
       content:
-        "We manage your clients' financial records, ensuring accuracy and compliance without taking up your time.",
+        "We provide Affordable expert financial leadership, MIS insights, and strategic guidance to help growing businesses make smarter decision.",
       path: "/services/virtualCFO",
     },
     {

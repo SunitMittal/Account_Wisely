@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const LandingImage = ({ title, link }) => {
   return (
     <div
-      className="flex h-48 flex-col items-center justify-center gap-2 bg-[url(assets/about-landing.jpg)] bg-cover bg-center bg-no-repeat text-[#2e1566] shadow-2xl sm:h-64 sm:gap-3 md:h-80 lg:h-[520px] inset-shadow-3xl"
+      className="flex h-48 flex-col items-center justify-center gap-2 bg-[url(assets/about-landing.jpg)] bg-cover bg-center bg-no-repeat text-[#230c54] shadow-2xl sm:h-64 sm:gap-3 md:h-80 lg:h-[520px] inset-shadow-3xl"
       style={{
         backgroundAttachment: "fixed",
       }}
