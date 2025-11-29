@@ -20,11 +20,14 @@ app.post("/send-email", async (req, res) => {
   const { senderEmail, subject, msg } = req.body; //////
 
   if (!senderEmail || !subject || !msg) {
-    return res.status(400).send({ msg: "senderEmail, subject and msg are required" });
+    return res
+      .status(400)
+      .send({ msg: "senderEmail, subject and msg are required" });
   }
 
   const mailOptions = {
-    from: senderEmail,
+    from: process.env.EMAIL_USER, // Gmail requires using authenticated email as 'from'
+    replyTo: senderEmail, // Use replyTo so replies go to the sender
     to: process.env.EMAIL_USER,
     subject: subject,
     text: `You have received a feedback/query:
