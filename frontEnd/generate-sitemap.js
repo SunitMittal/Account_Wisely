@@ -8,6 +8,7 @@ const routes = [
   '/contact',
   '/career',
   '/services/accounting',
+  '/services/virtualCFO',
   '/services/bookkeeping',
   '/services/taxreturn',
   '/services/payroll',
