@@ -2,9 +2,18 @@ import React, { useState } from "react";
 import LandingImage from "../components/LandingImage";
 import Career1 from "../assets/career1.png";
 import { Link } from "react-router-dom";
-import { FaCheckCircle, FaBriefcase, FaHandshake, FaArrowRight } from "react-icons/fa";
+import {
+  FaCheckCircle,
+  FaBriefcase,
+  FaHandshake,
+  FaArrowRight,
+} from "react-icons/fa";
 
 const Career = () => {
+  const [submitting, setSubmitting] = useState(false);
+  const [succeeded, setSucceeded] = useState(false);
+  const [errors, setErrors] = useState({});
+
   const currentOpenings = [
     {
       id: 1,
@@ -53,7 +62,7 @@ const Career = () => {
         "Account Wisely is extremely prompt and professional. They were able to help me out a lot with relevant service. I'm extremely grateful for their help and guidance in the matter.",
       image: "../../assets/team/thomas.webp",
     },
-        {
+    {
       id: 3,
       name: "MAYUR KHAMBETE",
       quote:
@@ -70,6 +79,87 @@ const Career = () => {
   ];
 
   const [activeTestimonial, setActiveTestimonial] = useState(0);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (submitting) return;
+    setSubmitting(true);
+    setErrors({});
+
+    const formData = new FormData(e.currentTarget);
+    const senderEmail = formData.get("email");
+    const fullname = formData.get("fullname");
+    const phone = formData.get("phone");
+    const message = formData.get("message");
+    const file = formData.get("input");
+
+    if (!senderEmail || !fullname) {
+      setErrors({ form: "Email and Full Name are required." });
+      setSubmitting(false);
+      return;
+    }
+
+    const subject = `Career Application from ${fullname}`;
+    let msg = `Name: ${fullname}\nEmail: ${senderEmail}\nPhone: ${
+      phone || "Not provided"
+    }\nMessage: ${message || "No message provided"}`;
+
+    if (file && file.size > 0) {
+      msg += `\n\nResume/CV attached: ${file.name} (${(
+        file.size / 1024
+      ).toFixed(2)} KB)`;
+    }
+
+    try {
+      const res = await fetch(
+        import.meta.env.VITE_API_URL || "http://localhost:4000/send-email",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ senderEmail, subject, msg }),
+        }
+      );
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        setErrors({
+          form: data.msg || "Failed to send application. Please try again.",
+        });
+      } else {
+        setSucceeded(true);
+        e.currentTarget.reset();
+      }
+    } catch (err) {
+      setErrors({ form: "Network error. Please try again." });
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
+  if (succeeded) {
+    return (
+      <>
+        <LandingImage title="Career" link="Career" />
+        <div className="flex flex-col items-center justify-center min-h-[60vh] px-4">
+          <div className="text-center max-w-2xl">
+            <h2 className="text-3xl font-bold text-[#2e1566] mb-4">
+              Thank You for Your Interest!
+            </h2>
+            <p className="text-lg text-gray-600 mb-6">
+              We've received your application and will review it shortly. Our
+              team will get back to you as soon as possible.
+            </p>
+            <Link
+              to="/career"
+              className="inline-block rounded-lg bg-gradient-to-r from-[#f58210] to-[#fc9f41] px-6 py-3 font-semibold text-white shadow-lg transition-all duration-600 hover:from-[#fc9f41] hover:to-[#f58210] hover:scale-[1.02]"
+            >
+              Back to Careers
+            </Link>
+          </div>
+        </div>
+      </>
+    );
+  }
 
   return (
     <>
@@ -88,8 +178,7 @@ const Career = () => {
 
         <div className="rounded-xl border bg-white p-6">
           <form
-            action=""
-            method="get"
+            onSubmit={handleSubmit}
             className="mx-auto flex max-w-3xl flex-col gap-4"
           >
             <p className="mb-4 text-gray-600">
@@ -104,6 +193,7 @@ const Career = () => {
                 id="fullname"
                 placeholder="Full Name"
                 className="h-12 w-full rounded-md border-0 bg-[#eceef6] px-4 py-2 focus:outline-none"
+                required
               />
               <input
                 type="email"
@@ -111,6 +201,7 @@ const Career = () => {
                 id="email"
                 placeholder="Email Address"
                 className="h-12 w-full rounded-md border-0 bg-[#eceef6] px-4 py-2 focus:outline-none"
+                required
               />
             </div>
 
@@ -126,8 +217,8 @@ const Career = () => {
                 type="file"
                 name="input"
                 id="input"
-                placeholder=""
-                className="h-12 w-full rounded-md border-0 bg-[#eceef6] px-4 py-2 focus:outline-none"
+                accept=".pdf,.doc,.docx"
+                className="h-12 w-full rounded-md border-0 bg-[#eceef6] px-4 py-2 focus:outline-none file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-[#2e1566] file:text-white hover:file:bg-[#1a3758]"
               />
             </div>
 
@@ -138,11 +229,16 @@ const Career = () => {
               className="h-24 w-full resize-none rounded-md border-0 bg-[#eceef6] px-4 py-2 focus:outline-none"
             ></textarea>
 
+            {errors.form && (
+              <p className="text-sm text-red-600">{errors.form}</p>
+            )}
+
             <button
               type="submit"
-              className="text-lg h-12 rounded-lg bg-gradient-to-r from-[#f58210] to-[#fc9f41] px-4 py-2 font-semibold text-white shadow-lg transition-all duration-600 hover:from-[#fc9f41] hover:to-[#f58210] hover:cursor-pointer hover:scale-[1.01]"
+              disabled={submitting}
+              className="text-lg h-12 rounded-lg bg-gradient-to-r from-[#f58210] to-[#fc9f41] px-4 py-2 font-semibold text-white shadow-lg transition-all duration-600 hover:from-[#fc9f41] hover:to-[#f58210] hover:cursor-pointer hover:scale-[1.01] disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Send Message
+              {submitting ? "Sending..." : "Send Message"}
             </button>
           </form>
         </div>
@@ -215,7 +311,9 @@ const Career = () => {
 
       {/* Current Openings */}
       <div className="px-4.5 py-10" id="current-openings">
-        <p className="my-4 text-center text-xl font-bold text-[#2e1566]">Career</p>
+        <p className="my-4 text-center text-xl font-bold text-[#2e1566]">
+          Career
+        </p>
         <div className="mx-auto max-w-6xl">
           <h2 className="mb-10 text-center text-4xl font-bold">
             Current <span className="text-[#2e1566]">Openings</span>
@@ -227,21 +325,24 @@ const Career = () => {
               {currentOpenings.map((job) => (
                 <div
                   key={job.id}
-                  className={`mb-4 cursor-pointer rounded-lg px-6 py-5 transition-all ${activeJob === job.id
+                  className={`mb-4 cursor-pointer rounded-lg px-6 py-5 transition-all ${
+                    activeJob === job.id
                       ? "bg-[#2e1566] text-white"
                       : "bg-white hover:bg-gray-100"
-                    }`}
+                  }`}
                   onClick={() => setActiveJob(job.id)}
                 >
                   <h3
-                    className={`text-xl font-bold ${activeJob === job.id ? "text-white" : ""
-                      }`}
+                    className={`text-xl font-bold ${
+                      activeJob === job.id ? "text-white" : ""
+                    }`}
                   >
                     {job.title}
                   </h3>
                   <div
-                    className={`mt-2 flex items-center ${activeJob === job.id ? "text-white" : "text-gray-600"
-                      }`}
+                    className={`mt-2 flex items-center ${
+                      activeJob === job.id ? "text-white" : "text-gray-600"
+                    }`}
                   >
                     <FaBriefcase className="mr-2" />
                     <span>{job.type}</span>
@@ -374,8 +475,9 @@ const Career = () => {
                 <button
                   key={index}
                   onClick={() => setActiveTestimonial(index)}
-                  className={`h-3 w-3 rounded-full cursor-pointer ${activeTestimonial === index ? "bg-[#2e1566]" : "bg-gray-300"
-                    }`}
+                  className={`h-3 w-3 rounded-full cursor-pointer ${
+                    activeTestimonial === index ? "bg-[#2e1566]" : "bg-gray-300"
+                  }`}
                 ></button>
               ))}
             </div>
@@ -479,13 +581,12 @@ const Career = () => {
           rewarding career at Account Wisely.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
-
           <button className="text-lg transform rounded-lg bg-gradient-to-r from-[#f58210] to-[#fc9f41] px-6 py-3 font-bold text-white shadow-lg transition-all duration-600 hover:cursor-pointer hover:from-[#fc9f41] hover:to-[#f58210] hover:scale-[1.02]">
-              <Link to={"#current-openings"}>View Open Positions</Link>
-            </button>
-            <button className="text-lg transform rounded-lg bg-gradient-to-r from-[#f58210] to-[#fc9f41] px-6 py-3 font-bold text-white shadow-lg transition-all duration-600 hover:cursor-pointer hover:from-[#fc9f41] hover:to-[#f58210] hover:scale-[1.02]">
-              <Link to={"/contact"}>Contact Recruitment Team</Link>
-            </button>
+            <Link to={"#current-openings"}>View Open Positions</Link>
+          </button>
+          <button className="text-lg transform rounded-lg bg-gradient-to-r from-[#f58210] to-[#fc9f41] px-6 py-3 font-bold text-white shadow-lg transition-all duration-600 hover:cursor-pointer hover:from-[#fc9f41] hover:to-[#f58210] hover:scale-[1.02]">
+            <Link to={"/contact"}>Contact Recruitment Team</Link>
+          </button>
         </div>
       </div>
 
