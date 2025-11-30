@@ -4,6 +4,7 @@ const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
+
 app.use(cors());
 app.use(express.json());
 
@@ -17,7 +18,7 @@ const transporter = nodemailer.createTransport({
 });
 
 app.post("/send-email", async (req, res) => {
-  const { senderEmail, subject, msg } = req.body; //////
+  const { senderEmail, subject, msg } = req.body;
 
   if (!senderEmail || !subject || !msg) {
     return res
