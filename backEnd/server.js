@@ -8,12 +8,14 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// transporter via Gmail
+// transporter via GoDaddy SMTP
 const transporter = nodemailer.createTransport({
-  service: "gmail",
+  host: "smtpout.secureserver.net", // GoDaddy's SMTP server
+  port: 465, // Secure port
+  secure: true, // Use SSL/TLS
   auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
+    user: process.env.EMAIL_USER, // GoDaddy email address (e.g., info@accountwisely.com)
+    pass: process.env.EMAIL_PASS, // GoDaddy email password
   },
 });
 
@@ -27,9 +29,9 @@ app.post("/send-email", async (req, res) => {
   }
 
   const mailOptions = {
-    from: process.env.EMAIL_USER, // Gmail requires using authenticated email as 'from'
-    replyTo: senderEmail, // Use replyTo so replies go to the sender
-    to: process.env.EMAIL_USER,
+    from: process.env.EMAIL_USER, // GoDaddy email address used for sending
+    replyTo: senderEmail, // Use replyTo so replies go to the user who submitted the form
+    to: process.env.RECIPIENT_EMAIL || process.env.EMAIL_USER, // Send to recipient email (info@accountwisely.com)
     subject: subject,
     text: `You have received a feedback/query:
             Email: ${senderEmail}
