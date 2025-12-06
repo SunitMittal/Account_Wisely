@@ -49,7 +49,7 @@ const Contact = () => {
 
     try {
       const res = await fetch(
-        "https://localhost:4000/send-email",
+        "https://account-wisely.onrender.com/send-email",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
