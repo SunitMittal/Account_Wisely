@@ -12,46 +12,37 @@ app.use(express.json());
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
+    user: "info@accountwisely.com",
+    pass: process.env.GOOGLE_APP_PASSWORD,
   },
 });
 
 app.post("/send-email", async (req, res) => {
-  const { senderEmail, subject, msg } = req.body;
-
-  if (!senderEmail || !subject || !msg) {
-    return res
-      .status(400)
-      .send({ msg: "senderEmail, subject and msg are required" });
+  var message = {
+    from: req.senderEmail,
+    to: "info@accountwisely.com",
+    subject: req.subject,
+    message: req.msg,
+    html: `<p>You have received a message from:</p>
+            <p><strong>Name:</strong> ${req.firstname} ${req.lastname}</p>
+            <p><strong>Email:</strong> ${req.senderEmail}</p>
+            <p><strong>Message:</strong></p>
+            <p>${req.msg}</p>`,
   }
 
-  const mailOptions = {
-    from: process.env.EMAIL_USER, // Gmail requires using authenticated email as 'from'
-    replyTo: senderEmail, // Use replyTo so replies go to the sender
-    to: process.env.EMAIL_USER,
-    subject: subject,
-    text: `You have received a feedback/query:
-            Email: ${senderEmail}
-            Message:
-            ${msg}
-        `,
-
-    html: `
-            <p><strong>You have received a feedback/query:</strong></p>
-            <p><strong>Email:</strong> ${senderEmail}</p>
-            <p><strong>Message:</strong></p>
-            <p>${msg}</p>
-        `,
-  };
-
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      console.error(error);
-      return res.status(500).send({ msg: "Error sending email", error });
+  await transporter.verify();
+  console.log("Server is ready to send emails");
+  (async () => {
+    try {
+      const info = await transporter.sendMail(message);
+      console.log("Message sent: %s", info.messageId);
+      console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+      res.status(200).send({ msg: "Email sent successfully!", info });
+    } catch (err) {
+      console.error("Error while sending mail", err);
+      res.status(500).send({ msg: "Error sending email", error: err });
     }
-    return res.status(200).send({ msg: "Email sent successfully!", info });
-  });
+  })();
 });
 
 const port = process.env.PORT || 4000;

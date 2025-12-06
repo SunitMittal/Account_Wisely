@@ -39,21 +39,21 @@ const Contact = () => {
     setErrors({});
 
     const formData = new FormData(e.currentTarget);
-    const senderEmail = formData.get("email");
-    const subject = `Contact form from ${formData.get("firstname") || "User"} ${
-      formData.get("lastname") || ""
-    }`.trim();
-    const msg = `Name: ${formData.get("firstname")} ${formData.get(
-      "lastname"
-    )}\nPhone: ${formData.get("phone")}\nMessage: ${formData.get("message")}`;
+    const mail = {
+      fitst_name: formData.get("firstname"),
+      last_name: formData.get("lastname"),
+      email: formData.get("email"),
+      phone: formData.get("phone"),
+      message: formData.get("message"),
+    };
 
     try {
       const res = await fetch(
-        import.meta.env.VITE_API_URL || "https://account-wisely.onrender.com/send-email",
+        "https://localhost:4000/send-email",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ senderEmail, subject, msg }),
+          body: JSON.stringify(mail),
         }
       );
 
@@ -66,7 +66,7 @@ const Contact = () => {
         setSucceeded(true);
         e.currentTarget.reset();
       }
-    } catch (err) {
+    } catch (e) {
       setErrors({ form: "Network error. Please try again." });
     } finally {
       setSubmitting(false);
