@@ -40,7 +40,7 @@ const Contact = () => {
 
     const formData = new FormData(e.currentTarget);
     const mail = {
-      fitst_name: formData.get("firstname"),
+      first_name: formData.get("firstname"),
       last_name: formData.get("lastname"),
       email: formData.get("email"),
       phone: formData.get("phone"),
@@ -221,9 +221,7 @@ const Contact = () => {
                     style={{ animationDelay: `${i * 0.1}s` }}
                   >
                     <div className="flex items-center gap-3 mb-3 px-2">
-                      <h3 className="text-lg font-bold text-black">
-                        {FAQ.Q}
-                      </h3>
+                      <h3 className="text-lg font-bold text-black">{FAQ.Q}</h3>
                     </div>
 
                     <p className="mt-2 font-medium text-gray-700 bg-white/50 rounded-xl px-4 py-4 shadow-inner backdrop-blur-md">

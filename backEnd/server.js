@@ -18,31 +18,58 @@ const transporter = nodemailer.createTransport({
 });
 
 app.post("/send-email", async (req, res) => {
-  var message = {
-    from: req.senderEmail,
-    to: "info@accountwisely.com",
-    subject: req.subject,
-    message: req.msg,
-    html: `<p>You have received a message from:</p>
-            <p><strong>Name:</strong> ${req.firstname} ${req.lastname}</p>
-            <p><strong>Email:</strong> ${req.senderEmail}</p>
-            <p><strong>Message:</strong></p>
-            <p>${req.msg}</p>`,
-  }
+  try {
+    // Extract data from request body
+    const { first_name, last_name, email, phone, message } = req.body;
 
-  await transporter.verify();
-  console.log("Server is ready to send emails");
-  (async () => {
-    try {
-      const info = await transporter.sendMail(message);
-      console.log("Message sent: %s", info.messageId);
-      console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-      res.status(200).send({ msg: "Email sent successfully!", info });
-    } catch (err) {
-      console.error("Error while sending mail", err);
-      res.status(500).send({ msg: "Error sending email", error: err });
+    // Validate required fields
+    if (!email || !message) {
+      return res.status(400).send({ msg: "Email and message are required" });
     }
-  })();
+
+    // Create email message
+    const mailOptions = {
+      from: "info@accountwisely.com", // Use your Gmail account as sender
+      replyTo: email, // Set reply-to to the sender's email
+      to: "info@accountwisely.com",
+      subject: `New Contact Form Submission from ${first_name || "User"}`,
+      html: `
+        <p>You have received a new message from the contact form:</p>
+        <p><strong>Name:</strong> ${first_name || ""} ${last_name || ""}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone || "Not provided"}</p>
+        <p><strong>Message:</strong></p>
+        <p>${message}</p>
+      `,
+      text: `
+        You have received a new message from the contact form:
+        
+        Name: ${first_name || ""} ${last_name || ""}
+        Email: ${email}
+        Phone: ${phone || "Not provided"}
+        
+        Message:
+        ${message}
+      `,
+    };
+
+    // Verify transporter connection
+    await transporter.verify();
+    console.log("Server is ready to send emails");
+
+    // Send email
+    const info = await transporter.sendMail(mailOptions);
+    console.log("Message sent: %s", info.messageId);
+    console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+
+    res.status(200).send({ msg: "Email sent successfully!", info });
+  } catch (err) {
+    console.error("Error while sending mail", err);
+    res.status(500).send({
+      msg: "Error sending email",
+      error: err.message || err,
+    });
+  }
 });
 
 const port = process.env.PORT || 4000;
