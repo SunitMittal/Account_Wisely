@@ -39,21 +39,21 @@ const Contact = () => {
     setErrors({});
 
     const formData = new FormData(e.currentTarget);
-    const senderEmail = formData.get("email");
-    const subject = `Contact form from ${formData.get("firstname") || "User"} ${
-      formData.get("lastname") || ""
-    }`.trim();
-    const msg = `Name: ${formData.get("firstname")} ${formData.get(
-      "lastname"
-    )}\nPhone: ${formData.get("phone")}\nMessage: ${formData.get("message")}`;
+    const mail = {
+      first_name: formData.get("firstname"),
+      last_name: formData.get("lastname"),
+      email: formData.get("email"),
+      phone: formData.get("phone"),
+      message: formData.get("message"),
+    };
 
     try {
       const res = await fetch(
-        import.meta.env.VITE_API_URL || "http://localhost:4000/send-email",
+        "https://account-wisely.onrender.com/send-email",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ senderEmail, subject, msg }),
+          body: JSON.stringify(mail),
         }
       );
 
@@ -66,7 +66,7 @@ const Contact = () => {
         setSucceeded(true);
         e.currentTarget.reset();
       }
-    } catch (err) {
+    } catch (e) {
       setErrors({ form: "Network error. Please try again." });
     } finally {
       setSubmitting(false);
@@ -221,9 +221,7 @@ const Contact = () => {
                     style={{ animationDelay: `${i * 0.1}s` }}
                   >
                     <div className="flex items-center gap-3 mb-3 px-2">
-                      <h3 className="text-lg font-bold text-black">
-                        {FAQ.Q}
-                      </h3>
+                      <h3 className="text-lg font-bold text-black">{FAQ.Q}</h3>
                     </div>
 
                     <p className="mt-2 font-medium text-gray-700 bg-white/50 rounded-xl px-4 py-4 shadow-inner backdrop-blur-md">
