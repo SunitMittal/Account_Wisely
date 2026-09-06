@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import "../index.css";
 import { HiOutlineMailOpen } from "react-icons/hi";
 import Logo from "../assets/websiteLogo.png";
+import WhatsAppButton from './WhatsAppButton'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,15 +33,15 @@ const Header = () => {
 
   return (
     <>
-      <div className="flex gap-2 bg-[#1a0940] px-4 py-2 text-xs text-white sm:justify-center sm:gap-5 sm:px-5 sm:text-sm md:justify-normal md:gap-10 md:px-28 md:text-lg">
+      <div className="flex items-center justify-between bg-[#1a0940] px-4 py-2 text-sm text-white sm:px-5 sm:text-sm md:px-28 md:text-lg">
         <a
-          href="mailto:partners@accountwisely.com"
-          className="underline-offset-8.5 flex items-center gap-1 hover:underline"
+          href="mailto:partners@accountwisely.com" className="underline-offset-8.5 flex items-center gap-1 hover:underline"
         >
           <HiOutlineMailOpen className="h-3 w-3 sm:h-4 sm:w-4" />
           <span className="hidden xs:inline">partners@accountwisely.com</span>
           <span className="xs:hidden">Email Us</span>
         </a>
+        <WhatsAppButton />
       </div>
 
       <nav className="shadow-sm">
@@ -279,7 +280,7 @@ const Header = () => {
                     </Link>
                     <Link
                       onClick={closeMenu}
-                      to={"/services/accounting"}
+                      to={"/services/virtualCFO"}
                       className={`py-1 text-white underline-offset-8 hover:underline ${
                         isActive("/services/virtualCFO") ? "font-bold" : ""
                       }`}

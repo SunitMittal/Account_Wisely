@@ -104,7 +104,7 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => {
           isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="transform bg-[#8954fc] p-4 text-white transition-transform duration-300">
+        <div className="transform bg-[#b08efb] p-4 text-white transition-transform duration-300">
           {answer}
         </div>
       </div>

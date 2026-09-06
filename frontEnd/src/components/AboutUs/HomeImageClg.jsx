@@ -2,8 +2,8 @@ import React from "react";
 import { Award, Users } from "lucide-react";
 import Container from "../Layout/Container";
 import TopImage from "../TopImage";
-import img1 from "../../assets/aboutImg1.png";
-import img2 from "../../assets/aboutImg2.jpg";
+import img1 from "../../assets/aboutImg1.jpeg";
+import img2 from "../../assets/aboutImg2.jpeg";
 import { GiTeamIdea } from "react-icons/gi";
 import { FaFolderClosed } from "react-icons/fa6";
 import { TbClockCheck } from "react-icons/tb";
@@ -19,12 +19,11 @@ const HomeImageClg = () => {
 
   return (
     <Container>
-      <div className="grid items-center md:gap-36 md:p-20 md:grid-cols-2 grid-rows-1 px-20 
-      ">
-        <div className="relative rounded-xl">
+      <div className="grid items-center md:gap-36 md:p-20 md:grid-cols-2 grid-rows-1 px-20">
+        <div className="relative rounded-xl mb-15">
           <TopImage source1={img1} source2={img2} className="z-0" />
 
-          <div className="animate-float-x absolute -top-8 -left-20 md:top-10 md:right-28 z-10 flex w-fit items-center space-x-4 rounded-lg bg-[#fff2dd] p-4 shadow-md transition-transform duration-300 hover:scale-105">
+          <div className="animate-float-x absolute -top-8 -left-30 md:top-6 md:right-28 z-10 flex w-fit items-center space-x-4 rounded-lg bg-[#fff2dd] p-4 shadow-md transition-transform duration-300 hover:scale-105">
             <Users className="text-[#492a8a]" />
             <div>
               <p className="text-xl font-bold text-gray-900">10+</p>
@@ -32,7 +31,7 @@ const HomeImageClg = () => {
             </div>
           </div>
 
-          <div className="animate-float-x-reverse absolute -left-10 -bottom-40 md:right-2/5 md:-bottom-16 z-10 flex w-fit flex-col items-start gap-4 space-x-4 rounded-lg bg-[#fff2dd] p-4 shadow-md transition-transform duration-300 hover:scale-105">
+          <div className="animate-float-x-reverse absolute left-8 -bottom-40 md:right-2/5 md:-bottom-18 z-10 flex w-fit items-center space-x-4 rounded-lg bg-[#fff2dd] p-4 shadow-md transition-transform duration-300 hover:scale-105">
             <div className="rounded-full bg-[#e3d6ff] p-3">
               <Award className="text-[#492a8a]" />
             </div>
