@@ -20,10 +20,10 @@ const HomeImageClg = () => {
   return (
     <Container>
       <div className="grid items-center md:gap-36 py-10 md:py-20 md:grid-cols-2 grid-rows-1">
-        <div className="relative rounded-xl mb-15 w-full mx-0 md:w-full md:mx-0 min-h-[300px] md:min-h-0">
+        <div className="relative rounded-xl mb-15 w-full mx-8 md:w-full md:mx-0 min-h-[300px] md:min-h-0">
           <TopImage source1={img1} source2={img2}/>
 
-          <div className="animate-float-x absolute top-2 left-2/5 md:top-6 md:right-2 md:left-auto z-10 flex w-fit items-center space-x-3 md:space-x-4 rounded-lg bg-[#fff2dd] p-2 md:p-4 shadow-md transition-transform duration-300 hover:scale-105">
+          <div className="animate-float-x absolute top-2 left-2/5 md:top-6 md:right-1/6 md:left-auto z-10 flex w-fit items-center space-x-3 md:space-x-4 rounded-lg bg-[#fff2dd] p-2 md:p-4 shadow-md transition-transform duration-300 hover:scale-105">
             <Users className="text-[#492a8a]" />
             <div>
               <p className="text-lg md:text-xl font-bold text-gray-900">10+</p>
