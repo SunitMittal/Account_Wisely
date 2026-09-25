@@ -32,7 +32,7 @@ const FAQSection = () => {
 
   return (
     <Container>
-      <div className="grid grid-cols-1 gap-16 p-5 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-16 md:grid-cols-2">
         <div className="animate-fade-in">
           <h2 className="mb-6 text-3xl font-bold text-black md:text-4xl">
             Find answers to your most common questions

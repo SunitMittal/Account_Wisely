@@ -21,7 +21,7 @@ const CompanyOverviewSection = () => {
         </div>
         <h2
           id="about-heading"
-          className="mb-6 text-center font-bold text-black text-2xl md:text-4xl"
+          className="mb-6 text-center font-bold text-black text-3xl md:text-5xl"
         >
           Efficiency, Accuracy, and Trust Define
           <span className="text-navy-800 block text-black">AccountWisely</span>

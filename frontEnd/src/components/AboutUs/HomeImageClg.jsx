@@ -19,7 +19,7 @@ const HomeImageClg = () => {
 
   return (
     <Container>
-      <div className="grid items-center md:gap-36 p-10 md:p-20 md:grid-cols-2 grid-rows-1">
+      <div className="grid items-center md:gap-36 py-10 md:py-20 md:grid-cols-2 grid-rows-1">
         <div className="relative rounded-xl mb-15 w-full mx-0 md:w-full md:mx-0 min-h-[300px] md:min-h-0">
           <TopImage source1={img1} source2={img2}/>
 
@@ -41,7 +41,6 @@ const HomeImageClg = () => {
             </div>
           </div>
         </div>
-
 
         <div className="animate-slide-in space-y-6">
           <div className="mb-3">
