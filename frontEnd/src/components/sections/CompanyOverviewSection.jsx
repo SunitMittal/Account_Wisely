@@ -12,16 +12,16 @@ const CompanyOverviewSection = () => {
   };
 
   return (
-    <section id="about" aria-labelledby="about-heading" className="py-12 sm:py-16 md:py-20">
+    <section id="about" aria-labelledby="about-heading">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mb-2 text-center">
-          <span className="lg:text-2xl font-bold tracking-wider text-[#1a0940] uppercase sm:text-2xl">
+          <span className="text-2xl md:text-3xl font-bold tracking-wider text-[#1a0940] uppercase">
             Company Overview
           </span>
         </div>
         <h2
           id="about-heading"
-          className="mb-6 text-center font-bold text-black sm:text-3xl md:text-4xl"
+          className="mb-6 text-center font-bold text-black text-2xl md:text-4xl"
         >
           Efficiency, Accuracy, and Trust Define
           <span className="text-navy-800 block text-black">AccountWisely</span>

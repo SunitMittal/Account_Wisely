@@ -5,7 +5,7 @@ import ServiceList from "./ServiceList";
 
 const ServiceSidebar = () => {
   return (
-    <div className="mt-6 md:sticky md:top-2 md:h-fit lg:mt-8">
+    <div className="px-7 mt-6 md:sticky md:top-2 md:h-fit lg:mt-8">
       <ServiceList />
 
       <div className="mx-auto my-6 max-w-96 rounded-2xl border border-[#1a0940] bg-white p-4 sm:my-8 sm:p-4.5">

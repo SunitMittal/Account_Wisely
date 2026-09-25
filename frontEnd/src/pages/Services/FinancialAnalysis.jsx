@@ -29,19 +29,19 @@ const FinancialAnalysis = () => {
         link="Services / Financial Analysis Services"
       />
 
-      <div className="md:my-20 md:grid md:grid-cols-[400px_minmax(900px,_1fr)_100px] md:justify-center md:px-50">
+      <div className="my-20 md:grid md:grid-cols-[400px_minmax(900px,_1fr)_100px] justify-center md:px-50">
         {/* left part */}
         <ServiceSidebar />
 
         {/* right part */}
-        <div className="my-6 lg:px-10 sm:my-6 sm:px-4.5">
+        <div className="px-7">
           <div>
-            <h2 className="text-3xl font-bold sm:text-2xl md:text-3xl">
+            <h3 className="text-3xl font-bold">
               Struggling with Financial Data?
               <span className="text-[#2e1566]"> Let’s Make It Simple!</span>
-            </h2>
+            </h3>
 
-            <p className="mb-1 mt-2 text-justify leading-7 text-gray-600 sm:mb-1 sm:mt-2 sm:leading-7 sm:text-lg">
+            <p className="mt-3 mb-2 leading-7 text-gray-600 text-lg">
               Financial analysis is essential—but let’s be honest, it can be
               <span className="font-bold"> time-consuming and complex. </span>
               As an accounting firm, your clients expect
@@ -49,7 +49,7 @@ const FinancialAnalysis = () => {
               that help them make better business decisions.
             </p>
 
-            <p className="mb-1 text-justify leading-7 text-gray-600 sm:mb-1 sm:leading-7 sm:text-lg">
+            <p className="my-2 leading-7 text-gray-600 text-lg">
               Instead of spending
               <span className="font-bold"> hours buried in spreadsheets, </span>
               why not
@@ -62,12 +62,12 @@ const FinancialAnalysis = () => {
               —without the headache?
             </p>
 
-            <p className="mb-3 text-justify leading-7 text-gray-600 sm:mb-3 sm:leading-7 sm:text-lg">
+            <p className="my-2 leading-7 text-gray-600 text-lg">
               That’s where<span className="font-bold"> Account Wisely </span>
               comes in!
             </p>
 
-            <p className="mb-4 text-justify leading-7 text-gray-600 sm:mb-4 sm:leading-7 sm:text-lg">
+            <p className="my-2 leading-7 text-gray-600 text-lg">
               <span className="font-bold">Pain Point: </span>Many businesses
               struggle to interpret their financial data, leaving them unsure of
               their next move. Account Wisely provides the clarity needed to
@@ -76,12 +76,12 @@ const FinancialAnalysis = () => {
             </p>
           </div>
 
-          <div>
-            <h2 className="text-3xl font-bold sm:text-2xl md:text-3xl">
+          <div className="mt-5">
+            <h3 className="text-3xl font-bold">
               Why Choose Outsourced Financial Analysis?
-            </h2>
+            </h3>
 
-            <p className="mb-3 mt-1 text-justify leading-7 text-gray-600 sm:mb-3 sm:mt-1 sm:leading-7 sm:text-lg">
+            <p className="my-2 text-lg leading-7 text-gray-600">
               Accounting firms across the India are
               <span className="font-bold">
                 {" "}
@@ -91,11 +91,11 @@ const FinancialAnalysis = () => {
               deliver to clients.
             </p>
 
-            <h3 className="text-2xl font-bold sm:text-xl md:text-2xl text-[#2e1566]">
+            <h4 className="my-2 text-3xl font-bold text-[#2e1566]">
               Here’s why it works:
-            </h3>
+            </h4>
 
-            <ul className="mb-2 text-justify leading-7 text-gray-600 sm:mb-2 sm:leading-7 sm:text-lg sm:pl-4">
+            <ul className="mb-5 px-5 text-lg leading-7 text-gray-600">
               <li>
                 <span className="font-bold">✅ Saves Time </span>– Free up your
                 team to focus on core accounting services.
@@ -117,25 +117,25 @@ const FinancialAnalysis = () => {
               </li>
             </ul>
 
-            <p className="mb-3 text-justify leading-7 text-gray-600 sm:mb-3 sm:leading-7 sm:text-lg">
+            <p className="my-2 text-lg leading-7 text-gray-600">
               <span className="font-bold">Bottom Line: </span>We help you
               deliver
               <span className="font-bold"> financial clarity </span>to your
               clients while you focus on growing your firm.
             </p>
 
-            <p className="mb-4 rounded-2xl bg-[#1a0940] px-8 py-6 text-white sm:px-8 sm:py-6 md:text-xl sm:mb-4">
+            <p className="rounded-2xl bg-[#1a0940] p-6 text-white text-lg">
               Looking for help with other accounting tasks? Explore our
               Outsourced Accounting Services to streamline your operations.
             </p>
           </div>
 
-          <div>
-            <h2 className="text-3xl font-bold sm:text-2xl md:text-3xl">
+          <div className="mt-5">
+            <h3 className="text-3xl font-bold">
               What Our Outsourced Financial Analysis Services Include
-            </h2>
+            </h3>
 
-            <p className="mb-3 mt-1 text-justify leading-7 text-gray-600 sm:mb-3 sm:mt-1 sm:leading-7 sm:text-lg">
+            <p className="my-2 text-lg leading-7 text-gray-600">
               We offer
               <span className="font-bold">
                 {" "}
@@ -144,11 +144,11 @@ const FinancialAnalysis = () => {
               designed to help your clients optimize business performance.
             </p>
 
-            <h3 className="text-2xl font-bold sm:text-xl md:text-2xl text-[#2e1566]">
+            <h4 className="my-2 text-3xl font-bold text-[#2e1566]">
               Our Key Services:
-            </h3>
+            </h4>
 
-            <ul className="mb-2 text-justify leading-7 text-gray-600 sm:mb-2 sm:leading-7 sm:text-lg sm:pl-4">
+            <ul className="mb-5 px-5 text-lg leading-7 text-gray-600">
               <li>
                 <span className="font-bold">📊 Profit & Loss Analysis </span>–
                 Help clients understand their revenue vs. expenses.
@@ -180,7 +180,7 @@ const FinancialAnalysis = () => {
               </li>
             </ul>
 
-            <p className="mb-4 text-justify leading-7 text-gray-600 sm:mb-4 sm:leading-7 sm:text-lg">
+            <p className="my-2 text-lg leading-7 text-gray-600">
               We turn
               <span className="font-bold">
                 {" "}
@@ -192,16 +192,16 @@ const FinancialAnalysis = () => {
             </p>
           </div>
 
-          <div>
-            <h2 className="text-3xl font-bold sm:text-2xl md:text-3xl">
+          <div className="mt-5">
+            <h2 className="text-3xl font-bold">
               How Outsourcing Benefits Your Firm
             </h2>
 
-            <h3 className="mt-2 text-2xl font-bold sm:text-xl md:text-2xl text-[#2e1566] sm:mt-2">
+            <h3 className="text-2xl font-bold text-[#2e1566]">
               More Time, Less Stress
             </h3>
 
-            <p className="mb-2 text-justify leading-7 text-gray-600 sm:mb-2 sm:leading-7 sm:text-lg">
+            <p className="my-2 leading-7 text-gray-600 text-lg">
               Why spend hours
               <span className="font-bold">
                 {" "}
@@ -212,11 +212,11 @@ const FinancialAnalysis = () => {
               <span className="font-bold"> growing your firm.</span>
             </p>
 
-            <h3 className="text-2xl font-bold sm:text-xl md:text-2xl text-[#2e1566]">
+            <h3 className="text-2xl font-bold text-[#2e1566]">
               Higher Accuracy & Expert Insights
             </h3>
 
-            <p className="mb-2 text-justify leading-7 text-gray-600 sm:mb-2 sm:leading-7 sm:text-lg">
+            <p className="my-2 leading-7 text-gray-600 text-lg">
               Even the best accountants can’t analyze everything. Our team
               <span className="font-bold">
                 {" "}
@@ -229,11 +229,11 @@ const FinancialAnalysis = () => {
               </span>
             </p>
 
-            <h3 className="text-2xl font-bold sm:text-xl md:text-2xl text-[#2e1566]">
+            <h3 className="text-2xl font-bold text-[#2e1566]">
               Better Client Satisfaction
             </h3>
 
-            <p className="mb-3 text-justify leading-7 text-gray-600 sm:mb-3 sm:leading-7 sm:text-lg">
+            <p className="my-2 leading-7 text-gray-600 text-lg">
               When clients receive
               <span className="font-bold"> clear financial insights, </span>
               they trust you more. We help you
@@ -242,26 +242,26 @@ const FinancialAnalysis = () => {
               <span className="font-bold"> trusted financial advisor.</span>
             </p>
 
-            <p className="mb-4 rounded-2xl bg-[#1a0940] px-8 py-6 text-white sm:px-8 sm:py-6 md:text-xl sm:mb-4">
+            <p className="rounded-2xl bg-[#1a0940] p-6 text-white text-lg">
               Need help with tax strategy? Explore our
               <span className="font-bold"> Tax Preparation Services </span>to
               ensure your clients are prepared and compliant.
             </p>
           </div>
 
-          <div>
-            <h2 className="text-3xl font-bold sm:text-2xl md:text-3xl">
+          <div className="mt-5">
+            <h2 className="text-3xl font-bold">
               Why India Accounting Firms Trust Account Wisely
             </h2>
 
-            <p className="my-1 text-justify leading-7 text-gray-600 sm:my-1 sm:leading-7 sm:text-lg">
+            <p className="my-2 leading-7 text-gray-600 text-lg">
               <span className="font-bold">
                 We’re not just an outsourcing company—we’re your financial
                 analysis partner.
               </span>
             </p>
 
-            <ul className="mb-4 text-justify leading-7 text-gray-600 sm:mb-4 sm:leading-7 sm:text-lg">
+            <ul className="text-lg text-gray-600">
               <li>
                 <span className="font-bold">
                   🔹 Specialized in Accounting & CA Firms{" "}
@@ -298,12 +298,12 @@ const FinancialAnalysis = () => {
             </ul>
           </div>
 
-          <div>
-            <h2 className="text-3xl font-bold sm:text-2xl md:text-3xl">
+          <div className="mt-5">
+            <h2 className="text-3xl font-bold">
               Helping Your Clients Make Smarter Business Decisions
             </h2>
 
-            <p className="my-1 text-justify leading-7 text-gray-600 sm:my-1 sm:leading-7 sm:text-lg">
+            <p className="my-2 leading-7 text-gray-600 text-lg">
               Your clients
               <span className="font-bold"> rely on financial insights </span>
               to make business decisions. But without
@@ -311,7 +311,7 @@ const FinancialAnalysis = () => {
               making<span className="font-bold"> critical mistakes.</span>
             </p>
 
-            <p className="text-justify leading-7 text-gray-600 sm:leading-7 sm:text-lg">
+            <p className="my-2 leading-7 text-gray-600 text-lg">
               With Account Wisely’s
               <span className="font-bold">
                 {" "}
@@ -320,7 +320,7 @@ const FinancialAnalysis = () => {
               you can:
             </p>
 
-            <ul className="mb-1 text-justify leading-7 text-gray-600 sm:mb-1 sm:leading-7 sm:text-lg">
+            <ul className="text-lg text-gray-600">
               <li>
                 🔹 Help clients
                 <span className="font-bold"> improve profitability.</span>
@@ -342,24 +342,24 @@ const FinancialAnalysis = () => {
               </li>
             </ul>
 
-            <p className="mb-3 text-justify leading-7 text-gray-600 sm:mb-3 sm:leading-7 sm:text-lg">
+            <p className="my-2 leading-7 text-gray-600 text-lg">
               We provide the insights,
               <span className="font-bold"> you take the credit!</span>
             </p>
 
-            <p className="mb-4 rounded-2xl bg-[#1a0940] px-8 py-6 text-white sm:px-8 sm:py-6 md:text-xl sm:mb-4">
+            <p className="rounded-2xl bg-[#1a0940] p-6 text-white text-lg">
               Explore our Outsourced
               <span className="font-bold"> Accounting Services </span>for a
               complete solution to support your clients’ business operations.
             </p>
           </div>
 
-          <div>
-            <h2 className="text-3xl font-bold sm:text-2xl md:text-3xl">
+          <div className="mt-5">
+            <h2 className="text-3xl font-bold">
               Ready to Elevate Your Financial Analysis Services?
             </h2>
 
-            <p className="mt-1 text-justify leading-7 text-gray-600 sm:mt-1 sm:leading-7 sm:text-lg">
+            <p className="my-2 leading-7 text-gray-600 text-lg">
               <span className="font-bold">
                 Accounting firms across the India{" "}
               </span>
@@ -368,7 +368,7 @@ const FinancialAnalysis = () => {
               without the overhead costs of an in-house team.
             </p>
 
-            <ul className="mb-2 text-justify leading-7 text-gray-600 sm:mb-2 sm:leading-7 sm:text-lg">
+            <ul className="text-lg text-gray-600">
               <li>
                 <span className="font-bold">🔹 Cut costs </span>while delivering
                 high-value insights.
@@ -383,7 +383,7 @@ const FinancialAnalysis = () => {
               </li>
             </ul>
 
-            <p className="mb-3 text-justify leading-7 text-gray-600 sm:mb-3 sm:leading-7 sm:text-lg">
+            <p className="my-2 leading-7 text-gray-600 text-lg">
               <span className="font-bold">💡 Let’s Talk! </span>Contact us today
               to see how Account Wisely can support your firm’s growth! 🚀
             </p>
@@ -392,19 +392,19 @@ const FinancialAnalysis = () => {
       </div>
 
       {/* FAQs */}
-      <div className="bg-[#fff2dd] px-4 py-14 sm:px-4 sm:py-8 md:py-14">
+      <div className="bg-[#fff2dd] px-7 py-10">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-lg font-bold text-center text-black">FAQs</h2>
-          <h2 className="text-center text-4xl font-bold sm:text-3xl md:text-4xl">
+          <h2 className="text-2xl font-bold text-center text-black">FAQs</h2>
+          <h2 className="text-center text-4xl font-bold">
             Everything You Need to Know About{" "}
-            <span className="text-[#2e1566]">Financial Analysis</span>
+            <span className="text-[#2e1566]">Outsourced Accounting</span>
           </h2>
-          <p className="my-3 text-center text-gray-600 sm:my-3 lg:mb-8 text-lg">
+          <p className="my-2 text-center text-gray-600 mb-8 text-lg">
             Discover helpful answers to your most pressing financial questions.
             We're here to assist you every step of the way!{" "}
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-7">
             {FAQS.map((FAQ, i) => (
               <div
                 key={i}

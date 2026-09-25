@@ -30,20 +30,20 @@ const Accounting = () => {
         link="Services / Accounting Services"
       />
 
-      <div className="md:my-20 md:grid md:grid-cols-[400px_minmax(900px,_1fr)_100px] md:justify-center md:px-50">
+      <div className="my-20 md:grid md:grid-cols-[400px_minmax(900px,_1fr)_100px] justify-center md:px-50">
         {/* left part */}
         <ServiceSidebar />
 
         {/* right part */}
-        <div className="my-6 lg:px-10 sm:my-8 sm:px-4.5">
+        <div className="px-7">
           <div>
-            <h3 className="text-3xl font-bold sm:text-2xl md:text-3xl">
+            <h3 className="text-3xl font-bold">
               Expert{" "}
               <span className="text-[#2e1566]">Accounting Solutions</span> for
               Startups, MSMEs and Accounting Firms– Boost Efficiency &
               Compliance
             </h3>
-            <p className="mt-3 mb-2 text-justify leading-7 text-gray-600 sm:mt-3 sm:mb-2 sm:leading-7 sm:text-lg">
+            <p className="mt-3 mb-2 leading-7 text-gray-600 text-lg">
               As your business grows, so do the complexities of managing
               financial operations.{" "}
               <span className="font-semibold text-gray-600">
@@ -56,7 +56,7 @@ const Accounting = () => {
               .
             </p>
 
-            <p className="my-2 text-justify leading-7 text-gray-600 sm:my-2 sm:leading-7 sm:text-lg">
+            <p className="my-2 leading-7 text-gray-600 text-lg">
               With our{" "}
               <span className="font-semibold text-gray-600">
                 expert accounting solutions
@@ -65,7 +65,8 @@ const Accounting = () => {
               overhead costs, and enhance service quality—without hiring
               in-house staff.
             </p>
-            <p className="my-3 text-justify leading-7 text-gray-600 sm:my-3 sm:leading-7 sm:text-lg">
+
+            <p className="my-2 leading-7 text-gray-600 text-lg">
               <span className="font-semibold">Pain Point:</span> Growing your
               client base and meeting increasing demands doesn't have to come at
               the expense of quality. With Account Wisely, you can scale
@@ -76,11 +77,11 @@ const Accounting = () => {
             </p>
           </div>
 
-          <div>
-            <h3 className="text-3xl font-bold text-[#2e1566] sm:text-2xl md:text-3xl">
+          <div className="mt-5">
+            <h3 className="text-3xl font-bold text-[#2e1566]">
               Why Businesses Trust Account Wisely
             </h3>
-            <p className="my-2 text-lg leading-7 text-gray-600 sm:my-2 sm:leading-7">
+            <p className="my-2 text-lg leading-7 text-gray-600">
               When you outsource to Account Wisely, you're not just outsourcing
               accounting—you're gaining a trusted partner that supports your
               business's success. From everyday financial tasks to intricate tax
@@ -90,20 +91,20 @@ const Accounting = () => {
               to meet your needs, no matter the season.
             </p>
 
-            <p className="text-lg leading-7 text-gray-600 sm:leading-7">
+            <p className="text-lg leading-7 text-gray-600">
               We don't just process numbers—we empower your firm with seamless
               financial management:
             </p>
 
-            <ul className="mb-5 mt-0 list-disc pl-5 text-lg leading-6 text-gray-600 sm:mb-5 sm:mt-0 sm:pl-7 sm:leading-7">
+            <ul className="mb-5 list-disc px-5 text-lg leading-7 text-gray-600">
               <li>
                 <span className="font-bold text-gray-600">Scalability:</span>{" "}
-                Expand your practice without worrying about additional workload
+                Expand your practice without worrying about additional workload.
               </li>
               <li>
                 <span className="font-bold text-gray-600">Cost Savings:</span>{" "}
                 Cut hiring costs while getting premium-quality accounting
-                services
+                services.
               </li>
               <li>
                 <span className="font-bold text-gray-600">Experience:</span>{" "}
@@ -111,27 +112,28 @@ const Accounting = () => {
                 <span className="font-bold">
                   India-trained accounting professionals
                 </span>
+                .
               </li>
               <li>
                 <span className="font-bold text-gray-600">
                   Compliance & Accuracy:
                 </span>{" "}
-                Meet India tax and regulatory requirements without hassle
+                Meet India tax and regulatory requirements without hassle.
               </li>
             </ul>
 
-            <p className="rounded-2xl bg-[#1a0940] px-8 py-6 text-white sm:px-8 sm:py-6 md:text-xl">
+            <p className="rounded-2xl bg-[#1a0940] p-6 text-white text-lg">
               Ready to boost your firm's cash flow management? Discover our
               Outsourced <strong>Services </strong>
               designed to streamline your financial processes.
             </p>
           </div>
 
-          <div>
-            <h3 className="mt-4 mb-4 text-3xl font-bold sm:mt-5 sm:mb-2 sm:text-2xl md:text-3xl">
+          <div className="mt-5">
+            <h3 className="text-3xl font-bold">
               Precision Accounting to Drive Your Firm's Growth!
             </h3>
-            <p className="text-lg leading-7 text-gray-600 sm:leading-7">
+            <p className="my-2 text-lg leading-7 text-gray-600">
               We understand that precision is everything. Our outsourced
               accounting solutions are designed to give you accurate, real-time
               financial insights, allowing your firm to make smarter, faster
@@ -139,7 +141,7 @@ const Accounting = () => {
               overhead, and maintain the compliance your clients depend on—all
               while freeing up time for you to focus on business growth.
             </p>
-            <p className="mb-4 mt-3 text-lg leading-7 text-gray-600 sm:mb-4 sm:mt-3 sm:leading-7">
+            <p className="my-2 text-lg leading-7 text-gray-600">
               <span className="font-bold">Pain Point: </span>The pressure to
               stay organized, compliant, and profitable can feel overwhelming.
               Let Account Wisely take care of the financial details, so you can
@@ -148,8 +150,8 @@ const Accounting = () => {
             </p>
           </div>
 
-          <div>
-            <h2 className="mt-5 mb-2 text-3xl font-bold sm:mt-5 sm:mb-2 sm:text-2xl md:text-3xl">
+          <div className="mt-5">
+            <h2 className="text-3xl font-bold">
               Why Choose Account Wisely for Your{" "}
               <span className="text-[#2e1566]">
                 Outsourced Accounting Needs?
@@ -158,7 +160,7 @@ const Accounting = () => {
             <h3 className="text-2xl font-bold">
               1. Cost-Effective Accounting Solutions
             </h3>
-            <p className="my-1 leading-7 text-gray-600 text-lg">
+            <p className="my-2 leading-7 text-gray-600 text-lg">
               Hiring an in-house team is expensive. Account Wisely offers a{" "}
               <span className="font-bold text-gray-600">
                 cost-efficient alternative
@@ -181,7 +183,7 @@ const Accounting = () => {
                 – Get expert accountants without hiring full-time staff
               </li>
             </ul>
-            <p className="my-1 text-gray-600 text-lg">
+            <p className="my-2 text-gray-600 text-lg">
               <span className="font-bold text-gray-600">Account Wisely</span>{" "}
               isn’t just another outsourced provider—we’re a trusted extension
               of your firm. Our services are discreet, high-quality, and built
@@ -189,7 +191,7 @@ const Accounting = () => {
               your operations. Let us be the invisible part of your team that
               propels your firm to the next level.
             </p>
-            <h3 className="text-2xl font-bold mt-2 mb-1">
+            <h3 className="text-2xl font-bold my-2">
               2. Industry Expertise & Regulatory Compliance
             </h3>
             <p className="leading-7 text-gray-600 text-lg">
@@ -214,7 +216,7 @@ const Accounting = () => {
                 – We understand your unique challenges
               </li>
             </ul>
-            <h3 className="mt-2 mb-1 text-2xl font-bold">
+            <h3 className="my-2 text-2xl font-bold">
               3. Scalable & Flexible Support
             </h3>
             <ul className="text-gray-500 text-lg">
@@ -233,11 +235,11 @@ const Accounting = () => {
             </ul>
           </div>
 
-          <div>
-            <h2 className="mt-4 mb-2 text-3xl font-bold sm:mt-4 sm:mb-2 sm:text-2xl md:text-3xl">
+          <div className="mt-5">
+            <h2 className="text-3xl font-bold">
               Trusted by CA & Accounting Firms Across the India
             </h2>
-            <p className="leading-7 text-gray-600 text-lg">
+            <p className="my-2 leading-7 text-gray-600 text-lg">
               we don’t just work for you—we work with you as an extension of
               your firm. From day-to-day accounting to complex financial
               planning, we help you{" "}
@@ -245,7 +247,7 @@ const Accounting = () => {
                 streamline processes, reduce costs, and improve efficiency.
               </span>
             </p>
-            <ul className="py-2 text-gray-600 text-lg leading-7">
+            <ul className="text-lg text-gray-600">
               <li>
                 <span className="font-bold text-gray-600">
                   🌟 95% Client Retention Rate
@@ -259,10 +261,10 @@ const Accounting = () => {
                 – No missed deadlines, no penalties
               </li>
             </ul>
-            <h3 className="mt-3 font-bold text-gray-600 text-lg leading-7">
+            <h3 className="my-2 font-bold text-gray-600 text-lg">
               Ready to Elevate Your Firm? Let’s Talk! 🚀
             </h3>
-            <ul className="text-gray-600 text-lg leading-7">
+            <ul className="text-gray-600 text-lg">
               <li>
                 👉{" "}
                 <Link to={"/contact"} className="font-bold text-[#2e1566]">
@@ -279,19 +281,19 @@ const Accounting = () => {
       </div>
 
       {/* FAQs */}
-      <div className="bg-[#fff2dd] px-4 py-14 sm:px-4 sm:py-8 md:py-14">
+      <div className="bg-[#fff2dd] px-7 py-10">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-lg font-bold text-center text-black">FAQs</h2>
-          <h2 className="text-center text-4xl font-bold sm:text-3xl md:text-4xl">
+          <h2 className="text-2xl font-bold text-center text-black">FAQs</h2>
+          <h2 className="text-center text-4xl font-bold">
             Everything You Need to Know About{" "}
             <span className="text-[#2e1566]">Outsourced Accounting</span>
           </h2>
-          <p className="my-3 text-center text-gray-600 sm:my-3 lg:mb-8 text-lg">
+          <p className="my-2 text-center text-gray-600 mb-8 text-lg">
             Discover helpful answers to your most pressing financial questions.
             We're here to assist you every step of the way!{" "}
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-7">
             {FAQS.map((FAQ, i) => (
               <div
                 key={i}

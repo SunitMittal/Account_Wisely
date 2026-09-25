@@ -129,7 +129,7 @@ const Career = () => {
         setSucceeded(true);
         e.currentTarget.reset();
       }
-    } catch (err) {
+    } catch{
       setErrors({ form: "Network error. Please try again." });
     } finally {
       setSubmitting(false);
@@ -165,18 +165,18 @@ const Career = () => {
     <>
       <LandingImage title="Career" link="Career" />
 
-      <div className="pt-12 text-center">
-        <h4 className="text-xl font-bold text-[#2e1566]">Career</h4>
+      <div className="px-7 pt-10 md:pt-15 text-center">
+        <h4 className="text-2xl md:text-3xl font-bold text-[#2e1566]">Career</h4>
         <h2 className="mt-1 text-4xl font-bold">
           Redefining Finance, One{" "}
           <span className="text-[#2e1566]">Career at a Time</span>
         </h2>
       </div>
 
-      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-evenly ">
+      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-evenly px-5 pb-15 md:pb-0">
         <img src={Career1} alt="" width={500} className="my-11" />
 
-        <div className="rounded-xl border bg-white p-6">
+        <div className="rounded-xl border bg-white p-5 md:p-8">
           <form
             onSubmit={handleSubmit}
             className="mx-auto flex max-w-3xl flex-col gap-4"
@@ -244,14 +244,14 @@ const Career = () => {
         </div>
       </div>
 
-      <div className="bg-[#fff2dd] p-6 md:px-44 md:py-16">
+      <div className="bg-[#fff2dd] px-7 py-10 md:px-40 md:py-15">
         <h2 className="mb-5 text-5xl font-bold text-[#2e1566]">
           Join the Account Wisely Team - Where Talent Meet Opportunities
         </h2>
         <h2 className="text-3xl font-bold text-[#2e1566]">
           Why Work at Account Wisely?
         </h2>
-        <p className="mt-2 text-justify leading-6 text-gray-600 bg-white/50 rounded-md px-3 py-2 shadow-inner">
+        <p className="mt-2 text-justify leading-6 text-gray-600 bg-white/50 rounded-md p-4 md:p-3 shadow-inner">
           Account Wisely thrives on exceptional talent—because great businesses
           are built by great people. As a leading provider of outsourced
           accounting services, we’re always looking for skilled and driven
@@ -260,7 +260,7 @@ const Career = () => {
           Wisely offers endless opportunities for growth and professional
           development in a dynamic work environment.
         </p>
-        <p className="text-justify leading-6 text-gray-600 bg-white/50 rounded-md px-3 py-1">
+        <p className="text-justify leading-6 text-gray-600 bg-white/50 rounded-md px-3 pb-4 md:px-3 md:pb-3">
           We offer more than just a job—we offer the chance to be part of a
           supportive, diverse team that values collaboration, integrity, and
           excellence. At Account Wisely, we invest in our people, providing them
@@ -272,7 +272,7 @@ const Career = () => {
         <h2 className="mt-5 text-3xl font-bold text-[#2e1566]">
           Our Culture: Collaboration, Innovation, and Growth
         </h2>
-        <p className="mt-2 text-justify leading-6 text-gray-600 bg-white/50 rounded-md px-3 py-2 shadow-inner">
+        <p className="mt-2 text-justify leading-6 text-gray-600 bg-white/50 rounded-md p-4 md:p-3 shadow-inner">
           At Account Wisely, collaboration, transparency, and innovation drive
           everything we do. As a leading provider of outsourced accounting
           services, we believe that great ideas come from teamwork and open
@@ -280,7 +280,7 @@ const Career = () => {
           success, and we foster an environment where creativity and
           collaboration thrive.
         </p>
-        <p className="text-justify leading-6 text-gray-600 bg-white/50 rounded-md px-3 py-1">
+        <p className="text-justify leading-6 text-gray-600 bg-white/50 rounded-md px-3 pb-4 md:px-3 md:pb-3">
           We are committed to work-life balance, offering flexibility and
           opportunities for continuous learning. Whether you’re an experienced
           accounting professional or starting your career, we provide the tools,
@@ -290,14 +290,14 @@ const Career = () => {
         <h2 className="mt-5 text-3xl font-bold text-[#2e1566]">
           Start Your Journey with Account Wisely
         </h2>
-        <p className="mt-2 text-justify leading-6 text-gray-600 bg-white/50 rounded-md px-3 py-2 shadow-inner">
+        <p className="mt-2 text-justify leading-6 text-gray-600 bg-white/50 rounded-md p-4 md:p-3 shadow-inner">
           If you’re looking to grow in the field of accounting, tax preparation,
           or payroll services, Account Wisely is the perfect place to build your
           career. We provide a supportive environment where talent meets
           opportunity, ensuring that every professional has the chance to
           succeed.
         </p>
-        <p className="text-justify leading-6 text-gray-600 bg-white/50 rounded-md px-3 py-1">
+        <p className="text-justify leading-6 text-gray-600 bg-white/50 rounded-md px-3 pb-4 md:px-3 md:pb-3">
           Join us and be part of a forward-thinking company that values
           innoGSTion, collaboration, and professional development. Whether
           you’re seeking your first job or a new challenge, we offer exciting
@@ -309,9 +309,10 @@ const Career = () => {
         </p>
       </div>
 
+
       {/* Current Openings */}
-      <div className="px-4.5 py-10" id="current-openings">
-        <p className="my-4 text-center text-xl font-bold text-[#2e1566]">
+      <div className="px-7 py-10 md:px-5 md:py-10" id="current-openings">
+        <p className="md:mt-4 text-center text-xl md:text-2xl font-bold text-[#2e1566]">
           Career
         </p>
         <div className="mx-auto max-w-6xl">
@@ -448,8 +449,9 @@ const Career = () => {
         </div>
       </div>
 
+
       {/* Testimonials */}
-      <div className="px-4.5 py-14 bg-[#fff2dd]">
+      <div className="px-7 py-10 md:px-5 md:py-10 bg-[#fff2dd]">
         <div className="mx-auto max-w-4xl">
           <h2 className="mb-9 text-center text-4xl font-bold">
             Team <span className="text-[#2e1566]">Testimonials</span>
@@ -485,8 +487,9 @@ const Career = () => {
         </div>
       </div>
 
+
       {/* Application Process */}
-      <div className="px-4.5 py-14">
+      <div className="px-7 py-10 md:px-5 md:py-10">
         <div className="mx-auto max-w-4xl">
           <h2 className="mb-6 text-center text-4xl font-bold">
             Our Application <span className="text-[#2e1566]">Process</span>
@@ -571,8 +574,9 @@ const Career = () => {
         </div>
       </div>
 
+
       {/* Call to Action */}
-      <div className="px-4.5 py-16 text-center bg-[#fff2dd]">
+      <div className="px-7 py-10 md:px-5 md:py-10 text-center bg-[#fff2dd]">
         <h2 className="mb-6 text-5xl font-bold">
           Ready to <span className="text-[#2e1566]">Join</span> Our Team?
         </h2>
@@ -590,8 +594,9 @@ const Career = () => {
         </div>
       </div>
 
+
       {/* No Current Openings */}
-      <div className="hidden bg-gray-50 px-4.5 py-16">
+      <div className="hidden bg-gray-50 px-7 py-10 md:px-5 md:py-10">
         <div className="mx-auto max-w-4xl text-center">
           <FaHandshake className="mx-auto mb-6 text-5xl text-[#2a4768]" />
           <h2 className="mb-4 text-3xl font-bold">No Current Openings</h2>

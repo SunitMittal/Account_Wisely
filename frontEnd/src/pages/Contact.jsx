@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { FiMapPin } from "react-icons/fi";
 import { RiMailSendLine } from "react-icons/ri";
 import LandingImage from "../components/LandingImage";
-// Using backend email endpoint instead of Formspree
 
 const Contact = () => {
   const [submitting, setSubmitting] = useState(false);
@@ -66,7 +65,7 @@ const Contact = () => {
         setSucceeded(true);
         e.currentTarget.reset();
       }
-    } catch (e) {
+    } catch{
       setErrors({ form: "Network error. Please try again." });
     } finally {
       setSubmitting(false);
@@ -85,68 +84,83 @@ const Contact = () => {
         title="Get in Touch with Account Wisely - Let's Talk Business!"
         link="Contact Us"
       />
-      <div className="flex flex-col gap-4 pt-8 sm:gap-6 sm:pt-16">
+      <div className="flex flex-col pt-10 md:pt-10 gap-6 md:gap-4">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-evenly">
+
           {/* section 1 */}
-          <div className="flex flex-col gap-5 px-4 sm:gap-7 sm:px-6">
+          <div className="flex flex-col p-7 md:p-6 gap-5 md:gap-7">
             {/* chat */}
             <div>
-              <p className="font-bold lg:text-xl sm:text-lg">Chat with Us</p>
-              <p className="text-gray-500 lg:text-lg sm:text-base">
+              <p className="font-bold text-xl md:text-2xl">Chat with Us</p>
+              <p className="text-gray-500 text-lg md:text-xl">
                 Speak to our friendly team via live chat
               </p>
-              <div className="flex items-center gap-2 sm:mt-2">
-                <RiMailSendLine className="sm:h-5 sm:w-5" />
+              <div className="flex items-center gap-2 mt-1">
+                <RiMailSendLine className="h-5 w-5" />
                 <a
-                  className="font-bold sm:text-base underline decoration-2"
+                  className="font-bold underline decoration-2"
                   href="mailto:info@accountwisely.com"
                 >
                   Shoot Us An Email
                 </a>
               </div>
             </div>
+
             {/* visit */}
             <div>
-              <p className="font-bold lg:text-xl sm:text-lg">Visit Us</p>
-              <p className="text-gray-500 lg:text-lg sm:text-base">
+              <p className="font-bold text-xl md:text-2xl">Visit Us</p>
+              <p className="text-gray-500 text-lg md:text-xl">
                 Meet use directly at our office
               </p>
-              <div className="flex items-center gap-2 sm:mt-2">
-                <FiMapPin className="sm:h-5 sm:w-5 " />
+
+              <div className="flex items-center gap-2 mt-1">
+                <FiMapPin className="h-6 w-6 shrink-0" />
                 <a
-                  href="https://maps.app.goo.gl/nwohfKm27YrRRDyg6"
+                  href="https://maps.app.goo.gl/2917FDHJYNWqr8iN7"
                   target="_blank"
-                  className="font-bold sm:text-base underline decoration-2"
+                  className="font-bold decoration-2 max-w-xs"
                 >
-                  Mumbai - India
+                  BLA Business Park, Office No. 902-903, 9th Floor, Sonawala Lane, Goregaon East, Mumbai, Maharashtra 400063
                 </a>
               </div>
+
+              <div className="flex items-center gap-2 pt-5">
+                <FiMapPin className="h-6 w-6 shrink-0" />
+                <a
+                  href="https://maps.app.goo.gl/wW7hPh1rNVUEnHHo6"
+                  target="_blank"
+                  className="font-bold decoration-2 max-w-xs"
+                >
+                  Office No. 1117-A, 11th Floor, HubTown Viva, Western Express Highway, Jogeshwari East, Mumbai, Maharashtra 400060
+                </a>
+              </div>
+
             </div>
           </div>
 
           {/* section 2 */}
-          <div className="my-6 flex flex-col gap-4 px-4 sm:my-8 sm:gap-6 sm:px-6">
-            <p className="text-2xl font-bold sm:text-3xl md:text-5xl">
+          <div className="my-6 flex flex-col gap-4 px-7 md:px-4">
+            <p className="text-4xl md:text-5xl font-bold">
               Ready to get Started?{" "}
               <span className="text-[#2e1566]">Let's chat.</span>
             </p>
-            <div className="flex flex-col gap-4 rounded-xl border border-gray-300 p-4 sm:gap-6 sm:p-6">
+            <div className="flex flex-col md:gap-4 rounded-xl border border-gray-300 p-4 gap-6">
               <form
                 onSubmit={handleSubmit}
-                className="mx-auto flex max-w-4xl flex-col gap-3 sm:gap-4"
+                className="mx-auto flex max-w-4xl flex-col gap-3"
               >
-                <p className="mb-3 text-sm text-gray-700 sm:mb-4 sm:text-base">
+                <p className="mb-3 text-gray-700">
                   Please fill out the form below, and a member of our team will
                   get back to you as soon as possible.
                 </p>
 
-                <div className="grid grid-cols-1 gap-3 sm:gap-4 md:grid-cols-2">
+                <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
                   <input
                     type="text"
                     name="firstname"
                     id="firstname"
                     placeholder="First Name"
-                    className="h-10 w-full rounded-md border-0 bg-[#eceef6] px-3 py-2 text-sm focus:outline-none sm:h-12 sm:px-4 sm:text-base"
+                    className="h-12 w-full rounded-md border-0 bg-[#eceef6] p-3 focus:outline-none"
                     required
                   />
                   <input
@@ -154,7 +168,7 @@ const Contact = () => {
                     name="lastname"
                     id="lastname"
                     placeholder="Last Name"
-                    className="h-10 w-full rounded-md border-0 bg-[#eceef6] px-3 py-2 text-sm focus:outline-none sm:h-12 sm:px-4 sm:text-base"
+                    className="h-12 w-full rounded-md border-0 bg-[#eceef6] p-3 focus:outline-none"
                   />
                 </div>
 
@@ -164,7 +178,7 @@ const Contact = () => {
                     name="email"
                     id="email"
                     placeholder="Email Address"
-                    className="h-10 w-full rounded-md border-0 bg-[#eceef6] px-3 py-2 text-sm focus:outline-none sm:h-12 sm:px-4 sm:text-base"
+                    className="h-12 w-full rounded-md border-0 bg-[#eceef6] p-3 focus:outline-none"
                     required
                   />
                   <input
@@ -172,7 +186,7 @@ const Contact = () => {
                     name="phone"
                     id="phone"
                     placeholder="Phone"
-                    className="h-10 w-full rounded-md border-0 bg-[#eceef6] px-3 py-2 text-sm focus:outline-none sm:h-12 sm:px-4 sm:text-base"
+                    className="h-12 w-full rounded-md border-0 bg-[#eceef6] p-3 focus:outline-none"
                     required
                   />
                 </div>
@@ -181,7 +195,7 @@ const Contact = () => {
                   name="message"
                   id="message"
                   placeholder="Write a Message"
-                  className="h-20 w-full resize-none rounded-md border-0 bg-[#eceef6] px-3 py-2 text-sm focus:outline-none sm:h-24 sm:px-4 sm:text-base"
+                  className="h-30 w-full resize-none rounded-md border-0 bg-[#eceef6] p-3 focus:outline-none"
                 />
                 {errors.form && (
                   <p className="text-xs text-red-600 sm:text-sm">
@@ -192,7 +206,7 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="h-10 rounded-lg bg-gradient-to-r from-[#f58210] via-[#fc9f41] to-[#ffc388] px-4 py-3 text-sm font-semibold text-white shadow-lg transition-all duration-600 hover:from-[#ffc388] hover:to-[#f58210] hover:cursor-pointer disabled:opacity-50 sm:h-12 sm:text-lg hover:shadow-2xl focus:outline-none sm:w-auto hover:scale-[1.01]"
+                  className="h-12 rounded-lg bg-gradient-to-r from-[#f58210] via-[#fc9f41] to-[#ffc388] px-4 text-lg font-semibold text-white shadow-lg transition-all duration-600 hover:from-[#ffc388] hover:to-[#f58210] hover:cursor-pointer disabled:opacity-50 hover:shadow-2xl focus:outline-none hover:scale-[1.01]"
                 >
                   {submitting ? "Sending..." : "Send Message"}
                 </button>
@@ -202,13 +216,13 @@ const Contact = () => {
         </div>
 
         {/* section 3 */}
-        <div className="mt-12 bg-[#fff2dd] px-4 py-14 sm:mt-16 sm:px-6">
+        <div className="md:mt-14 bg-[#fff2dd] px-7 py-15">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl font-bold text-center text-black mb-14">
               Frequently Asked Questions
             </h2>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-9">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-9">
               {FAQS.map((FAQ, i) => (
                 <div
                   key={i}

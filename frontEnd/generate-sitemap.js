@@ -7,6 +7,7 @@ const routes = [
   { path: "/about", priority: "0.8", changefreq: "monthly" },
   { path: "/contact", priority: "0.9", changefreq: "monthly" },
   { path: "/career", priority: "0.8", changefreq: "weekly" },
+  { path: "/privacypolicy", priority: "0.8", changefreq: "weekly" },
   { path: "/services/accounting", priority: "0.9", changefreq: "monthly" },
   { path: "/services/virtualCFO", priority: "0.9", changefreq: "monthly" },
   { path: "/services/taxreturn", priority: "0.9", changefreq: "monthly" },

@@ -15,7 +15,7 @@ const WhatsAppButton = () => {
       rel="noopener noreferrer"
       aria-label="Chat with us on WhatsApp"
     >
-      <FaWhatsapp className="h-4 w-4 sm:h-6 sm:w-6" />
+      <FaWhatsapp className="h-7 w-7" />
     </a>
   );
 };

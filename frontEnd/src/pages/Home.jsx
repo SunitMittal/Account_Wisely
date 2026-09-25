@@ -31,25 +31,25 @@ const Home = () => {
         <section>
           <HomeVideo />
         </section>
-        <section className="">
+        <section className="p-5">
           <HomeImageClg />
         </section>
-        <section className="md:py-10 bg-[#fff2dd]">
+        <section className="p-5 md:py-10 bg-[#fff2dd]">
           <ServicesSection />
         </section>
-        <section className="">
+        <section className="p-5 md:py-10">
           <CompanyOverviewSection />
         </section>
-        <section className="md:py-10 bg-[#fff2dd]">
+        <section className="p-5 md:py-10 bg-[#fff2dd]">
           <OnboardingProcessSection />
         </section>
-        <section className="">
+        <section className="p-5 md:py-10">
           <TestimonialsSection />
         </section>
-        <section className="md:py-10 bg-[#fff2dd]">
+        <section className="p-5 md:py-10 bg-[#fff2dd]">
           <FAQSection />
         </section>
-        <section className="">
+        <section className="p-5 md:py-10">
           <CtaSection />
         </section>
       </main>

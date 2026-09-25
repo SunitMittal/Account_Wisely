@@ -48,7 +48,7 @@ const WhyChooseSection = () => {
 
   return (
     <Container>
-      <div className="grid grid-cols-1 items-start gap-8 md:grid-cols-2">
+      <div className="grid grid-cols-1 items-start gap-8 md:grid-cols-2 p-5">
         <div
           ref={imageRef}
           className={`scroll-hidden relative ${

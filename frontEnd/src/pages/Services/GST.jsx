@@ -29,20 +29,20 @@ const GST = () => {
         link="Services / GST Return Filing Services"
       />
 
-      <div className="md:my-20 md:grid md:grid-cols-[400px_minmax(900px,_1fr)_100px] md:justify-center md:px-50">
+      <div className="my-20 md:grid md:grid-cols-[400px_minmax(900px,_1fr)_100px] justify-center md:px-50">
         {/* left part */}
         <ServiceSidebar />
 
         {/* right part */}
-        <div className="my-6 lg:px-10 sm:my-6 sm:px-4.5">
+        <div className="px-7">
           <div>
-            <h2 className="text-3xl font-bold sm:text-2xl md:text-3xl">
+            <h3 className="text-3xl font-bold">
               Expert
               <span className="text-[#2e1566]"> GST Return Filing </span>
               Services
-            </h2>
+            </h3>
 
-            <p className="mb-2 mt-3 text-justify leading-7 text-gray-600 sm:mb-2 sm:mt-3 sm:leading-7 sm:text-lg">
+            <p className="mt-3 mb-2 leading-7 text-gray-600 text-lg">
               Navigating GST regulations is like solving a never-ending
               puzzle—one wrong move, and it could cost your clients dearly. At
               <span className="font-bold"> Account Wisely, </span>we specialize
@@ -55,7 +55,7 @@ const GST = () => {
               on time—without the headache.
             </p>
 
-            <p className="mb-3 text-justify leading-7 text-gray-600 sm:mb-3 sm:leading-7 sm:text-lg">
+            <p className="my-2 leading-7 text-gray-600 text-lg">
               Why wrestle with ever-changing
               <span className="font-bold"> Ind-AS regulations </span>when you
               can have<span className="font-bold"> GST experts </span>handle it
@@ -70,7 +70,7 @@ const GST = () => {
               </span>
             </p>
 
-            <p className="mb-4 text-justify leading-7 text-gray-600 sm:mb-4 sm:leading-7 sm:text-lg">
+            <p className="my-2 leading-7 text-gray-600 text-lg">
               <span className="font-bold">Pain Point: </span>GST filing errors
               or delays can lead to hefty fines. Account Wisely ensures
               <span className="font-bold">
@@ -85,17 +85,17 @@ const GST = () => {
             </p>
           </div>
 
-          <div>
-            <h2 className="text-3xl font-bold sm:text-2xl md:text-3xl">
+          <div className="mt-5">
+            <h3 className="text-3xl font-bold">
               Why
               <span className="text-[#2e1566]">
                 {" "}
                 Outsource GST Return Filing{" "}
               </span>
               to Account Wisely?
-            </h2>
+            </h3>
 
-            <p className="mb-4 mt-3 text-justify leading-7 text-gray-600 sm:mb-4 sm:mt-3 sm:leading-7 sm:text-lg">
+            <p className="mt-3 mb-2 leading-7 text-gray-600 text-lg">
               GST compliance is
               <span className="font-bold">
                 {" "}
@@ -108,14 +108,14 @@ const GST = () => {
             </p>
           </div>
 
-          <div>
-            <h2 className="text-3xl font-bold sm:text-2xl md:text-3xl">
+          <div className="mt-5">
+            <h3 className="text-3xl font-bold">
               The Hidden
               <span className="text-[#2e1566]"> Costs of In-House </span>
               GST Filing
-            </h2>
+            </h3>
 
-            <p className="mb-1 mt-3 text-justify leading-7 text-gray-600 sm:mb-1 sm:mt-3 sm:leading-7 sm:text-lg">
+            <p className="mt-3 mb-2 leading-7 text-gray-600 text-lg">
               Managing GST returns in-house may seem like a good idea, but it
               comes with hidden costs—
               <span className="font-bold">
@@ -124,7 +124,7 @@ const GST = () => {
               </span>
             </p>
 
-            <ul className="mb-2 text-justify leading-7 text-gray-600 sm:mb-2 sm:leading-7 sm:text-lg">
+            <ul className="mb-3 px-5 text-lg leading-7 text-gray-600">
               <li>
                 <span className="font-bold">
                   ❌ Missed deadlines can result in penalties.
@@ -144,7 +144,7 @@ const GST = () => {
               </li>
             </ul>
 
-            <p className="mb-4 text-justify leading-7 text-gray-600 sm:mb-4 sm:leading-7 sm:text-lg">
+            <p className="my-2 text-lg leading-7 text-gray-600">
               By outsourcing GST return filing to
               <span className="font-bold"> Account Wisely, </span>you eliminate
               these risks while
@@ -152,12 +152,12 @@ const GST = () => {
             </p>
           </div>
 
-          <div>
-            <h3 className="text-3xl font-bold sm:text-2xl md:text-3xl">
+          <div className="mt-5">
+            <h3 className="text-3xl font-bold">
               Benefits of Outsourcing GST Filing
             </h3>
 
-            <ul className="mb-4 mt-3 text-justify leading-7 text-gray-600 sm:mb-4 sm:mt-3 sm:leading-7 sm:text-lg">
+            <ul className="mb-5 px-5 text-lg leading-7 text-gray-600">
               <li>
                 <span className="font-bold">✅ Accurate GST Returns – </span>
                 No more second-guessing! We ensure error-free GST calculations
@@ -181,17 +181,17 @@ const GST = () => {
             </ul>
           </div>
 
-          <div>
-            <h2 className="text-3xl font-bold sm:text-2xl md:text-3xl">
+          <div className="mt-5">
+            <h3 className="text-3xl font-bold">
               What We Offer
               <span className="text-[#2e1566]">
                 {" "}
                 Comprehensive GST Return{" "}
               </span>{" "}
               Services
-            </h2>
+            </h3>
 
-            <p className="mb-1 mt-3 text-justify leading-7 text-gray-600 sm:mb-1 sm:mt-3 sm:leading-7 sm:text-lg">
+            <p className="mt-3 mb-2 leading-7 text-gray-600 text-lg">
               We provide
               <span className="font-bold">
                 {" "}
@@ -204,7 +204,7 @@ const GST = () => {
               </span>
             </p>
 
-            <ul className="mb-4 text-justify leading-7 text-gray-600 sm:mb-4 sm:leading-7 sm:text-lg">
+            <ul className="mb-5 px-5 text-lg leading-7 text-gray-600">
               <li>
                 <span className="font-bold">📌 Preparation and filing </span>
                 of quarterly or annual GST returns
@@ -228,16 +228,16 @@ const GST = () => {
             </ul>
           </div>
 
-          <div>
-            <h2 className="text-3xl font-bold sm:text-2xl md:text-3xl">
+          <div className="mt-5">
+            <h3 className="text-3xl font-bold">
               The Smart Choice for
               <span className="text-[#2e1566]">
                 {" "}
                 Outsourced GST Return Filing
               </span>
-            </h2>
+            </h3>
 
-            <p className="mt-3 mb-4 text-justify leading-7 text-gray-600 sm:mt-3 sm:mb-4 sm:leading-7 sm:text-lg">
+            <p className="my-3 leading-7 text-gray-600 text-lg">
               Outsourcing GST return filing to Account Wisely offers your firm
               an
               <span className="font-bold">
@@ -250,7 +250,7 @@ const GST = () => {
               </span>
             </p>
 
-            <p className="rounded-2xl bg-[#1a0940] px-8 py-6 text-white sm:px-8 sm:py-6 md:text-xl">
+            <p className="rounded-2xl bg-[#1a0940] p-6 text-white text-lg">
               <span className="font-bold">
                 📞 Ready to simplify GST filing for your clients? Contact
                 Account Wisely today!
@@ -261,19 +261,19 @@ const GST = () => {
       </div>
 
       {/* FAQs */}
-      <div className="bg-[#fff2dd] px-4 py-14 sm:px-4 sm:py-8 md:py-14">
+      <div className="bg-[#fff2dd] px-7 py-10">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-lg font-bold text-center text-black">FAQs</h2>
-          <h2 className="text-center text-4xl font-bold sm:text-3xl md:text-4xl">
+          <h2 className="text-2xl font-bold text-center text-black">FAQs</h2>
+          <h2 className="text-center text-4xl font-bold">
             Everything You Need to Know About{" "}
-            <span className="text-[#2e1566]">GST Filing</span>
+            <span className="text-[#2e1566]">Outsourced Accounting</span>
           </h2>
-          <p className="my-3 text-center text-gray-600 sm:my-3 lg:mb-8 text-lg">
+          <p className="my-2 text-center text-gray-600 mb-8 text-lg">
             Discover helpful answers to your most pressing financial questions.
             We're here to assist you every step of the way!{" "}
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-7">
             {FAQS.map((FAQ, i) => (
               <div
                 key={i}

@@ -29,19 +29,19 @@ const Payroll = () => {
         link="Services / Payroll Services"
       />
 
-      <div className="md:my-20 md:grid md:grid-cols-[400px_minmax(900px,_1fr)_100px] md:justify-center md:px-50">
+      <div className="my-20 md:grid md:grid-cols-[400px_minmax(900px,_1fr)_100px] justify-center md:px-50">
         {/* left part */}
         <ServiceSidebar />
 
         {/* right part */}
-        <div className="my-6 lg:px-10 sm:my-6 sm:px-4.5">
+        <div className="px-7">
           <div>
-            <h2 className="text-3xl font-bold sm:text-2xl md:text-3xl">
+            <h3 className="text-3xl font-bold">
               <span className="text-[#2e1566]">Expert Payroll Solutions </span>
               for Your Clients’ Needs
-            </h2>
+            </h3>
 
-            <p className="mb-2 mt-3 text-justify leading-7 text-gray-600 sm:mb-2 sm:mt-3 sm:leading-7 sm:text-lg">
+            <p className="mt-3 mb-2 leading-7 text-gray-600 text-lg">
               Managing payroll is a bit like juggling—except the balls are
               <span className="font-bold">
                 {" "}
@@ -54,7 +54,7 @@ const Payroll = () => {
               </span>
             </p>
 
-            <p className="mb-2 text-justify leading-7 text-gray-600 sm:mb-2 sm:leading-7 sm:text-lg">
+            <p className="my-2 leading-7 text-gray-600 text-lg">
               That’s where Account Wisely steps in. We specialize in
               <span className="font-bold">
                 {" "}
@@ -71,7 +71,7 @@ const Payroll = () => {
               <span className="font-bold"> —so you don’t have to.</span>
             </p>
 
-            <p className="mb-3 text-justify leading-7 text-gray-600 sm:mb-3 sm:leading-7 sm:text-lg">
+            <p className="my-2 leading-7 text-gray-600 text-lg">
               Partnering with Account Wisely means your firm can focus on what
               really matters—helping your clients grow—while we make sure their
               employees get paid accurately and on time. With our team staying
@@ -79,7 +79,7 @@ const Payroll = () => {
               can rest easy knowing that compliance is never a concern.
             </p>
 
-            <p className="mb-4 text-justify leading-7 text-gray-600 sm:mb-4 sm:leading-7 sm:text-lg">
+            <p className="my-2 leading-7 text-gray-600 text-lg">
               <span className="font-bold">Pain Point: </span>Payroll can be a
               headache, especially when it involves tax filings and tricky
               deductions. Account Wisely helps eliminate these headaches with
@@ -88,12 +88,12 @@ const Payroll = () => {
             </p>
           </div>
 
-          <div>
-            <h2 className="text-3xl font-bold sm:text-2xl md:text-3xl">
+          <div className="mt-5">
+            <h3 className="text-3xl font-bold">
               Why Outsource Payroll Services?
-            </h2>
+            </h3>
 
-            <p className="mb-1 mt-3 text-justify leading-7 text-gray-600 sm:mb-1 sm:mt-3 sm:leading-7 sm:text-lg">
+            <p className="mt-3 mb-2 leading-7 text-gray-600 text-lg">
               Let’s be honest—handling payroll internally is like
               <span className="font-bold">
                 {" "}
@@ -110,7 +110,7 @@ const Payroll = () => {
               payroll outsourcing:
             </p>
 
-            <ul className="text-justify leading-7 text-gray-600 sm:leading-7 sm:text-lg sm:pl-7">
+            <ul className="mb-5 list-disc px-5 text-lg leading-7 text-gray-600">
               <li className="list-disc">
                 <span className="font-bold">✅ Accuracy & Compliance: </span>
                 No more last-minute tax panic—we ensure error-free payroll
@@ -138,15 +138,15 @@ const Payroll = () => {
             </ul>
           </div>
 
-          <div>
-            <h2 className="mt-4 text-3xl font-bold sm:text-2xl md:text-3xl">
+          <div className="mt-5">
+            <h3 className="text-3xl font-bold">
               What We Offer:{" "}
               <span className="text-[#2e1566]">
                 Comprehensive Payroll Services Tailored for India Companies
               </span>
-            </h2>
+            </h3>
 
-            <p className=" mb-1 mt-3 text-justify leading-7 text-gray-600 sm:mb-1 sm:mt-3 sm:leading-7 sm:text-lg">
+            <p className="mt-3 mb-2 leading-7 text-gray-600 text-lg">
               Outsourcing payroll means you get
               <span className="font-bold">
                 {" "}
@@ -155,7 +155,7 @@ const Payroll = () => {
               with:
             </p>
 
-            <ul className="mb-4 text-justify leading-7 text-gray-600 sm:pl-7 sm:mb-4 sm:leading-7 sm:text-lg">
+            <ul className="mb-5 px-5 text-lg leading-7 text-gray-600">
               <li>
                 <span className="font-bold">✔ Payroll processing </span>& wage
                 calculations.
@@ -180,14 +180,14 @@ const Payroll = () => {
             </ul>
           </div>
 
-          <div>
-            <h3 className="text-3xl font-bold sm:text-2xl md:text-3xl">
+          <div className="mt-5">
+            <h3 className="text-3xl font-bold">
               The Real Pain Point:
               <span className="text-[#2e1566]"> Payroll Errors = Fines </span>&
               <span className="text-[#2e1566]"> Unhappy Clients</span>
             </h3>
 
-            <p className="mb-2 mt-3 text-justify leading-7 text-gray-600 sm:mb-2 sm:mt-3 sm:leading-7 sm:text-lg">
+            <p className="mt-3 mb-2 leading-7 text-gray-600 text-lg">
               Getting payroll wrong isn’t just embarrassing—it can be
               <span className="font-bold"> costly and legally risky. </span>
               Late filings? Incorrect deductions?
@@ -197,11 +197,11 @@ const Payroll = () => {
               </span>
             </p>
 
-            <p className="mb-1 text-justify leading-7 text-gray-600 sm:mb-1 sm:leading-7 sm:text-lg">
+            <p className="my-2 leading-7 text-gray-600 text-lg">
               Account Wisely ensures that:
             </p>
 
-            <ul className="mb-4 text-justify leading-7 text-gray-600 sm:pl-7 sm:mb-4 sm:leading-7 sm:text-lg">
+            <ul className="mb-5 list-disc px-5 text-lg leading-7 text-gray-600">
               <li className="list-disc">
                 <span className="font-bold">No miscalculations— </span>so
                 clients don’t come knocking.
@@ -221,12 +221,12 @@ const Payroll = () => {
             </ul>
           </div>
 
-          <div>
-            <h2 className="text-3xl font-bold sm:text-2xl md:text-3xl">
+          <div className="mt-5">
+            <h3 className="text-3xl font-bold">
               Why Choose Account Wisely?
-            </h2>
+            </h3>
 
-            <p className="mb-1 mt-3 text-justify leading-7 text-gray-600 sm:mb-1 sm:mt-3 sm:leading-7 sm:text-lg">
+            <p className="mt-3 mb-2 leading-7 text-gray-600 text-lg">
               We’re not just a payroll provider—we’re
               <span className="font-bold"> your firm’s secret weapon </span>
               for streamlined, stress-free payroll services. Here’s why
@@ -234,7 +234,7 @@ const Payroll = () => {
               partner with us:
             </p>
 
-            <ul className="mb-4 text-justify leading-7 text-gray-600 sm:pl-7 sm:mb-4 sm:leading-7 sm:text-lg">
+            <ul className="mb-5 px-5 text-lg leading-7 text-gray-600">
               <li>
                 <span className="font-bold">📌 Industry Expertise: </span>From
                 small businesses to large enterprises,
@@ -266,7 +266,7 @@ const Payroll = () => {
               </li>
             </ul>
 
-            <p className="rounded-2xl bg-[#1a0940] px-8 py-6 text-white sm:px-8 sm:py-6 md:text-xl">
+            <p className="rounded-2xl bg-[#1a0940] p-6 text-white text-lg">
               For further financial management support, explore our
               <span className="font-bold">
                 {" "}
@@ -275,20 +275,20 @@ const Payroll = () => {
             </p>
           </div>
 
-          <div>
-            <h2 className="mt-4 text-3xl font-bold sm:text-2xl md:text-3xl md:mt-4">
+          <div className="mt-5">
+            <h3 className="text-3xl font-bold">
               Conclusion:
               <span className="text-[#2e1566]">
                 {" "}
                 Let’s Handle Payroll—You Handle Growth
               </span>
-            </h2>
+            </h3>
 
-            <p className="mb-1 mt-3 text-justify leading-7 text-gray-600 sm:mb-1 sm:mt-3 sm:leading-7 sm:text-lg">
+            <p className="mt-3 mb-2 leading-7 text-gray-600 text-lg">
               Outsourcing payroll to Account Wisely means:
             </p>
 
-            <ul className="mb-2 text-justify leading-7 text-gray-600 sm:mb-2 sm:leading-7 sm:pl-7 sm:text-lg">
+            <ul className="mb-5 px-5 text-lg leading-7 text-gray-600">
               <li>
                 <span className="font-bold">✔ Fewer payroll headaches</span>
               </li>
@@ -302,7 +302,7 @@ const Payroll = () => {
               </li>
             </ul>
 
-            <p className="text-justify leading-7 text-gray-600 sm:leading-7 sm:text-lg">
+            <p className="my-2 leading-7 text-gray-600 text-lg">
               <span className="font-bold">
                 📢 Ready to simplify payroll for your clients? Let’s talk.
                 Contact Account Wisely today
@@ -314,19 +314,19 @@ const Payroll = () => {
       </div>
 
       {/* FAQs */}
-      <div className="bg-[#fff2dd] px-4 py-14 sm:px-4 sm:py-8 md:py-14">
+      <div className="bg-[#fff2dd] px-7 py-10">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-lg font-bold text-center text-black">FAQs</h2>
-          <h2 className="text-center text-4xl font-bold sm:text-3xl md:text-4xl">
+          <h2 className="text-2xl font-bold text-center text-black">FAQs</h2>
+          <h2 className="text-center text-4xl font-bold">
             Everything You Need to Know About{" "}
-            <span className="text-[#2e1566]">Payroll Outsourcing</span>
+            <span className="text-[#2e1566]">Outsourced Accounting</span>
           </h2>
-          <p className="my-3 text-center text-gray-600 sm:my-3 lg:mb-8 text-lg">
+          <p className="my-2 text-center text-gray-600 mb-8 text-lg">
             Discover helpful answers to your most pressing financial questions.
             We're here to assist you every step of the way!{" "}
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-7">
             {FAQS.map((FAQ, i) => (
               <div
                 key={i}

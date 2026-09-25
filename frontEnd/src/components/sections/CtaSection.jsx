@@ -14,7 +14,7 @@ const CtaSection = () => {
   };
 
   return (
-    <section className="py-20">
+    <section>
       <div className="container mx-auto px-4 md:px-6">
         <div className="mx-auto max-w-3xl text-center">
           <h2

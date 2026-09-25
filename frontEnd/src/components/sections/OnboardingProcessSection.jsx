@@ -12,7 +12,7 @@ import {
 import Container from "../Layout/Container";
 import ProcessCard from "../AboutUs/ProcessCard";
 
-const OnboardingProcessSection = () => {
+const   OnboardingProcessSection = () => {
   const processSteps = [
     {
       id: 1,
@@ -64,7 +64,7 @@ const OnboardingProcessSection = () => {
   return (
     <Container>
       <div className="mb-5 text-center">
-        <p className="lg:text-2xl font-bold tracking-wider text-[#1a0940]">
+        <p className="text-xl md:text-3xl font-bold tracking-wider text-[#1a0940]">
           Client Onboarding Process
         </p>
         <h2 className="mt-2 text-2xl font-bold md:text-4xl text-black">

@@ -63,7 +63,7 @@ const MissionValues = () => {
 
   return (
     <Container>
-      <div className="flex flex-col gap-8 md:flex-row">
+      <div className="flex flex-col md:gap-8 md:flex-row p-5">
         <div
           ref={titleRef}
           className={`scroll-hidden md:w-2/5 ${
@@ -71,16 +71,16 @@ const MissionValues = () => {
           }`}
         >
           <div className="mb-4">
-            <p className="mb-1 text-sm font-bold text-[#2e1566]">
+            <p className="mb-1 text-lg md:text-xl font-bold text-[#2e1566]">
               — Our Mission & Core Values
             </p>
-            <h2 className="font-bold text-black lg:text-4xl md:text-3xl">
+            <h2 className="font-bold text-black text-2xl md:text-4xl">
               Partnering for Growth Through{" "}
               <span className="text-[#2e1566]">Financial Clarity</span>
             </h2>
           </div>
 
-          <div className="relative mt-8">
+          <div className="relative">
             <div className="absolute top-0 right-0 -mt-19 -mr-12 h-30 w-30 text-purple-200 opacity-50">
               <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -99,7 +99,7 @@ const MissionValues = () => {
             cardsInView ? "scroll-show" : ""
           }`}
         >
-          <p className="text-gray-700">
+          <p className="text-gray-700 md:text-lg">
             Our mission is simple: to{" "}
             <span className="font-medium">
               empower Indian Start-Ups and CA firms
@@ -120,7 +120,8 @@ const MissionValues = () => {
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-1 gap-4 pt-6 md:grid-cols-3">
+
+      <div className="grid grid-cols-1 gap-4 p-5 md:grid-cols-3">
         {values.map((value) => (
           <ValueCard
             key={value.id}

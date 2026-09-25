@@ -33,19 +33,19 @@ const Header = () => {
 
   return (
     <>
-      <div className="flex items-center justify-between bg-[#1a0940] px-4 py-2 text-sm text-white sm:px-5 sm:text-sm md:px-28 md:text-lg">
+      <div className="flex items-center justify-between bg-[#1a0940] px-7 py-2 md:px-30 md:py-2 text-white">
         <a
           href="mailto:partners@accountwisely.com" className="underline-offset-8.5 flex items-center gap-1 hover:underline"
         >
-          <HiOutlineMailOpen className="h-3 w-3 sm:h-4 sm:w-4" />
+          <HiOutlineMailOpen className="h-5 w-5" />
           <span className="hidden xs:inline">partners@accountwisely.com</span>
-          <span className="xs:hidden">Email Us</span>
+          <span className="xs:hidden text-lg md:text-xl">Email Us</span>
         </a>
         <WhatsAppButton />
       </div>
 
       <nav className="shadow-sm">
-        <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6 sm:py-5 md:px-10">
+        <div className="mx-auto max-w-7xl px-7 py-5">
           {/* desktop view */}
           <div className="hidden items-center justify-between lg:flex">
             <div className="flex-shrink-0">

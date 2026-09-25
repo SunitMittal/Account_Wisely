@@ -29,19 +29,18 @@ const virtualCFO = () => {
         link="Services / Vitrual CFO Services"
       />
 
-      <div className="md:my-20 md:grid md:grid-cols-[400px_minmax(900px,_1fr)_100px] md:justify-center md:px-50">
+      <div className="my-20 md:grid md:grid-cols-[400px_minmax(900px,_1fr)_100px] justify-center md:px-50">
         {/* left side */}
         <ServiceSidebar />
 
         {/* right side */}
-        <div className="my-6 lg:px-10 sm:my-8 sm:px-4.5">
+        <div className="px-7">
           <div>
-            <h2 className="text-3xl font-bold sm:text-2xl md:text-3xl">
-              Why do modern businesses need a Virtual CFO instead of a full-time
-              CFO?
+            <h2 className="text-3xl font-bold">
+              Why do modern businesses need a Virtual CFO instead of a full-time CFO?
             </h2>
 
-            <p className="mt-2 text-justify leading-7 text-gray-600 sm:mt-2 sm:leading-7 sm:text-lg">
+            <p className="mt-3 mb-2 leading-7 text-gray-600 text-lg">
               In today’s fast-changing business environment,
               <span className="font-bold">
                 {" "}
@@ -52,18 +51,18 @@ const virtualCFO = () => {
               sustainable growth.
             </p>
 
-            <p className="mt-1 text-justify leading-7 text-gray-600 sm:mt-1 sm:leading-7 sm:text-lg">
+            <p className="my-2 leading-7 text-gray-600 text-lg">
               However, hiring a
               <span className="font-bold"> full-time CFO </span>
               can be costly and unnecessary—especially for businesses with lean
               teams or limited budgets.
             </p>
 
-            <p className="mt-1 text-justify leading-7 text-gray-600 sm:mt-1 sm:leading-7 sm:text-lg font-bold">
+            <p className="my-2 leading-7 text-gray-600 text-lg">
               This is where Virtual CFO Services step in.
             </p>
 
-            <p className="mt-1 text-justify leading-7 text-gray-600 sm:mt-1 sm:leading-7 sm:text-lg">
+            <p className="my-2 leading-7 text-gray-600 text-lg">
               A
               <span className="font-bold">
                 {" "}
@@ -76,15 +75,15 @@ const virtualCFO = () => {
               multi-industry expertise, a Virtual CFO provides:
             </p>
 
-            <ul className="mb-1 text-justify leading-7 text-gray-600 sm:mb-1 sm:leading-7 sm:text-lg sm:pl-7">
-              <li>• Strategic financial insights</li>
-              <li>• Financial planning and forecasting</li>
-              <li>• Performance monitoring</li>
-              <li>• Profitability improvement strategies</li>
-              <li>• Risk management guidance</li>
+            <ul className="my-2 list-disc px-5 text-lg leading-7 text-gray-600">
+              <li>Strategic financial insights</li>
+              <li>Financial planning and forecasting</li>
+              <li>Performance monitoring</li>
+              <li>Profitability improvement strategies</li>
+              <li>Risk management guidance</li>
             </ul>
 
-            <p className="mt-1 mb-4 text-justify leading-7 text-gray-600 sm:mt-1 sm:mb-4 sm:leading-7 sm:text-lg">
+            <p className="mb-5 leading-7 text-gray-600 text-lg">
               —all at
               <span className="font-bold"> fraction of the cost </span>
               of a full-time CFO.
@@ -438,19 +437,19 @@ const virtualCFO = () => {
       </div>
 
       {/* FAQs */}
-      <div className="bg-[#fff2dd] px-4 py-14 sm:px-4 sm:py-8 md:py-14">
+      <div className="bg-[#fff2dd] px-7 py-10">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-lg font-bold text-center text-black">FAQs</h2>
-          <h2 className="text-center text-4xl font-bold sm:text-3xl md:text-4xl">
+          <h2 className="text-2xl font-bold text-center text-black">FAQs</h2>
+          <h2 className="text-center text-4xl font-bold">
             Everything You Need to Know About{" "}
             <span className="text-[#2e1566]">Outsourced Accounting</span>
           </h2>
-          <p className="my-3 text-center text-gray-600 sm:my-3 lg:mb-8 text-lg">
+          <p className="my-2 text-center text-gray-600 mb-8 text-lg">
             Discover helpful answers to your most pressing financial questions.
             We're here to assist you every step of the way!{" "}
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-7">
             {FAQS.map((FAQ, i) => (
               <div
                 key={i}

@@ -36,18 +36,18 @@ const WorkingProcess = () => {
   ];
   return (
     <Container>
-      <div className="mb-12 text-center">
-        <h2 className="mb-2 tracking-wider font-bold uppercase text-gray-700 sm:text-xl lg:text-2xl">
+      <div className="mb-12 text-center pt-5">
+        <h2 className="mb-2 tracking-wider font-bold uppercase text-gray-700 text-xl md:text-3xl">
               Working Process
         </h2>
-        <h2 className="font-bold text-black lg:text-4xl md:text-3xl">
+        <h2 className="font-bold text-black text-2xl md:text-3xl">
           The AccountWisely <span className="text-[#2e1566]">Approach</span>:{" "}
           <br />
           Smarter Outsourcing for Accounting Firms
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4 px-5">
         {processSteps.map((step) => (
           <div
             key={step.id}

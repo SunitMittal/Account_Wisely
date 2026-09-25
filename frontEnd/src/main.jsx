@@ -13,6 +13,7 @@ import Career from "./pages/Career.jsx";
 import Contact from "./pages/Contact.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import Home from "./pages/Home.jsx";
+import Privacy from "./pages/Privacy.jsx";
 import "./index.css";
 
 const router = createBrowserRouter([
@@ -31,6 +32,7 @@ const router = createBrowserRouter([
       { path: "/services/financialanalysis", element: <FinancialAnalysis /> },
       { path: "/career", element: <Career /> },
       { path: "/contact", element: <Contact /> },
+      { path: "/privacypolicy", element: <Privacy /> },
     ],
   },
 ]);
@@ -38,5 +40,5 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>
+  </React.StrictMode>,
 );

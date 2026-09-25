@@ -68,8 +68,8 @@ const ServicesSection = () => {
     <Container2>
       <div>
         <div className="md:sticky md:top-8 tracking-wider">
-          <p className="text-2xl font-bold text-gray-700">Services</p>
-          <h1 className="mt-2 font-bold text-black sm:text-3xl md:max-w-56 md:text-3xl lg:text-5xl"><span className="text-[#2e1566]">Outsourced Accounting </span>Services Designed for Your Firm
+          <p className="text-2xl md:text-3xl font-bold text-gray-700">Services</p>
+          <h1 className="mt-2 font-bold text-black text-3xl md:max-w-56 md:text-5xl"><span className="text-[#2e1566]">Outsourced Accounting </span>Services Designed for Your Firm
           </h1>
           <p className="mt-4 max-w-[26rem] leading-6 text-gray-700 sm:text-base sm:leading-7">
             Managing client accounts can be a drain on your time and resources.
@@ -82,7 +82,7 @@ const ServicesSection = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:gap-6 md:grid-cols-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
         {services.map((service) => (
           <div
             key={service.id}
