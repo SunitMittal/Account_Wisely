@@ -1,68 +1,92 @@
 const express = require("express");
-const nodemailer = require("nodemailer");
 const cors = require("cors");
+const fs = require("fs");
+const path = require("path");
+const nodemailer = require("nodemailer");
+
 require("dotenv").config();
 
 const app = express();
-
-app.use(cors());
 app.use(express.json());
+app.use(cors());
 
-// transporter via GoDaddy SMTP
-const transporter = nodemailer.createTransport({
-  host: "smtpout.secureserver.net", // GoDaddy's SMTP server
-  port: 465,
-  secure: true, // Use SSL/TLS
-  auth: {
-    user: process.env.EMAIL_USER, // GoDaddy email address (e.g., info@accountwisely.com)
-    pass: process.env.EMAIL_PASS, // GoDaddy email password
-  },
-});
+const RESPONSES_FILE = path.join(__dirname, "responses.jsonl");
 
-app.post("/send-email", async (req, res) => {
+// Email is optional — only set up if SMTP details are provided. Leave these blank in .env if you rather just check the Google Sheet.
+const emailEnabled = Boolean(process.env.SMTP_HOST && process.env.OWNER_EMAIL);
+const transporter = emailEnabled
+  ? nodemailer.createTransport({
+      host: process.env.SMTP_HOST,
+      port: Number(process.env.SMTP_PORT || 587),
+      secure: false,
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
+      },
+    })
+  : null;
+
+function formatEmailBody(data) {
+  return `
+New survey response
+
+Accounting setup: ${(data.accountingSetup || []).join(", ")}
+Help needed: ${(data.helpNeeded || []).join(", ")}
+Monthly sales: ${(data.monthlySales || []).join(", ")}
+Location: ${data.location || ""}
+Name: ${data.firstName || ""}
+Email: ${data.email || ""}
+Phone: ${data.phone || ""}
+Submitted: ${new Date().toLocaleString()}
+`.trim();
+}
+
+app.post("/api/survey", async (req, res) => {
+  const data = req.body;
+
   try {
-    const { first_name, last_name, email, phone, message } = req.body;
+    // Save first — this is the permanent backup record. Nothing is lost even if the Sheet or email steps below fail.
+    fs.appendFileSync(
+      RESPONSES_FILE,
+      JSON.stringify({ ...data, submittedAt: new Date().toISOString() }) + "\n",
+    );
+  } catch (err) {
+    console.error("Failed to save response to disk:", err);
+    return res
+      .status(500)
+      .json({ status: "error", message: "Could not save response" });
+  }
 
-    if (!email || !message) {
-      return res.status(400).send({ msg: "email and message are required" });
+  res.json({ status: 'success' })
+
+  // Push the same data into the Google Sheet, if configured.
+  if (process.env.SHEET_WEBHOOK_URL) {
+    fetch(process.env.SHEET_WEBHOOK_URL, {
+        method: "POST",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify(data),
+      })
+      .catch((err) => {
+      console.error('Response was saved, but writing to the Sheet failed:', err)
+    })
     }
 
-    const mailOptions = {
-      from: process.env.EMAIL_USER, // GoDaddy email address used for sending
-      replyTo: email, // replies go to the user who submitted the form
-      to: process.env.RECIPIENT_EMAIL || process.env.EMAIL_USER, // recipient email (info@accountwisely.com)
-      subject: `New Contact Form Submission from ${first_name || "User"}`,
-      text: `You have received a new message from the contact form:
-
-Name: ${first_name || ""} ${last_name || ""}
-Email: ${email}
-Phone: ${phone || "Not provided"}
-
-Message:
-${message}
-      `,
-      html: `
-        <p>You have received a new message from the contact form:</p>
-        <p><strong>Name:</strong> ${first_name || ""} ${last_name || ""}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone || "Not provided"}</p>
-        <p><strong>Message:</strong></p>
-        <p>${message}</p>
-      `,
-    };
-
-    const info = await transporter.sendMail(mailOptions);
-    console.log("Message sent: %s", info.messageId);
-
-    res.status(200).send({ msg: "Email sent successfully!" });
-  } catch (err) {
-    console.error("Error while sending mail", err);
-    res.status(500).send({
-      msg: "Error sending email",
-      error: err.message || err,
-    });
+  // Optional email notification, only runs if SMTP is configured.
+  if (emailEnabled) {
+    try {
+      await transporter.sendMail({
+        from: process.env.SMTP_USER,
+        to: process.env.OWNER_EMAIL,
+        subject: "New Account Wisely survey response",
+        text: formatEmailBody(data),
+      });
+    } catch (err) {
+      console.error("Response was saved, but email notification failed:", err);
+    }
   }
+
+  res.json({ status: "success" });
 });
 
-const port = process.env.PORT || 4000;
-app.listen(port, () => console.log(`Server running on port ${port}`));
+const port = process.env.PORT;
+app.listen(port, () => console.log(`server running on port ${port}`));

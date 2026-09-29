@@ -21,7 +21,7 @@ const CtaSection = () => {
             className="mb-6 text-3xl font-bold md:text-4xl"
             data-aos="fade-up"
           >
-            Ready to Transform Your Accounting Firm?
+            Ready to Transform Your Accounting?
           </h2>
 
           <p

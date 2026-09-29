@@ -1,13 +1,9 @@
-import React, { useState } from "react";
 import { FiMapPin } from "react-icons/fi";
 import { RiMailSendLine } from "react-icons/ri";
 import LandingImage from "../components/LandingImage";
+import SurveyForm from "../components/SurveyForm";
 
 const Contact = () => {
-  const [submitting, setSubmitting] = useState(false);
-  const [succeeded, setSucceeded] = useState(false);
-  const [errors, setErrors] = useState({});
-
   const FAQS = [
     {
       Q: "How can I get in touch with Account Wisely?",
@@ -27,56 +23,10 @@ const Contact = () => {
     },
     {
       Q: "Can I book a consultation before partnering with Account Wisely?",
-      A: "Yes! We offer a free trial. Visit our Book a Free Trial page",
+      A: "Yes! We offer a free consultation call. Visit our Book a Free consultation call",
     },
   ];
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (submitting) return;
-    setSubmitting(true);
-    setErrors({});
-
-    const formData = new FormData(e.currentTarget);
-    const mail = {
-      first_name: formData.get("firstname"),
-      last_name: formData.get("lastname"),
-      email: formData.get("email"),
-      phone: formData.get("phone"),
-      message: formData.get("message"),
-    };
-
-    try {
-      const res = await fetch(
-        "https://account-wisely.onrender.com/send-email",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(mail),
-        }
-      );
-
-      if (!res.ok) {
-        const data = await res.json().catch(() => ({}));
-        setErrors({
-          form: data.msg || "Failed to send message. Please try again.",
-        });
-      } else {
-        setSucceeded(true);
-        e.currentTarget.reset();
-      }
-    } catch{
-      setErrors({ form: "Network error. Please try again." });
-    } finally {
-      setSubmitting(false);
-    }
-  };
-
-  if (succeeded) {
-    return (
-      <p>Thanks for contacting! We will get back to you as soon as possible.</p>
-    );
-  }
   return (
     <>
       {/* image */}
@@ -86,9 +36,8 @@ const Contact = () => {
       />
       <div className="flex flex-col pt-10 md:pt-10 gap-6 md:gap-4">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-evenly">
-
           {/* section 1 */}
-          <div className="flex flex-col p-7 md:p-6 gap-5 md:gap-7">
+          <div className="order-2 md:order-1 flex flex-col p-7 md:p-6 gap-5 md:gap-7">
             {/* chat */}
             <div>
               <p className="font-bold text-xl md:text-2xl">Chat with Us</p>
@@ -120,7 +69,8 @@ const Contact = () => {
                   target="_blank"
                   className="font-bold decoration-2 max-w-xs"
                 >
-                  BLA Business Park, Office No. 902-903, 9th Floor, Sonawala Lane, Goregaon East, Mumbai, Maharashtra 400063
+                  BLA Business Park, Office No. 902-903, 9th Floor, Sonawala
+                  Lane, Goregaon East, Mumbai, Maharashtra 400063
                 </a>
               </div>
 
@@ -131,87 +81,20 @@ const Contact = () => {
                   target="_blank"
                   className="font-bold decoration-2 max-w-xs"
                 >
-                  Office No. 1117-A, 11th Floor, HubTown Viva, Western Express Highway, Jogeshwari East, Mumbai, Maharashtra 400060
+                  Office No. 1117-A, 11th Floor, HubTown Viva, Western Express
+                  Highway, Jogeshwari East, Mumbai, Maharashtra 400060
                 </a>
               </div>
-
             </div>
           </div>
 
           {/* section 2 */}
-          <div className="my-6 flex flex-col gap-4 px-7 md:px-4">
+          <div className="order-1 md:order-2 my-6 flex flex-col gap-4 px-7 md:px-4">
             <p className="text-4xl md:text-5xl font-bold">
               Ready to get Started?{" "}
               <span className="text-[#2e1566]">Let's chat.</span>
             </p>
-            <div className="flex flex-col md:gap-4 rounded-xl border border-gray-300 p-4 gap-6">
-              <form
-                onSubmit={handleSubmit}
-                className="mx-auto flex max-w-4xl flex-col gap-3"
-              >
-                <p className="mb-3 text-gray-700">
-                  Please fill out the form below, and a member of our team will
-                  get back to you as soon as possible.
-                </p>
-
-                <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
-                  <input
-                    type="text"
-                    name="firstname"
-                    id="firstname"
-                    placeholder="First Name"
-                    className="h-12 w-full rounded-md border-0 bg-[#eceef6] p-3 focus:outline-none"
-                    required
-                  />
-                  <input
-                    type="text"
-                    name="lastname"
-                    id="lastname"
-                    placeholder="Last Name"
-                    className="h-12 w-full rounded-md border-0 bg-[#eceef6] p-3 focus:outline-none"
-                  />
-                </div>
-
-                <div className="grid grid-cols-1 gap-3 sm:gap-4 md:grid-cols-2">
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    placeholder="Email Address"
-                    className="h-12 w-full rounded-md border-0 bg-[#eceef6] p-3 focus:outline-none"
-                    required
-                  />
-                  <input
-                    type="tel"
-                    name="phone"
-                    id="phone"
-                    placeholder="Phone"
-                    className="h-12 w-full rounded-md border-0 bg-[#eceef6] p-3 focus:outline-none"
-                    required
-                  />
-                </div>
-
-                <textarea
-                  name="message"
-                  id="message"
-                  placeholder="Write a Message"
-                  className="h-30 w-full resize-none rounded-md border-0 bg-[#eceef6] p-3 focus:outline-none"
-                />
-                {errors.form && (
-                  <p className="text-xs text-red-600 sm:text-sm">
-                    {errors.form}
-                  </p>
-                )}
-
-                <button
-                  type="submit"
-                  disabled={submitting}
-                  className="h-12 rounded-lg bg-gradient-to-r from-[#f58210] via-[#fc9f41] to-[#ffc388] px-4 text-lg font-semibold text-white shadow-lg transition-all duration-600 hover:from-[#ffc388] hover:to-[#f58210] hover:cursor-pointer disabled:opacity-50 hover:shadow-2xl focus:outline-none hover:scale-[1.01]"
-                >
-                  {submitting ? "Sending..." : "Send Message"}
-                </button>
-              </form>
-            </div>
+            <SurveyForm />
           </div>
         </div>
 
