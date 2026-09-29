@@ -265,7 +265,7 @@ export default function SurveyForm() {
             <div className="w-[52px] h-[52px] rounded-full bg-[#fdecd9] text-[#f58210] flex items-center justify-center mx-auto mb-4">
               <Check size={28} strokeWidth={3} />
             </div>
-            <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
+            <h2 className="md:text-xl font-bold text-gray-900 mb-2">
                Thanks {data.firstName || "there"}, Get ready to have perfect Accounts for your Business
             </h2>
             <p className="text-gray-500 leading-relaxed">
