@@ -48,9 +48,9 @@ function toggleInArray(arr, value) {
   return arr.includes(value) ? arr.filter((v) => v !== value) : [...arr, value];
 }
 
-// Paste your server's endpoint here, or set BackEnd_API_URL (.env file)
+// Paste your server's endpoint here, or set VITE_API_URL (.env file)
 // Left blank, submissions still work in the UI but nothing is recorded anywhere.
-const API_URL = import.meta.env.BackEnd_API_URL || "";
+const API_URL = import.meta.env.VITE_API_URL || "";
 
 async function submitResponse(data) {
   if (!API_URL) {
