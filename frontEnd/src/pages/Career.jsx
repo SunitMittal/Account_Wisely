@@ -112,7 +112,7 @@ const Career = () => {
 
     try {
       const res = await fetch(
-        import.meta.env.VITE_API_URL || "http://localhost:4000/send-email",
+        import.meta.env.BackEnd_API_URL || "http://localhost:4000/send-email",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
