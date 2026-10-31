@@ -1,16 +1,27 @@
 import { useState } from "react";
-import {
-  Check,
-  ArrowLeft,
-  ArrowRight,
-  MapPin,
-  Mail,
-  User,
-  Phone,
-  Download,
-} from "lucide-react";
+import {Check, ArrowLeft, ArrowRight, MapPin, Mail, User, Phone, Download } from "lucide-react";
 
-const TOTAL_STEPS = 6;
+const TOTAL_STEPS = 6; // 5 question steps + 1 thank-you step
+// const TOTAL_STEPS = 5;
+
+//? Testing for google tag (LeadConversion)
+const LAST_QUESTION_STEP = TOTAL_STEPS - 1;
+//? Testing for google tag (LeadConversion)
+
+// Paste your server's endpoint here, or set VITE_API_URL (.env file)
+// Left blank, submissions still work in the UI but nothing is recorded anywhere.
+const API_URL = import.meta.env.VITE_API_URL || "";
+ 
+
+//? Testing for google tag (LeadConversion)
+// Google Ads conversion (from your "Submit lead form" event snippet)
+const GOOGLE_ADS_CONVERSION = {
+  send_to: "AW-18402509814/Sn1LCMHv7acdEPaHgMdE",
+  value: 1.0,
+  currency: "USD", // keep in sync with your Google Ads conversion action
+};
+//? Testing for google tag (LeadConversion)
+
 
 const ACCOUNTING_SETUP_OPTIONS = [
   "No accountant",
@@ -44,20 +55,18 @@ const initialData = {
   phone: "",
 };
 
+
 function toggleInArray(arr, value) {
   return arr.includes(value) ? arr.filter((v) => v !== value) : [...arr, value];
 }
 
-// Paste your server's endpoint here, or set VITE_API_URL (.env file)
-// Left blank, submissions still work in the UI but nothing is recorded anywhere.
-const API_URL = import.meta.env.VITE_API_URL || "";
-
 async function submitResponse(data) {
   if (!API_URL) {
-    console.warn(
-      "No API_URL configured — response was not saved anywhere. See README.md.",
-    );
-    return;
+
+    //? Testing for google tag (LeadConversion)
+    throw new Error("VITE_API_URL is not configured — lead was not saved.");
+    //? Testing for google tag (LeadConversion)
+
   }
 
   const res = await fetch(API_URL, {
@@ -70,12 +79,25 @@ async function submitResponse(data) {
   }
 }
 
+//? Testing for google tag (LeadConversion)
+function trackLeadConversion() {
+  if (typeof window.gtag !== "function")
+    return; // if not loaded
+  window.gtag("event", "conversion", GOOGLE_ADS_CONVERSION);
+}
+//? Testing for google tag (LeadConversion)
+
 export default function SurveyForm() {
   const [step, setStep] = useState(1);
   const [data, setData] = useState(initialData);
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [touched, setTouched] = useState(false);
+
+//? Testing for google tag (LeadConversion)
+  const [submitError, setSubmitError] = useState(false);
+//? Testing for google tag (LeadConversion)
+
 
   const update = (patch) => setData((prev) => ({ ...prev, ...patch }));
 
@@ -101,25 +123,44 @@ export default function SurveyForm() {
     }
   };
 
-  const LAST_QUESTION_STEP = 5;
-
   const goNext = async () => {
+//? Testing for google tag (LeadConversion)
+    if (submitting)
+      return;
+//? Testing for google tag (LeadConversion)
+
     if (!isStepValid()) {
       setTouched(true);
       return;
     }
     setTouched(false);
+
     if (step === LAST_QUESTION_STEP) {
       setSubmitting(true);
+//? Testing for google tag (LeadConversion)
+      setSubmitError(false)
+//? Testing for google tag (LeadConversion)
+
       try {
         await submitResponse(data);
+//? Testing for google tag (LeadConversion)
+        trackLeadConversion(); // only after a successful save
+        setSubmitted(true);
+        setStep(TOTAL_STEPS);
+//? Testing for google tag (LeadConversion)
       } catch (err) {
         console.error("Failed to submit response:", err);
+//? Testing for google tag (LeadConversion)
+setSubmitError(true); // stay on this step so the user can retry
+//? Testing for google tag (LeadConversion)
       } finally {
         setSubmitting(false);
       }
-      setSubmitted(true);
-      setStep(TOTAL_STEPS);
+//? Testing for google tag (LeadConversion)
+      // setSubmitted(true);
+      // setStep(TOTAL_STEPS);
+//? Testing for google tag (LeadConversion)
+
       return;
     }
     setStep((s) => Math.min(s + 1, TOTAL_STEPS));
@@ -127,6 +168,10 @@ export default function SurveyForm() {
 
   const goBack = () => {
     setTouched(false);
+//? Testing for google tag (LeadConversion)
+setSubmitError(false);
+//? Testing for google tag (LeadConversion)
+
     setStep((s) => Math.max(s - 1, 1));
   };
 
@@ -283,6 +328,7 @@ export default function SurveyForm() {
           </div>
         )}
 
+{/* Validation message */}
         {touched && !isStepValid() && step <= LAST_QUESTION_STEP && (
           <div className="mt-3 text-[12.5px] text-red-600">
             * All the Fields are Mandatory
@@ -296,7 +342,7 @@ export default function SurveyForm() {
           <button
             type="button"
             onClick={goBack}
-            disabled={step === 1}
+            disabled={step === 1 || submitting}
             className="flex items-center gap-1.5 text-sm font-semibold text-gray-500 px-4 py-2.5 rounded-lg disabled:opacity-35 disabled:cursor-default"
           >
             <ArrowLeft size={16} />
