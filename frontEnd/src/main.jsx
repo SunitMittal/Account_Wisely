@@ -14,6 +14,7 @@ import Contact from "./pages/Contact.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import Home from "./pages/Home.jsx";
 import Privacy from "./pages/Privacy.jsx";
+import ThankYouModal from './components/ThankYouModal.jsx'
 import "./index.css";
 
 const router = createBrowserRouter([
@@ -31,7 +32,10 @@ const router = createBrowserRouter([
       { path: "/services/gst", element: <GST /> },
       { path: "/services/financialanalysis", element: <FinancialAnalysis /> },
       { path: "/career", element: <Career /> },
-      { path: "/contact", element: <Contact /> },
+      {
+        path: "/contact", element: <Contact />,
+        children:[{path:'thank-you', element:<ThankYouModal/>}]
+       },
       { path: "/privacypolicy", element: <Privacy /> },
     ],
   },

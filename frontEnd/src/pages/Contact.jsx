@@ -2,6 +2,7 @@ import { FiMapPin } from "react-icons/fi";
 import { RiMailSendLine } from "react-icons/ri";
 import LandingImage from "../components/LandingImage";
 import SurveyForm from "../components/SurveyForm";
+import {Outlet} from 'react-router-dom'
 
 const Contact = () => {
   const FAQS = [
@@ -131,6 +132,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <Outlet/>
     </>
   );
 };

@@ -1,27 +1,22 @@
 import { useState } from "react";
-import {Check, ArrowLeft, ArrowRight, MapPin, Mail, User, Phone, Download } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import {
+  Check,
+  ArrowLeft,
+  ArrowRight,
+  MapPin,
+  Mail,
+  User,
+  Phone,
+  Download,
+} from "lucide-react";
 
-const TOTAL_STEPS = 6; // 5 question steps + 1 thank-you step
-// const TOTAL_STEPS = 5;
+const TOTAL_STEPS = 5; // All 5 question steps
 
-//? Testing for google tag (LeadConversion)
-const LAST_QUESTION_STEP = TOTAL_STEPS - 1;
-//? Testing for google tag (LeadConversion)
+const THANK_YOU_PATH = "/contact/thank-you";
 
 // Paste your server's endpoint here, or set VITE_API_URL (.env file)
-// Left blank, submissions still work in the UI but nothing is recorded anywhere.
 const API_URL = import.meta.env.VITE_API_URL || "";
- 
-
-//? Testing for google tag (LeadConversion)
-// Google Ads conversion (from your "Submit lead form" event snippet)
-const GOOGLE_ADS_CONVERSION = {
-  send_to: "AW-18402509814/Sn1LCMHv7acdEPaHgMdE",
-  value: 1.0,
-  currency: "USD", // keep in sync with your Google Ads conversion action
-};
-//? Testing for google tag (LeadConversion)
-
 
 const ACCOUNTING_SETUP_OPTIONS = [
   "No accountant",
@@ -55,19 +50,13 @@ const initialData = {
   phone: "",
 };
 
-
 function toggleInArray(arr, value) {
   return arr.includes(value) ? arr.filter((v) => v !== value) : [...arr, value];
 }
 
 async function submitResponse(data) {
-  if (!API_URL) {
-
-    //? Testing for google tag (LeadConversion)
+  if (!API_URL)
     throw new Error("VITE_API_URL is not configured — lead was not saved.");
-    //? Testing for google tag (LeadConversion)
-
-  }
 
   const res = await fetch(API_URL, {
     method: "POST",
@@ -79,25 +68,14 @@ async function submitResponse(data) {
   }
 }
 
-//? Testing for google tag (LeadConversion)
-function trackLeadConversion() {
-  if (typeof window.gtag !== "function")
-    return; // if not loaded
-  window.gtag("event", "conversion", GOOGLE_ADS_CONVERSION);
-}
-//? Testing for google tag (LeadConversion)
-
 export default function SurveyForm() {
+  const navigate = useNavigate();
+
   const [step, setStep] = useState(1);
   const [data, setData] = useState(initialData);
-  const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
-  const [touched, setTouched] = useState(false);
-
-//? Testing for google tag (LeadConversion)
   const [submitError, setSubmitError] = useState(false);
-//? Testing for google tag (LeadConversion)
-
+  const [touched, setTouched] = useState(false);
 
   const update = (patch) => setData((prev) => ({ ...prev, ...patch }));
 
@@ -116,7 +94,7 @@ export default function SurveyForm() {
           data.email.trim().length > 3 &&
           data.email.includes("@") &&
           data.firstName.trim().length > 0 &&
-          data.phone.trim().length >= 7
+          data.phone.trim().length == 10
         );
       default:
         return true;
@@ -124,10 +102,7 @@ export default function SurveyForm() {
   };
 
   const goNext = async () => {
-//? Testing for google tag (LeadConversion)
-    if (submitting)
-      return;
-//? Testing for google tag (LeadConversion)
+    if (submitting) return;
 
     if (!isStepValid()) {
       setTouched(true);
@@ -135,31 +110,24 @@ export default function SurveyForm() {
     }
     setTouched(false);
 
-    if (step === LAST_QUESTION_STEP) {
+    if (step === TOTAL_STEPS) {
       setSubmitting(true);
-//? Testing for google tag (LeadConversion)
-      setSubmitError(false)
-//? Testing for google tag (LeadConversion)
+      setSubmitError(false);
 
       try {
         await submitResponse(data);
-//? Testing for google tag (LeadConversion)
-        trackLeadConversion(); // only after a successful save
-        setSubmitted(true);
-        setStep(TOTAL_STEPS);
-//? Testing for google tag (LeadConversion)
+
+        const { firstName } = data;
+        setData(initialData); // new form will trigger everytime the modal is closed
+        setStep(1);
+
+        navigate(THANK_YOU_PATH, { state: { submitted: true, firstName } }); // Google Ads conversion fires inside ThankYouModal
       } catch (err) {
         console.error("Failed to submit response:", err);
-//? Testing for google tag (LeadConversion)
-setSubmitError(true); // stay on this step so the user can retry
-//? Testing for google tag (LeadConversion)
+        setSubmitError(true); // stay on this step so the user can retry=
       } finally {
         setSubmitting(false);
       }
-//? Testing for google tag (LeadConversion)
-      // setSubmitted(true);
-      // setStep(TOTAL_STEPS);
-//? Testing for google tag (LeadConversion)
 
       return;
     }
@@ -168,14 +136,11 @@ setSubmitError(true); // stay on this step so the user can retry
 
   const goBack = () => {
     setTouched(false);
-//? Testing for google tag (LeadConversion)
-setSubmitError(false);
-//? Testing for google tag (LeadConversion)
-
+    setSubmitError(false);
     setStep((s) => Math.max(s - 1, 1));
   };
 
-  const progressPct = (Math.min(step, TOTAL_STEPS) / TOTAL_STEPS) * 100;
+  const progressPct = (step / TOTAL_STEPS) * 100;
 
   return (
     <div className="w-full max-w-2xl mx-auto bg-white rounded-2xl border border-gray-300 p-5 sm:p-7">
@@ -187,7 +152,7 @@ setSubmitError(false);
         />
       </div>
       <div className="text-sm text-gray-500 mb-5">
-        Step {Math.min(step, TOTAL_STEPS)} of {TOTAL_STEPS}
+        Step {step} of {TOTAL_STEPS}
       </div>
 
       {/* Body */}
@@ -238,17 +203,14 @@ setSubmitError(false);
 
         {step === 4 && (
           <Question title="What's your current location?">
-            <div className="flex items-center gap-2 border border-gray-300 rounded-xl px-3 py-3 focus-within:border-[#f58210] transition-colors">
-              <MapPin size={18} className="text-gray-500 shrink-0" />
-              <input
-                className="w-full outline-none border-none text-[14.5px] text-gray-900 bg-transparent placeholder:text-gray-400"
-                type="text"
-                placeholder="City, state"
-                value={data.location}
-                onChange={(e) => update({ location: e.target.value })}
-                autoFocus
-              />
-            </div>
+            <InputField
+              icon={MapPin}
+              type="text"
+              placeholder="City, state"
+              value={data.location}
+              onChange={(e) => update({ location: e.target.value })}
+              autoFocus
+            />
           </Question>
         )}
 
@@ -257,112 +219,75 @@ setSubmitError(false);
             title="Contact information"
             hint="We'll use this to reach you about your accounting — never shared or sold."
           >
-            <div className="mb-4">
-              <label className="block text-[12.5px] font-semibold text-gray-500 mb-1.5">
-                Email address
-              </label>
-              <div className="flex items-center gap-2 border border-gray-300 rounded-xl px-3 py-3 focus-within:border-[#f58210] transition-colors">
-                <Mail size={18} className="text-gray-500 shrink-0" />
-                <input
-                  className="w-full outline-none border-none text-[14.5px] text-gray-900 bg-transparent placeholder:text-gray-400"
-                  type="email"
-                  placeholder="you@company.com"
-                  value={data.email}
-                  onChange={(e) => update({ email: e.target.value })}
-                />
-              </div>
-            </div>
-            <div className="mb-4">
-              <label className="block text-[12.5px] font-semibold text-gray-500 mb-1.5">
-                Full name
-              </label>
-              <div className="flex items-center gap-2 border border-gray-300 rounded-xl px-3 py-3 focus-within:border-[#f58210] transition-colors">
-                <User size={18} className="text-gray-500 shrink-0" />
-                <input
-                  className="w-full outline-none border-none text-[14.5px] text-gray-900 bg-transparent placeholder:text-gray-400"
-                  type="text"
-                  placeholder="Your full name"
-                  value={data.firstName}
-                  onChange={(e) => update({ firstName: e.target.value })}
-                />
-              </div>
-            </div>
-            <div className="mb-1">
-              <label className="block text-[12.5px] font-semibold text-gray-500 mb-1.5">
-                Phone number
-              </label>
-              <div className="flex items-center gap-2 border border-gray-300 rounded-xl px-3 py-3 focus-within:border-[#f58210] transition-colors">
-                <Phone size={18} className="text-gray-500 shrink-0" />
-                <input
-                  className="w-full outline-none border-none text-[14.5px] text-gray-900 bg-transparent placeholder:text-gray-400"
-                  type="tel"
-                  placeholder="10-digit mobile number"
-                  value={data.phone}
-                  onChange={(e) => update({ phone: e.target.value })}
-                />
-              </div>
-            </div>
+            <InputField
+              label="Email address"
+              icon={Mail}
+              type="email"
+              placeholder="you@company.com"
+              value={data.email}
+              onChange={(e) => update({ email: e.target.value })}
+            />
+            <InputField
+              label="Full name"
+              icon={User}
+              type="text"
+              placeholder="Your full name"
+              value={data.firstName}
+              onChange={(e) => update({ firstName: e.target.value })}
+            />
+            <InputField
+              label="Phone number"
+              icon={Phone}
+              type="tel"
+              placeholder="10-digit mobile number"
+              value={data.phone}
+              onChange={(e) => update({ phone: e.target.value })}
+              last
+            />
           </Question>
         )}
 
-        {step === TOTAL_STEPS && submitted && (
-          <div className="text-center py-5 px-1">
-            <div className="w-[52px] h-[52px] rounded-full bg-[#fdecd9] text-[#f58210] flex items-center justify-center mx-auto mb-4">
-              <Check size={28} strokeWidth={3} />
-            </div>
-            <h2 className="md:text-xl font-bold text-gray-900 mb-2">
-               Thanks {data.firstName || "there"}, Get ready to have perfect Accounts for your Business
-            </h2>
-            <p className="text-gray-500 leading-relaxed">
-              We will reach out to you shortly
-            </p>
-            <a
-                href="/company-profile.pdf"
-                download="Account-Wisely-Company-Profile.pdf"
-                className="inline-flex items-center gap-2 mt-5 text-sm font-semibold text-[#1f7a6c] border-[1.5px] border-[#1f7a6c] rounded-lg px-4 py-2.5 hover:bg-[#eef7f5] transition-colors"
-              >
-                <Download size={16} />
-                Download our company profile
-              </a>
-              
+        {/* Validation message */}
+        {touched && !isStepValid() && (
+          <div className="mt-3 text-[12.5px] text-red-600">
+            * All the Fields are Mandatory
           </div>
         )}
 
-{/* Validation message */}
-        {touched && !isStepValid() && step <= LAST_QUESTION_STEP && (
-          <div className="mt-3 text-[12.5px] text-red-600">
-            * All the Fields are Mandatory
+        {/* Submit error message */}
+        {submitError && (
+          <div className="mt-3 text-[12.5px] text-red-600" role="alert">
+            Something went wrong while submitting. Please try again or email us
+            at info@accountwisely.com.
           </div>
         )}
       </div>
 
       {/* Nav */}
-      {step <= LAST_QUESTION_STEP && (
-        <div className="flex justify-between items-center gap-2.5 mt-6">
-          <button
-            type="button"
-            onClick={goBack}
-            disabled={step === 1 || submitting}
-            className="flex items-center gap-1.5 text-sm font-semibold text-gray-500 px-4 py-2.5 rounded-lg disabled:opacity-35 disabled:cursor-default"
-          >
-            <ArrowLeft size={16} />
-            Back
-          </button>
-          <button
-            type="button"
-            onClick={goNext}
-            disabled={submitting}
-            className="flex items-center gap-1.5 text-sm font-semibold text-white bg-gradient-to-r from-[#f58210] via-[#fc9f41] to-[#ffc388] hover:from-[#ffc388] hover:to-[#f58210] transition-all duration-500 px-5 py-2.5 rounded-lg ml-auto disabled:opacity-60"
-          >
-            {step === LAST_QUESTION_STEP
-              ? submitting
-                ? "Submitting…"
-                : "Submit"
-              : "Continue"}
-            {step !== LAST_QUESTION_STEP && <ArrowRight size={16} />}
-          </button>
-        </div>
-      )}
+      <div className="flex justify-between items-center gap-2.5 mt-6">
+        <button
+          type="button"
+          onClick={goBack}
+          disabled={step === 1 || submitting}
+          className="flex items-center gap-1.5 text-sm font-semibold text-gray-500 px-4 py-2.5 rounded-lg disabled:opacity-35 disabled:cursor-default"
+        >
+          <ArrowLeft size={16} />
+          Back
+        </button>
+        <button
+          type="button"
+          onClick={goNext}
+          disabled={submitting}
+          className="flex items-center gap-1.5 text-sm font-semibold text-white bg-gradient-to-r from-[#f58210] via-[#fc9f41] to-[#ffc388] hover:from-[#ffc388] hover:to-[#f58210] transition-all duration-500 px-5 py-2.5 rounded-lg ml-auto disabled:opacity-60"
+        >
+          {step === TOTAL_STEPS
+            ? submitting
+              ? "Submitting…"
+              : "Submit"
+            : "Continue"}
+          {step !== TOTAL_STEPS && <ArrowRight size={16} />}
+        </button>
+      </div>
     </div>
   );
 }
@@ -375,6 +300,25 @@ function Question({ title, hint, children }) {
       </h2>
       {hint && <p className="text-[13px] text-gray-500 mb-4">{hint}</p>}
       <div className="mt-3.5">{children}</div>
+    </div>
+  );
+}
+
+function InputField({ label, last = false, icon: Icon, ...inputProps }) {
+  return (
+    <div className={last ? "mb-1" : "mb-4"}>
+      {label && (
+        <label className="block text-[12.5px] font-semibold text-gray-500 mb-1.5">
+          {label}
+        </label>
+      )}
+      <div className="flex items-center gap-2 border border-gray-300 rounded-xl px-3 py-3 focus-within:border-[#f58210] transition-colors">
+        <Icon size={18} className="text-gray-500 shrink-0" />
+        <input
+          className="w-full outline-none border-none text-[14.5px] text-gray-900 bg-transparent placeholder:text-gray-400"
+          {...inputProps}
+        />
+      </div>
     </div>
   );
 }
