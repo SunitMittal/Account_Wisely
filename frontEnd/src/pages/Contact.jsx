@@ -31,10 +31,11 @@ const Contact = () => {
   return (
     <>
       {/* image */}
-      <LandingImage
+      {/* <LandingImage
         title="Get in Touch with Account Wisely - Let's Talk Business!"
         link="Contact Us"
-      />
+      /> */}
+
       <div className="flex flex-col pt-10 md:pt-10 gap-6 md:gap-4">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-evenly">
           {/* section 1 */}

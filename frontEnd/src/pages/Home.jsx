@@ -62,14 +62,14 @@ const Home = () => {
       </main>
 
       {/* Floating call-to-action pointer */}
-      <button
+      {/* <button
         type="button"
         onClick={scrollToCta}
         aria-label="Jump to contact section"
         className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-gradient-to-r from-[#f58210] via-[#fc9f41] to-[#ffc388] text-white shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-300 animate-iconPulse"
       >
         <Phone size={24} strokeWidth={2.2} />
-      </button>
+      </button> */}
       
     </div>
   );
